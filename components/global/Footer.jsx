@@ -6,8 +6,9 @@ export default function Footer() {
   return (
     <footer className="flex flex-col">
       <section className="bg-[#1E273E] section-block-padding container-padding">
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-8 lg:gap-10 xl:gap-14">
-          <div className="lg:col-span-1 flex flex-col gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-10 lg:gap-10 xl:gap-14">
+          <div className="flex gap-10">
+          <div className="flex flex-col gap-6 md:gap-10">
             <div className="w-40">
               <Link href="/" className="flex items-center">
                 <Image
@@ -33,8 +34,46 @@ export default function Footer() {
               </p>
             </div>
           </div>
+          <div className="flex flex-col gap-6 md:gap-10 md:hidden block">
+            <h4 className="text-white ">Platforms</h4>
+            <ul className="space-y-2 md:min-w-[150px]">
+              <li>
+                <Image
+                  src="/landing/platform1.png"
+                  alt="codeElan"
+                  width={100}
+                  height={48}
+                  className="hidden md:block"
+                />
+                <Image
+                  src="/landing/platform1.png"
+                  alt="codeElan"
+                  width={100}
+                  height={30}
+                  className="md:hidden block"
+                />
+              </li>
+              <li>
+                <Image
+                  src="/landing/platform2.png"
+                  alt="codeElan"
+                  width={195}
+                  height={48}
+                  className="hidden md:block"
+                />
+                <Image
+                  src="/landing/platform2.png"
+                  alt="codeElan"
+                  width={70}
+                  height={30}
+                  className="md:hidden block"
+                />
+              </li>
+            </ul>
+          </div>
+          </div>
           <div className="flex flex-row justify-around gap-3 md:gap-40">
-            <div className="flex flex-col gap-10 justify-center ">
+            <div className="flex flex-col gap-6 md:gap-10 justify-center">
               <h4 className="text-white text-5">Important Links</h4>
               <ul className="space-y-2 md:min-w-[150px] min-w-[122px]">
                 <li>
@@ -63,7 +102,7 @@ export default function Footer() {
                 </li>
               </ul>
             </div>
-            <div className="flex flex-col gap-10 ">
+            <div className="flex flex-col gap-6 md:gap-10 hidden md:block">
               <h4 className="text-white ">Platforms</h4>
               <ul className="space-y-2 md:min-w-[150px]">
                 <li>
@@ -100,7 +139,7 @@ export default function Footer() {
                 </li>
               </ul>
             </div>
-            <div className="flex flex-col gap-10">
+            <div className="flex flex-col gap-6 md:gap-10">
               <h4 className="text-white ">Contact Details</h4>
               <ul className="space-y-2 md:min-w-[150px] min-w-[120px]">
                 <li className="flex gap-2 items-center">
@@ -114,11 +153,11 @@ export default function Footer() {
                   </a>
                 </li>
                 <li className="flex gap-2 items-center">
-                    <img
-            src="/landing/email.png"
-            alt="email"
-            className="w-4.5 h-3.5"
-            />
+                  <img
+                    src="/landing/email.png"
+                    alt="email"
+                    className="w-4.5 h-3.5"
+                  />
                   <a href="mailto:contact@orbiz.one" className="text-white">
                     info@codeelan.com
                   </a>
