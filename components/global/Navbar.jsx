@@ -31,7 +31,7 @@ export default function Navbar() {
                 { name: "Mission & Vision", href: "/mission-vision" },
             ],
         },
-        { name: "Contact Us", href: "/contact-us" },
+        { name: "Contact Us", href: "/contact" },
     ];
 
     /* ---------- ACTIVE ROUTE ---------- */
