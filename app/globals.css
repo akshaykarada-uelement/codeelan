@@ -174,3 +174,26 @@ body {
   }
 
 }
+
+
+/* casestudy moble view swiper */
+
+ .casestudy-bullet {
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          background-color: rgba(0, 0, 0, 0.2);
+          opacity: 1;
+          cursor: pointer;
+          transition: all 0.3s ease;
+        }
+
+        .casestudy-bullet-active {
+          background-color: #3b82f6;
+          width: 24px;
+          border-radius: 4px;
+        }
+
+        .casestudy-swiper {
+          padding-bottom: 40px;
+        }
