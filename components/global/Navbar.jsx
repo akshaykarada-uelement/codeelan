@@ -24,11 +24,11 @@ export default function Navbar() {
         },
         {
             name: "About Us",
-            href: "/about-us",
+            href: "/aboutus",
             children: [
                 { name: "Case Studies", href: "/case-studies" },
                 { name: "Partnership", href: "/partnership" },
-                { name: "Mission & Vision", href: "/mission-vision" },
+                { name: "Mission & Vision", href: "/missionvision" },
             ],
         },
         { name: "Contact Us", href: "/contact" },

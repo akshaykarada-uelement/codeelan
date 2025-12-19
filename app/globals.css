@@ -178,22 +178,95 @@ body {
 
 /* casestudy moble view swiper */
 
- .casestudy-bullet {
-          width: 8px;
-          height: 8px;
-          border-radius: 50%;
-          background-color: rgba(0, 0, 0, 0.2);
-          opacity: 1;
-          cursor: pointer;
-          transition: all 0.3s ease;
-        }
+.casestudy-bullet {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
 
-        .casestudy-bullet-active {
-          background-color: #3b82f6;
-          width: 24px;
-          border-radius: 4px;
-        }
+.casestudy-bullet-active {
+  background-color: #3b82f6;
+  width: 24px;
+  border-radius: 4px;
+}
 
-        .casestudy-swiper {
-          padding-bottom: 40px;
-        }
+.casestudy-swiper {
+  padding-bottom: 40px;
+}
+
+/* ===== React Select – CodeElan Style ===== */
+
+.react-select__control {
+  background-color: #f5f5f5 !important;
+  border: none !important;
+  box-shadow: none !important;
+  min-height: 48px;
+  cursor: pointer;
+}
+
+.react-select__value-container {
+  padding: 2px 12px !important;
+}
+
+.react-select__placeholder {
+  color: #1a2b6dcc !important;
+}
+
+.react-select__single-value {
+  color: #1a2b6dcc !important;
+}
+
+.react-select__indicator-separator {
+  display: none;
+}
+
+.react-select__dropdown-indicator {
+  color: #1a2b6d80;
+}
+
+/* dropdown menu */
+.react-select__menu {
+  margin-top: 6px;
+  border-radius: 2px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+  overflow: hidden;
+}
+
+/* option base */
+.react-select__option {
+  padding: 14px 16px;
+  font-size: 16px;
+  background-color: #ffffff;
+  color: #1a2b6d;
+  cursor: pointer;
+  position: relative;
+}
+
+/* separator line */
+.react-select__option:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 16px;
+  right: 16px;
+  height: 1px;
+  background: #eaeaea;
+}
+
+/* hover glow effect */
+.react-select__option--is-focused {
+  background-color: #ffffff !important;
+  color: #39d52d !important;
+  text-shadow: 0 0 6px rgba(57, 213, 45, 0.4);
+}
+
+/* selected option */
+.react-select__option--is-selected {
+  background-color: #ffffff !important;
+  color: #39d52d !important;
+  font-weight: 500;
+}
