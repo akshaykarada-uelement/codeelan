@@ -3,18 +3,19 @@ export const caseStudies = [
     id: "ecommerce-mobile-app",
     title: "Ecommerce Mobile App",
     shortDescription: "Mobile shopping application",
-    description: "The ecommerce mobile app offers a seamless platform for both sellers and consumers, enabling businesses to create online stores and reach a broader customer base.",
+    description:
+      "The ecommerce mobile app offers a seamless platform for both sellers and consumers, enabling businesses to create online stores and reach a broader customer base.",
     image: "/casestudy/cs-image1.png",
     category: "Mobile Development",
-    gridSize: "standard",    
+    gridSize: "standard",
     details: {
       points: [
         {
           number: 1,
           title: "Project Overview",
-          icon: "📋",
-          description: "The ecommerce mobile app offers a seamless platform for both sellers and consumers, enabling businesses to create online stores and reach a broader customer base.",
+          icon: "/casestudy/logos/Overview.svg",
           subPoints: [
+            "The eCommerce mobile app offers a seamless platform for both sellers and consumers, enabling businesses to create online stores and reach a broader customer base.",
             "Sellers can easily upload and manage extensive product catalogs, while consumers can browse, select products, and complete their purchases with just a few taps."
           ],
           expandable: true
@@ -22,25 +23,30 @@ export const caseStudies = [
         {
           number: 2,
           title: "Implementation Approach",
-          icon: "🔄",
-          description: "Leveraging advanced technology, the app intelligently analyzes customer preferences, location data, and order history to recommend nearby stores, streamlining the shopping experience and providing personalized recommendations.",
-          subPoints: null,
+          icon: "/casestudy/logos/Implementation_Approach.svg",
+          subPoints: [
+            "Leveraging advanced technology, the app intelligently analyzes customer preferences, location data, and order history to recommend nearby stores, streamlining the shopping experience and providing personalized recommendations."
+          ],
           expandable: true
         },
         {
           number: 3,
           title: "Development Process",
-          icon: "⚙️",
-          description: "The app's successful launch was made possible through the efforts of a skilled team of developers and technical experts. Comprehensive research and rigorous testing were conducted to ensure the app's functionality, accuracy, and reliability, delivering a high-quality user experience.",
-          subPoints: null,
+          icon: "/casestudy/logos/Development_Process.svg",
+          subPoints: [
+            "The app's successful launch was made possible through the efforts of a skilled team of developers and technical experts.",
+            "Comprehensive research and rigorous testing were conducted to ensure the app’s functionality, accuracy, and reliability, delivering a high-quality user experience."
+          ],
           expandable: true
         },
         {
           number: 4,
           title: "Results and Impact",
-          icon: "📊",
-          description: "By helping users locate nearby stores, the app reduces unnecessary interactions with distant vendors, saving time and effort in the purchase process. This feature has significantly improved customer satisfaction, offering a more efficient and convenient shopping experience.",
-          subPoints: null,
+          icon: "/casestudy/logos/Results_Impact.svg",
+          subPoints: [
+            "By helping users locate nearby stores, the app reduces unnecessary interactions with distant vendors, saving time and effort in the purchase process.",
+            "This feature has significantly improved customer satisfaction, offering a more efficient and convenient shopping experience."
+          ],
           expandable: true
         }
       ]
@@ -50,26 +56,28 @@ export const caseStudies = [
     id: "product-testing-web",
     title: "Product Testing (Web)",
     shortDescription: "Web testing platform",
-    description: "Comprehensive web-based testing platform for QA teams with real-time bug tracking, automated test case management, and detailed performance monitoring.",
+    description:
+      "Comprehensive web-based testing platform for QA teams with real-time bug tracking, automated test case management, and detailed performance monitoring.",
     image: "/casestudy/cs-image2.jpg",
     category: "QA & Testing",
-    gridSize: "standard",    
+    gridSize: "standard",
     details: {
       points: [
         {
           number: 1,
           title: "Client Overview",
-          icon: "👥",
-          description: "Client deals with customized product development to manage idea generation within an organization. The objective of the Client portal is to effectively engage all Global employees to participate in the continuous improvement process by: Client has its Web portal and native android Mobile application Client Mobile application currently has a curated feature and will be enhances in upcoming releases.",
-          subPoints: null,
+          icon: "/casestudy/logos/Overview.svg",
+          subPoints: [
+            "Client deals with customized product development to manage idea generation within an organization. The objective of the Client portal is to effectively engage all Global employees to participate in the continuous improvement process by: Client has its Web portal and native android Mobile application Client Mobile application currently has a curated feature and will be enhances in upcoming releases."
+          ],
           expandable: true
         },
         {
           number: 2,
           title: "Solution Details",
-          icon: "💡",
-          description: "KMDW provided Retail application - Performance testing solution which covered following stages:",
+          icon: "/casestudy/logos/Solution_Details.svg",
           subPoints: [
+            "KMDW provided Retail application - Performance testing solution which covered following stages:",
             "Requirement Gathering - workflows and load model design.",
             "High Level Scenario identification",
             "Test Script - creation",
@@ -89,9 +97,10 @@ export const caseStudies = [
         {
           number: 3,
           title: "Automation Stack",
-          icon: "⚡",
-          description: "Test automation infrastructure and tools",
-          subPoints: null,
+          icon: "/casestudy/logos/Automation_Stack.svg",
+          subPoints: [
+            "Test automation infrastructure and tools"
+          ],
           table: {
             headers: ["Parameter", "Tools/Framework"],
             rows: [
@@ -113,26 +122,28 @@ export const caseStudies = [
     id: "automation-website-mobile",
     title: "Automation for Website and Mobile Application",
     shortDescription: "End-to-end automation testing",
-    description: "End-to-end automation testing suite covering web and mobile platforms with comprehensive integration, supporting multiple frameworks and devices.",
+    description:
+      "End-to-end automation testing suite covering web and mobile platforms with comprehensive integration, supporting multiple frameworks and devices.",
     image: "/casestudy/cs-image3.png",
     category: "Test Automation",
-    gridSize: "tall-bottom",    
+    gridSize: "tall-bottom",
     details: {
       points: [
         {
           number: 1,
           title: "Client Overview",
-          icon: "👥",
-          description: "Client deals with customized product development to manage idea generation within an organization. The objective of the portal is to effectively engage all Global employees to participate in the continuous improvement process by: sharing an innovative idea and implementing the same if helpful for Business Unit. For implemented ideas, projects and best practices, employees earn points which can be re-deemmed after reaching a minimum level. Client has its Website portal and native android Mobile application.",
-          subPoints: null,
+          icon: "/casestudy/logos/Overview.svg",
+          subPoints: [
+            "Client deals with customized product development to manage idea generation within an organization. The objective of the portal is to effectively engage all Global employees to participate in the continuous improvement process by: sharing an innovative idea and implementing the same if helpful for Business Unit. For implemented ideas, projects and best practices, employees earn points which can be re-deemmed after reaching a minimum level. Client has its Website portal and native android Mobile application."
+          ],
           expandable: true
         },
         {
           number: 2,
           title: "Solution Details",
-          icon: "💡",
-          description: "Detailed solution approach for automation testing",
+          icon: "/casestudy/logos/Solution_Details.svg",
           subPoints: [
+            "Detailed solution approach for automation testing",
             "Understanding of the flows in the application.",
             "Detailed Functional Test Cases for Automation.",
             "Automation testing of Website and Mobile."
@@ -142,9 +153,10 @@ export const caseStudies = [
         {
           number: 3,
           title: "Automation Stack",
-          icon: "⚡",
-          description: "Test automation tools and frameworks for web and mobile",
-          subPoints: null,
+          icon: "/casestudy/logos/Automation_Stack.svg",
+          subPoints: [
+            "Test automation tools and frameworks for web and mobile"
+          ],
           table: {
             headers: ["Platform", "Tools/Framework"],
             rows: [
@@ -161,18 +173,19 @@ export const caseStudies = [
     id: "automotive-car-resale",
     title: "Designing a Modern UI/UX for an Automotive Car Resale Platform",
     shortDescription: "Modern automotive marketplace",
-    description: "Modern, intuitive UI/UX design for an automotive marketplace with advanced filtering, AR car preview, and secure transaction handling.",
+    description:
+      "Modern, intuitive UI/UX design for an automotive marketplace with advanced filtering, AR car preview, and secure transaction handling.",
     image: "/casestudy/cs-image4.png",
     category: "UI/UX Design",
-    gridSize: "tall-right",    
+    gridSize: "tall-right",
     details: {
       points: [
         {
           number: 1,
           title: "Introduction",
-          icon: "📋",
-          description: "This case study outlines the process of designing a contemporary, user-friendly UI/UX for an automotive car resale platform.",
+          icon: "/casestudy/logos/Introduction.svg",
           subPoints: [
+            "This case study outlines the process of designing a contemporary, user-friendly UI/UX for an automotive car resale platform.",
             "The primary objective was to create an intuitive interface that allows users to seamlessly list and search for used cars.",
             "Key design priorities included simplicity, streamlined navigation, and an aesthetically pleasing layout to enhance both user engagement and satisfaction."
           ],
@@ -181,8 +194,7 @@ export const caseStudies = [
         {
           number: 2,
           title: "Research and Analysis",
-          icon: "🔍",
-          description: "Comprehensive research conducted to understand user needs and market dynamics",
+          icon: "/casestudy/logos/Research_Analysis.svg",
           subPoints: [
             {
               subTitle: "User Persona Development :",
@@ -202,8 +214,7 @@ export const caseStudies = [
         {
           number: 3,
           title: "Design Approach",
-          icon: "🎨",
-          description: "Strategic design principles applied to create intuitive interface",
+          icon: "/casestudy/logos/Design_Approach.svg",
           subPoints: [
             {
               subTitle: "Simplicity :",
@@ -227,8 +238,7 @@ export const caseStudies = [
         {
           number: 4,
           title: "Structuring Information",
-          icon: "📊",
-          description: "Organized information architecture for optimal user navigation",
+          icon: "/casestudy/logos/Structuring_Information.svg",
           subPoints: [
             {
               subTitle: "Homepage :",
@@ -252,8 +262,7 @@ export const caseStudies = [
         {
           number: 5,
           title: "Visual Design Elements",
-          icon: "🎭",
-          description: "Visual components enhancing platform aesthetics",
+          icon: "/casestudy/logos/Visual_Design_Elements.svg",
           subPoints: [
             {
               subTitle: "Color Scheme :",
@@ -273,8 +282,7 @@ export const caseStudies = [
         {
           number: 6,
           title: "Enhancing User Experience (UX)",
-          icon: "✨",
-          description: "Advanced features improving overall user satisfaction",
+          icon: "/casestudy/logos/Enhancing_User_Experience_(UX).svg",
           subPoints: [
             {
               subTitle: "Search Bar :",
@@ -298,8 +306,7 @@ export const caseStudies = [
         {
           number: 7,
           title: "Prototype & User Testing",
-          icon: "🧪",
-          description: "Testing phase to validate design effectiveness",
+          icon: "/casestudy/logos/Prototype_&_User_Testing.svg",
           subPoints: [
             {
               subTitle: "Wireframes :",
@@ -323,18 +330,19 @@ export const caseStudies = [
     id: "crm-development-aspnet",
     title: "CRM Development in ASP.NET MVC",
     shortDescription: "Enterprise CRM system",
-    description: "Enterprise-level CRM system built with ASP.NET MVC featuring customer relationship management, sales pipeline tracking, and advanced analytics dashboards.",
+    description:
+      "Enterprise-level CRM system built with ASP.NET MVC featuring customer relationship management, sales pipeline tracking, and advanced analytics dashboards.",
     image: "/casestudy/cs-image5.png",
     category: "Backend Development",
-    gridSize: "equal",    
+    gridSize: "equal",
     details: {
       points: [
         {
           number: 1,
           title: "Project Overview",
-          icon: "📋",
-          description: "Title: Development of a Customer Relationship Management (CRM) System",
+          icon: "/casestudy/logos/Overview.svg",
           subPoints: [
+            "Title: Development of a Customer Relationship Management (CRM) System",
             "Duration: 8 months",
             "Team Size: 6 developers, 1 project manager, 1 QA engineer",
             "Technology Stack: ASP.NET MVC, C#, HTML, jQuery, CSS, Bootstrap, MS SQL Server"
@@ -344,8 +352,7 @@ export const caseStudies = [
         {
           number: 2,
           title: "Objectives",
-          icon: "🎯",
-          description: "The goal was to create a comprehensive CRM system that enables businesses to manage customer relationships effectively. Key objectives included:",
+          icon: "/casestudy/logos/Objectives.svg",
           subPoints: [
             {
               subTitle: "Centralized Customer Data :",
@@ -369,8 +376,7 @@ export const caseStudies = [
         {
           number: 3,
           title: "Development Process",
-          icon: "⚙️",
-          description: "Systematic approach to building the CRM system",
+          icon: "/casestudy/logos/Development_Process.svg",
           subPoints: [
             {
               subTitle: "Requirement Analysis :",
@@ -409,8 +415,7 @@ export const caseStudies = [
         {
           number: 4,
           title: "Testing",
-          icon: "🧪",
-          description: "Comprehensive testing approach to ensure system quality",
+          icon: "/casestudy/logos/Testing.svg",
           subPoints: [
             {
               subTitle: "Unit Testing :",
@@ -426,8 +431,7 @@ export const caseStudies = [
         {
           number: 5,
           title: "Deployment",
-          icon: "🚀",
-          description: "System deployment and infrastructure setup",
+          icon: "/casestudy/logos/Deployment.svg",
           subPoints: [
             {
               subTitle: "Server Setup :",
@@ -443,8 +447,7 @@ export const caseStudies = [
         {
           number: 6,
           title: "Challenges Encountered",
-          icon: "⚠️",
-          description: "Obstacles faced during development and solutions",
+          icon: "/casestudy/logos/Challenges_Encountered.svg",
           subPoints: [
             {
               subTitle: "Data Migration :",
@@ -464,8 +467,7 @@ export const caseStudies = [
         {
           number: 7,
           title: "Results",
-          icon: "📊",
-          description: "Outcomes and impact of the CRM system",
+          icon: "/casestudy/logos/Results.svg",
           subPoints: [
             "Successfully delivered the CRM system on schedule, enhancing customer data management by 50%.",
             "Increased sales tracking efficiency, leading to a 25% improvement in sales conversion rates.",
@@ -476,8 +478,7 @@ export const caseStudies = [
         {
           number: 8,
           title: "Conclusion",
-          icon: "✅",
-          description: "Summary and future outlook",
+          icon: "/casestudy/logos/Conclusion.svg",
           subPoints: [
             "The development of the CRM system using ASP.NET MVC, C#, and modern web technologies proved to be a valuable experience.",
             "By focusing on user requirements and employing best practices in software development, the project met its objectives and significantly improved business processes.",
@@ -492,18 +493,19 @@ export const caseStudies = [
     id: "insurance-automation",
     title: "Automation for Insurance Application",
     shortDescription: "Insurance process automation",
-    description: "Automated insurance processing system with policy management, claims handling automation, and customer portal with AI-driven recommendations.",
+    description:
+      "Automated insurance processing system with policy management, claims handling automation, and customer portal with AI-driven recommendations.",
     image: "/casestudy/cs-image6.png",
     category: "Automation",
-    gridSize: "equal",    
+    gridSize: "equal",
     details: {
       points: [
         {
           number: 1,
           title: "Client Overview",
-          icon: "👥",
-          description: "A leading insurance company specializing in sales automation software for the life insurance and annuity sectors.",
+          icon: "/casestudy/logos/Overview.svg",
           subPoints: [
+            "A leading insurance company specializing in sales automation software for the life insurance and annuity sectors.",
             "Their digital tools streamline key processes such as product illustrations, quoting, e-applications, and compliance management.",
             "The company's platforms enable solutions to efficiently manage insurance and retirement products across multiple channels.",
             "Additionally, they promote innovation through a global idea-generation platform, where employees contribute improvements to products and operations, earning redeemable points via a dedicated web portal."
@@ -513,8 +515,7 @@ export const caseStudies = [
         {
           number: 2,
           title: "Solution Details",
-          icon: "💡",
-          description: "Comprehensive automation solution for insurance operations",
+          icon: "/casestudy/logos/Solution_Details.svg",
           subPoints: [
             {
               subTitle: "Framework Implementation :",
@@ -538,9 +539,10 @@ export const caseStudies = [
         {
           number: 3,
           title: "Tech Stack",
-          icon: "🛠️",
-          description: "Technologies and tools used in the solution",
-          subPoints: null,
+          icon: "/casestudy/logos/Tech_Stack.svg",
+          subPoints: [
+            "Technologies and tools used in the solution"
+          ],
           table: {
             headers: ["Component", "Technology"],
             rows: [
@@ -558,8 +560,7 @@ export const caseStudies = [
         {
           number: 4,
           title: "Testing",
-          icon: "🧪",
-          description: "Comprehensive testing approach",
+          icon: "/casestudy/logos/Testing.svg",
           subPoints: [
             "Conducted unit testing on individual components to ensure code quality.",
             "Performed integration testing to ensure seamless interactions between backend and frontend.",
@@ -570,8 +571,7 @@ export const caseStudies = [
         {
           number: 5,
           title: "Deployment",
-          icon: "🚀",
-          description: "Deployment strategy and execution",
+          icon: "/casestudy/logos/Deployment.svg",
           subPoints: [
             "Deployed the application on cloud infrastructure using AWS services.",
             "Configured CI/CD pipelines for automated testing and deployment.",
@@ -582,8 +582,7 @@ export const caseStudies = [
         {
           number: 6,
           title: "Challenges Encountered",
-          icon: "⚠️",
-          description: "Key challenges and solutions",
+          icon: "/casestudy/logos/Challenges_Encountered.svg",
           subPoints: [
             {
               subTitle: "Complex Business Logic :",
@@ -603,8 +602,7 @@ export const caseStudies = [
         {
           number: 7,
           title: "Results",
-          icon: "📊",
-          description: "Project outcomes and achievements",
+          icon: "/casestudy/logos/Results.svg",
           subPoints: [
             "Successfully implemented a comprehensive automation framework covering end-to-end testing scenarios.",
             "Reduced manual testing effort by 70%, leading to faster release cycles.",
@@ -616,8 +614,7 @@ export const caseStudies = [
         {
           number: 8,
           title: "Conclusion",
-          icon: "✅",
-          description: "Final thoughts and future direction",
+          icon: "/casestudy/logos/Conclusion.svg",
           subPoints: [
             "The implementation of Cucumber BDD framework proved invaluable for the insurance automation project.",
             "Clear, maintainable test scenarios facilitated better communication and collaboration across teams.",
@@ -632,4 +629,4 @@ export const caseStudies = [
 ];
 
 export const getAllCaseStudies = () => caseStudies;
-export const getCaseStudyById = (id) => caseStudies.find(study => study.id === id);
+export const getCaseStudyById = (id) => caseStudies.find((study) => study.id === id);

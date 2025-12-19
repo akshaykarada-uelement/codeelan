@@ -47,16 +47,26 @@ export async function generateMetadata({ params }) {
 
 export default function CaseStudyPage({ params }) {
   const awaitedParams = use(params);
-  console.log('CaseStudyPage params:', awaitedParams);
+ 
   const id = awaitedParams.id;
   const decodedId = decodeURIComponent(id);
-  console.log('CaseStudyPage decodedId:', decodedId);
+ 
   const caseStudy = getCaseStudyById(decodedId);
-  console.log('CaseStudyPage caseStudy:', caseStudy);
+ 
 
   if (!caseStudy) {
     notFound();
   }
 
-  return <CaseStudyDetails caseStudy={caseStudy} />;
+  return(
+    <main className="section-block-padding">
+       <div className="inline-block w-full mx-auto">
+        <h3 className="relative text-[#1E273E] section-block-bottom text-center font-bold text-[40px]">
+            Case Studies
+            <span className="block absolute right-[calc(50%-150px)] -translate-1/2 w-11 h-[5px] bg-[#49CF38] "></span>
+        </h3>
+      </div>
+      <CaseStudyDetails caseStudy={caseStudy} />;
+    </main>
+  ) 
 }

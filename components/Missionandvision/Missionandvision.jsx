@@ -3,9 +3,9 @@ export default function Missionandvision() {
   return (
     <main className="min-h-screen container-padding section-block-padding">
       <div className="inline-block w-full mx-auto">
-      <h2 className=" relative text-center text-2xl md:text-3xl font-semibold mb-10">
+      <h2 className="relative text-center text-2xl md:text-3xl font-semibold mb-10">
         Mission and Vision
-        <span className="block absolute right-[calc(50%-150px)] -translate-x-1/2 w-6 h-[5px] bg-green-500 mt-2"></span>
+        <span className="block absolute right-[calc(50%-150px)] -translate-x-1/2 w-6 h-[5px] bg-[#49CF38] mt-2"></span>
       </h2>
       </div>
 
