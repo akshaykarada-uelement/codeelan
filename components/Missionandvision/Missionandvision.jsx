@@ -2,10 +2,12 @@
 export default function Missionandvision() {
   return (
     <main className="min-h-screen container-padding section-block-padding">
+      <div className="inline-block w-full mx-auto">
       <h2 className=" relative text-center text-2xl md:text-3xl font-semibold mb-10">
         Mission and Vision
-        <span className="block absolute right-0 -translate-x-1/2 w-10 h-[5px] bg-green-500  mt-2"></span>
+        <span className="block absolute right-[calc(50%-150px)] -translate-x-1/2 w-6 h-[5px] bg-green-500 mt-2"></span>
       </h2>
+      </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
         
@@ -53,7 +55,7 @@ export default function Missionandvision() {
         </div>
 
         {/* RIGHT IMAGE */}
-        <div className="flex justify-center md:justify-end order-[-1] md:order-none">
+        <div className="flex justify-center xl:justify-center order-[-1] md:order-none">
           <img
             src="/mission/mission1.png"
             alt="Mission and Vision Illustration"

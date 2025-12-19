@@ -26,7 +26,7 @@ export default function Navbar() {
             name: "About Us",
             href: "/aboutus",
             children: [
-                { name: "Case Studies", href: "/case-studies" },
+                { name: "Case Studies", href: "/casestudy" },
                 { name: "Partnership", href: "/partnership" },
                 { name: "Mission & Vision", href: "/missionvision" },
             ],
@@ -60,7 +60,7 @@ export default function Navbar() {
 
     return (
         <nav className="fixed top-0 left-1/2 -translate-x-1/2 w-full bg-white z-[100] shadow-[0_2px_10px_rgba(0,0,0,0.08)]">
-            <div className="max-w-[1440px] mx-auto px-6 h-[103px] flex items-center justify-between">
+            <div className="mx-auto container-padding py-4 flex items-center justify-between">
 
                 {/* Logo */}
                 <Link href="/" className="flex items-center">

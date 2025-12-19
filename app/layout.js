@@ -10,7 +10,7 @@ export default function RootLayout({ children }) {
       </head>
       <body>
         <Navbar />
-        <div className="md:pt-41 pt-35">
+        <div className="xl:pt-20 pt-15">
         {children}
         </div>
         <Footer />

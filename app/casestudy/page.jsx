@@ -10,7 +10,7 @@ export default function CasestudyPage() {
   const caseStudies = getAllCaseStudies();
 
   return (
-    <main className="min-h-screen section-block-bottom px-5 md:px-7">
+    <main className="section-block-padding px-5 md:px-7">
         <h3 className="text-[#1E273E] section-block-bottom text-center font-bold text-[40px]">
             Case Studies
         </h3>

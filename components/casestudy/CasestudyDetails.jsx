@@ -23,7 +23,7 @@ export default function CaseStudyDetails({ caseStudy }) {
   const titleWords = caseStudy.title.split(' ');
 
   return (
-    <div className="bg-white min-h-screen">
+    <div className="bg-white min-h-screen section-block-padding">
       {/* Header */}
       {/* <div className="bg-gradient-to-r from-gray-900 to-gray-800 text-white py-6 px-4 sm:px-6 sticky top-0 z-40">
         <div className="max-w-7xl mx-auto">
@@ -59,14 +59,13 @@ export default function CaseStudyDetails({ caseStudy }) {
                 src={caseStudy.image}
                 alt={caseStudy.title}
                 className="object-cover"
-                priority
               />
             </div>
           </div>
         </div>
 
         {/* Points Section */}
-        <div className="space-y-4">
+        <div className="space-y-4 container-padding">
           {points.map((point, index) => (
             <div
               key={index}

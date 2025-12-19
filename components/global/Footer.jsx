@@ -167,7 +167,7 @@ export default function Footer() {
           </div>
         </div>
       </section>
-      <div className="w-full h-[1px] bg-[#D9D9D933]"></div>
+      <div className="w-full h-[1px] !bg-[#D9D9D920]"></div>
 
       <div className="container-padding py-4 md:py-4 bg-[#1E273E]">
         <div className="flex flex-col md:flex-row items-start md:items-center md:justify-between w-full gap-4">
