@@ -18,20 +18,20 @@ export default function Navbar() {
             name: "Platforms",
             href: "/platforms",
             children: [
-                { name: "Omniscientia", href: "/omniscientia" },
-                { name: "Perfectus", href: "/perfectus" },
+                { name: "Omniscientia", href: "https://omniscientia.codeelan.com/" },
+                { name: "Perfectus", href: "https://perfectus.codeelan.com/" },
             ],
         },
         {
             name: "About Us",
-            href: "/about-us",
+            href: "/aboutus",
             children: [
                 { name: "Case Studies", href: "/case-studies" },
                 { name: "Partnership", href: "/partnership" },
-                { name: "Mission & Vision", href: "/mission-vision" },
+                { name: "Mission & Vision", href: "/missionvision" },
             ],
         },
-        { name: "Contact Us", href: "/contact-us" },
+        { name: "Contact Us", href: "/contact" },
     ];
 
     /* ---------- ACTIVE ROUTE ---------- */
@@ -125,20 +125,35 @@ export default function Navbar() {
                             {item.children && openDropdown === item.name && (
                                 <div className="absolute left-0 top-full pt-4">
                                     <div className="w-[260px] bg-white shadow-[0_10px_30px_rgba(0,0,0,0.15)]">
-                                        {item.children.map((child, index) => (
-                                            <Link
-                                                key={child.name}
-                                                href={child.href}
-                                                className={`block px-5 py-4 text-sm font-medium text-[#1E2A5E] hover:text-[#49CF38]
+                                        {item.children.map((child, index) => {
+                                            const isExternal = child.href.startsWith('http://') || child.href.startsWith('https://');
+                                            const linkClassName = `block px-5 py-4 text-sm font-medium text-[#1E2A5E] hover:text-[#49CF38]
                           ${index !== item.children.length - 1
                                                         ? "border-b border-[#DEDEDE99]"
                                                         : ""
                                                     }
-                        `}
-                                            >
-                                                {child.name}
-                                            </Link>
-                                        ))}
+                        `;
+                                            
+                                            return isExternal ? (
+                                                <a
+                                                    key={child.name}
+                                                    href={child.href}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className={linkClassName}
+                                                >
+                                                    {child.name}
+                                                </a>
+                                            ) : (
+                                                <Link
+                                                    key={child.name}
+                                                    href={child.href}
+                                                    className={linkClassName}
+                                                >
+                                                    {child.name}
+                                                </Link>
+                                            );
+                                        })}
                                     </div>
                                 </div>
                             )}
@@ -204,22 +219,37 @@ export default function Navbar() {
                             {/* Mobile Dropdown */}
                             {item.children && openDropdown === item.name && (
                                 <div className="mt-3 ml-4 flex flex-col gap-3">
-                                    {item.children.map((child) => (
-                                        <Link
-                                            key={child.name}
-                                            href={child.href}
-                                            onClick={() => setMenuOpen(false)}
-                                            className={`text-sm px-3 py-2 rounded-md transition-colors
+                                    {item.children.map((child) => {
+                                        const isExternal = child.href.startsWith('http://') || child.href.startsWith('https://');
+                                        const linkClassName = `text-sm px-3 py-2 rounded-md transition-colors
   ${pathname === child.href
                                                     ? "bg-white text-[#49CF38]"
                                                     : "text-[#1E273E]"
                                                 }
-`}
-
-                                        >
-                                            {child.name}
-                                        </Link>
-                                    ))}
+`;
+                                        
+                                        return isExternal ? (
+                                            <a
+                                                key={child.name}
+                                                href={child.href}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                onClick={() => setMenuOpen(false)}
+                                                className={linkClassName}
+                                            >
+                                                {child.name}
+                                            </a>
+                                        ) : (
+                                            <Link
+                                                key={child.name}
+                                                href={child.href}
+                                                onClick={() => setMenuOpen(false)}
+                                                className={linkClassName}
+                                            >
+                                                {child.name}
+                                            </Link>
+                                        );
+                                    })}
                                 </div>
                             )}
                         </div>
