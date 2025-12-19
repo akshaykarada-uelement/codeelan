@@ -1,9 +1,10 @@
 
 export default function Missionandvision() {
   return (
-    <main className="min-h-screen px-4 md:px-12 py-12">
-      <h2 className="text-center text-2xl md:text-3xl font-semibold mb-10">
+    <main className="min-h-screen container-padding section-block-padding">
+      <h2 className=" relative text-center text-2xl md:text-3xl font-semibold mb-10">
         Mission and Vision
+        <span className="block absolute right-0 -translate-x-1/2 w-10 h-[5px] bg-green-500  mt-2"></span>
       </h2>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
@@ -12,9 +13,9 @@ export default function Missionandvision() {
         <div className="flex flex-col gap-10">
           
           {/* Mission */}
-          <div className="bg-white shadow-sm border p-6">
+          <div className="bg-white shadow-md p-17">
             <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
-              <span>🚀</span> Mission
+              <span><img src="/mission/mission2.svg" alt="" /></span> Mission
             </h3>
             <p className="text-sm leading-relaxed text-gray-600">
               At CodeElan, we aim to empower businesses through innovative
@@ -32,9 +33,9 @@ export default function Missionandvision() {
           </div>
 
           {/* Vision */}
-          <div className="bg-white shadow-sm border p-6">
+          <div className="bg-white shadow-md p-17">
             <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
-              <span>🧪</span> Vision
+              <span><img src="/mission/mission3.svg" alt="" /></span> Vision
             </h3>
             <p className="text-sm leading-relaxed text-gray-600">
               To be a global leader in AI-driven digital transformation,

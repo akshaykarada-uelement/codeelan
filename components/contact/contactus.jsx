@@ -15,7 +15,7 @@ const serviceOptions = [
 
 export default function Contactus() {
     return (
-        <main className="min-h-screen px-4 md:px-12 py-12">
+        <main className="min-h-screen container-padding section-block-padding">
 
             {/* CONTACT FORM */}
             <div className="max-w-3xl mx-auto">
@@ -24,7 +24,7 @@ export default function Contactus() {
                     <span className="block w-10 h-[3px] bg-green-500 mx-auto mt-2"></span>
                 </h1>
 
-                <div className="bg-white shadow-md p-6 md:p-8 rounded-sm">
+                <div className="bg-white shadow-xl p-6 md:py-18 md:px-40">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
                             <label className="block text-sm mb-1">Your Name *</label>
@@ -83,7 +83,7 @@ export default function Contactus() {
             </div>
 
             {/* FIND US HERE */}
-            <div className="mt-16 text-center">
+            <div className="m-16 text-center">
                 <h2 className="text-xl font-semibold mb-6">
                     Find us here
                     <span className="block w-8 h-[3px] bg-green-500 mx-auto mt-2"></span>
