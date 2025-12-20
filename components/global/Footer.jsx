@@ -94,7 +94,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <a
-                    href="/code-of-conduct"
+                    href="/codeofconductpage"
                     className="text-white hover:text-blue-600"
                   >
                     Code of Conduct

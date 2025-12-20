@@ -19,34 +19,34 @@ export default function Contactus() {
 
             {/* CONTACT FORM */}
             <div className="max-w-3xl mx-auto">
-                <h1 className="text-3xl font-semibold text-center mb-8">
+                <h1 className="fl2 text-center mb-8">
                     Contact Us
-                    <span className="block w-10 h-[3px] bg-green-500 mx-auto mt-2"></span>
+                    <span className="block absolute right-[calc(50%-120px)] -translate-x-1/2 w-6 h-[5px] bg-[#49CF38] "></span>
                 </h1>
 
                 <div className="bg-white shadow-xl p-6 md:py-18 md:px-40">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
-                            <label className="block text-sm mb-1">Your Name *</label>
+                            <label className="block fl7 mb-1">Your Name *</label>
                             <input
                                 type="text"
                                 placeholder="Ex. Amy West"
-                                className="w-full bg-[#f5f5f5] p-3 outline-none"
+                                className="w-full bg-[#f5f5f5] p-3 outline-none fl8"
                             />
                         </div>
 
                         <div>
-                            <label className="block text-sm mb-1">Email Address *</label>
+                            <label className="block fl7 mb-1">Email Address *</label>
                             <input
                                 type="email"
                                 placeholder="example@gmail.com"
-                                className="w-full bg-[#f5f5f5] p-3 outline-none"
+                                className="w-full bg-[#f5f5f5] p-3 outline-none fl8"
                             />
                         </div>
                     </div>
 
                     <div className="mt-6">
-                        <label className="block text-sm mb-1">
+                        <label className="block fl7 mb-1">
                             Services/Technologies interested in *
                         </label>
 
@@ -59,24 +59,24 @@ export default function Contactus() {
 
 
                     <div className="mt-6">
-                        <label className="block text-sm mb-1">Subject *</label>
+                        <label className="block fl7 mb-1">Subject *</label>
                         <input
                             type="text"
                             placeholder="Subject"
-                            className="w-full bg-[#f5f5f5] p-3 outline-none"
+                            className="w-full bg-[#f5f5f5] p-3 outline-none fl8"
                         />
                     </div>
 
                     <div className="mt-6">
-                        <label className="block text-sm mb-1">Comments *</label>
+                        <label className="block fl7 mb-1">Comments *</label>
                         <textarea
                             placeholder="Message"
                             rows={4}
-                            className="w-full bg-[#f5f5f5] p-3 outline-none resize-none"
+                            className="w-full bg-[#f5f5f5] p-3 outline-none fl8 resize-none"
                         />
                     </div>
 
-                    <button className="mt-6 w-full bg-green-500 text-white py-3 font-medium">
+                    <button className="mt-6 w-full bg-green-500 text-[#1E273E] py-3 fl7">
                         Send
                     </button>
                 </div>
@@ -84,25 +84,25 @@ export default function Contactus() {
 
             {/* FIND US HERE */}
             <div className="m-16 text-center">
-                <h2 className="text-xl font-semibold mb-6">
+                <h2 className="fl2 mb-6">
                     Find us here
-                    <span className="block w-8 h-[3px] bg-green-500 mx-auto mt-2"></span>
+                    <span className="block absolute right-[calc(50%-130px)] -translate-x-1/2 w-6 h-[5px] bg-[#49CF38] "></span>
                 </h2>
 
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-4xl mx-auto">
                     <div>
-                        <p className="font-medium">Phone</p>
-                        <p className="text-sm text-gray-600">(820) 865 - 0598</p>
+                        <p className="fl4">Phone</p>
+                        <p className="fl7">(820) 865 - 0598</p>
                     </div>
 
                     <div>
-                        <p className="font-medium">Email</p>
-                        <p className="text-sm text-gray-600">info@codeelan.com</p>
+                        <p className="fl4">Email</p>
+                        <p className="fl7">info@codeelan.com</p>
                     </div>
 
                     <div>
-                        <p className="font-medium">Location</p>
-                        <p className="text-sm text-gray-600">India | USA</p>
+                        <p className="fl4">Location</p>
+                        <p className="fl7">India | USA</p>
                     </div>
                 </div>
             </div>

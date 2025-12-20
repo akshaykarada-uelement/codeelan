@@ -142,27 +142,35 @@ body {
   }
 
   .fl1 {
-    @apply text-[22px] md:text-[32px] font-poppins-semibold text-[#1A2B6D];
+    @apply text-[36px] md:text-[48px] font-poppins-semibold text-[#FFFFFF];
   }
 
   .fl2 {
-    @apply text-[16px] md:text-[24px] font-poppins-medium text-[#1A2B6D]
+    @apply text-[28px] md:text-[40px] font-poppins-medium text-[#323232];
   }
 
   .fl3 {
-    @apply text-[14px] md:text-[18px] font-poppins-medium;
+    @apply text-[20px] md:text-[30px] font-poppins-medium   text-[#323232];
   }
 
-  .fl4 {
-    @apply text-[12px] md:text-[16px] font-poppins-light text-[#1A2B6D]
+   .fl4 {
+    @apply text-[16px] md:text-[24px] font-poppins-medium   text-[#323232];
   }
 
-  .fl5 {
-    @apply text-[12px] md:text-[20px] font-poppins-semibold text-[#1A2B6D]
+    .fl5 {
+    @apply text-[10px] md:text-[16px] font-poppins-semibold text-[#323232];
   }
 
   .fl6 {
-    @apply text-[10px] md:text-[14px] font-poppins-light text-[#1A2B6D]
+    @apply text-[16px] md:text-[22px] font-poppins text-[#323232];
+  }
+
+   .fl7 {
+    @apply text-[12px] md:text-[16px] font-poppins text-[#323232];
+  }
+
+  .fl8 {
+    @apply text-[10px] md:text-[14px] font-poppins-light text-[#323232];
   }
 
   .red-btn {
@@ -269,4 +277,163 @@ body {
   background-color: #ffffff !important;
   color: #39d52d !important;
   font-weight: 500;
+}/* =======================
+   CENTER CARD
+======================= */
+.center-card {
+  width: 360px;
+  min-height: 460px;
+  background: #fff;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+  padding: 40px 24px;
+  text-align: center;
+}
+
+.center-card img {
+  height: 140px;
+  margin: 0 auto;
+}
+
+.center-card p {
+  margin-top: 24px;
+  font-size: 14px;
+  color: #555;
+  line-height: 1.7;
+}
+
+/* =======================
+   SIDE CARDS
+======================= */
+.side-card {
+  width: 240px;
+  height: 300px;
+  background: #fff;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 60px;
+  z-index: 1;
+}
+
+.side-card img {
+  height: 140px;
+}
+
+/* Desktop spacing */
+.side-card.left {
+  left: calc(50% - 460px);
+}
+
+.side-card.right {
+  right: calc(50% - 460px);
+}
+
+/* =======================
+   WRAPPER + GREY PANEL
+======================= */
+.carousel-wrapper {
+  position: relative;
+  height: 620px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 45%;
+  max-width: 1100px;
+  height: 600px;
+  background: #f2f2f2;
+  z-index: 0;
+}
+
+/* =======================
+   NAVIGATION
+======================= */
+.carousel-nav-wrapper {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+}
+
+.carousel-nav-wrapper button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.carousel-nav-wrapper img {
+  width: 34px;
+  height: 34px;
+}
+
+/* =======================
+   TABLET (≤ 1024px)
+======================= */
+@media (max-width: 1024px) {
+  .center-card {
+    width: 320px;
+    min-height: 420px;
+  }
+
+  .side-card {
+    width: 200px;
+    height: 260px;
+    top: 70px;
+  }
+
+  .side-card.left {
+    left: calc(50% - 380px);
+  }
+
+  .side-card.right {
+    right: calc(50% - 380px);
+  }
+
+  .carousel-wrapper::before {
+    width: 60%;
+    height: 520px;
+  }
+}
+
+/* =======================
+   MOBILE (≤ 768px)
+======================= */
+@media (max-width: 768px) {
+  .side-card {
+    display: none;
+  }
+
+  .center-card {
+    width: 90%;
+    min-height: auto;
+    padding: 32px 20px;
+  }
+
+  .center-card img {
+    height: 100px;
+  }
+
+  .carousel-wrapper {
+    height: auto;
+    padding: 40px 0;
+  }
+
+  .carousel-wrapper::before {
+    width: 92%;
+    height: 100%;
+  }
+
+  .carousel-nav-wrapper {
+    margin-top: 24px;
+  }
 }

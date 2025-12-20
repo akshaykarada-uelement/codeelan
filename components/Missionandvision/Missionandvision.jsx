@@ -3,9 +3,9 @@ export default function Missionandvision() {
   return (
     <main className="min-h-screen container-padding section-block-padding">
       <div className="inline-block w-full mx-auto">
-      <h2 className="relative text-center text-2xl md:text-3xl font-semibold mb-10">
+      <h2 className="relative text-center fl2 mb-10">
         Mission and Vision
-        <span className="block absolute right-[calc(50%-150px)] -translate-x-1/2 w-6 h-[5px] bg-[#49CF38] mt-2"></span>
+        <span className="block absolute right-[calc(50%-200px)] -translate-x-1/2 w-6 h-[5px] bg-[#49CF38] "></span>
       </h2>
       </div>
 
@@ -16,10 +16,10 @@ export default function Missionandvision() {
           
           {/* Mission */}
           <div className="bg-white shadow-md p-17">
-            <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
+            <h3 className="fl3 mb-4 flex items-center gap-2">
               <span><img src="/mission/mission2.svg" alt="" /></span> Mission
             </h3>
-            <p className="text-sm leading-relaxed text-gray-600">
+            <p className="fl7">
               At CodeElan, we aim to empower businesses through innovative
               technology solutions that solve complex problems and drive
               digital transformation. By adopting an “Adopt-Build-Operate”
@@ -36,10 +36,10 @@ export default function Missionandvision() {
 
           {/* Vision */}
           <div className="bg-white shadow-md p-17">
-            <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
+            <h3 className="fl3 mb-4 flex items-center gap-2">
               <span><img src="/mission/mission3.svg" alt="" /></span> Vision
             </h3>
-            <p className="text-sm leading-relaxed text-gray-600">
+            <p className="fl7">
               To be a global leader in AI-driven digital transformation,
               empowering businesses with cutting-edge technology solutions that
               enhance efficiency, scalability, and innovation. Through our
