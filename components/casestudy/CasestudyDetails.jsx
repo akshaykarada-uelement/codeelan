@@ -24,8 +24,8 @@ export default function CaseStudyDetails({ caseStudy }) {
 
   return (
     <div className="min-h-screen">
-      <div className="flex items-center w-full gap-8 xl:gap-10 mb-10 bg-[#F0F0F0]">
-        <div className="flex w-1/2 flex-col justify-center container-padding ">
+      <div className="flex md:flex-row flex-col items-center md:justify-center w-full gap-8 xl:gap-10 mb-8 md:mb-10 bg-[#F0F0F0]">
+        <div className="flex md:w-1/2 w-full flex-col justify-center container-padding py-4 md:py-0">
           <div className="flex gap-3 mb-5 md:mb-10">
             <span className="w-1 h-10 bg-[#49CF38] transform rotate-[15deg]" />
             <h1 className="fl3">{caseStudy.title}</h1>
@@ -33,7 +33,7 @@ export default function CaseStudyDetails({ caseStudy }) {
           <p className="fl7">{caseStudy.description}</p>
         </div>
 
-        <div className="flex w-1/2 h-auto items-center justify-center overflow-hidden">
+        <div className="flex md:w-1/2 w-full h-auto items-center justify-center overflow-hidden">
           <img
             src={caseStudy.detailimage}
             alt={caseStudy.title}
@@ -42,7 +42,7 @@ export default function CaseStudyDetails({ caseStudy }) {
         </div>
       </div>
 
-      <div className="space-y-10 container-padding">
+      <div className="space-y-8 md:space-y-10 px-5 md:px-18 2xl:px-18 3xl:px-22">
         {points.map((point, index) => {
           const firstSubPoint =
             point.subPoints && point.subPoints.length > 0
@@ -76,22 +76,22 @@ export default function CaseStudyDetails({ caseStudy }) {
               key={index}
               className="w-full flex justify-center gap-5 xl:gap-10 transition-all duration-300"
             >
-              <div className="text-[75px] md:text-[100px] font-poppins-medium text-[#1E273E0D] w-[15vw]">
+              <div className="text-[50px] md:text-[100px] font-poppins-medium text-[#1E273E0D] w-[15vw] ">
                 {String(point.number).padStart(2, "0")}.
               </div>
 
-              <div className="bg-[#F0F0F0] overflow-hidden transition-all duration-300 p-5 sm:p-6 xl:p-10 w-[90vw]">
+              <div className="bg-[#F0F0F0] overflow-hidden transition-all duration-300 p-5 sm:p-6 xl:p-10 md:w-[90vw]">
                 <button
                   onClick={() => handleTogglePoint(index)}
                   className={
                     "flex items-center transition cursor-pointer w-full"
                   }
                 >
-                  <div className="flex items-center gap-4 sm:gap-6 xl:gap-10 flex-1 text-left">
+                  <div className="flex md:flex-row flex-col md:items-center gap-4 sm:gap-6 xl:gap-10 flex-1 text-left">
                     <img
                       src={point.icon}
                       alt={point.title}
-                      className="size-15"
+                      className="size-8 md:size-15"
                     />
                     <div className="flex flex-col gap-3 sm:gap-4 flex-1">
                       <h3 className="fl4">{point.title}</h3>
@@ -143,7 +143,7 @@ export default function CaseStudyDetails({ caseStudy }) {
                       ) : null}
                     </div>
                     <span
-                      className={`flex justify-end text-[20px] font-bold text-gray-600 hover:text-green-500 transition-transform duration-300 flex-shrink-0 ml-2 ${
+                      className={`hidden md:block flex justify-end text-[20px] font-bold text-gray-600 hover:text-green-500 transition-transform duration-300 flex-shrink-0 ml-2 ${
                         expandedPoint === index ? "rotate-45" : ""
                       }`}
                       aria-hidden="true"
