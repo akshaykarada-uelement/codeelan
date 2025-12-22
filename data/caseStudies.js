@@ -70,7 +70,8 @@ export const caseStudies = [
           title: "Client Overview",
           icon: "/casestudy/logos/Overview.svg",
           subPoints: [
-            "Client deals with customized product development to manage idea generation within an organization. The objective of the Client portal is to effectively engage all Global employees to participate in the continuous improvement process by: Client has its Web portal and native android Mobile application Client Mobile application currently has a curated feature and will be enhances in upcoming releases."
+            "Client deals with customized product development to manage idea generation within an organization.",
+            "The objective of​ the Client portal is to effectively engage all Global employees to participate in the continuous improvement process​ by: Client has its Web portal and native android Mobile​ application Client Mobile application currently has a curtailed feature and will be enhances in upcoming releases."
           ],
           expandable: true
         },
@@ -86,7 +87,7 @@ export const caseStudies = [
             "Test execution as below:",
             "Smoke or Baseline testing.",
             "100% or le level load testing.",
-            "Endurance testing ( 0.5 + )",
+            "Endurance testing ( 0.5 * )",
             "Create detailed analysis report for each test execution",
             "Create comparison and test closure report.",
             "Mobile device level performance metrics as below:",
@@ -137,7 +138,10 @@ export const caseStudies = [
           title: "Client Overview",
           icon: "/casestudy/logos/Overview.svg",
           subPoints: [
-            "Client deals with customized product development to manage idea generation within an organization. The objective of the portal is to effectively engage all Global employees to participate in the continuous improvement process by: sharing an innovative idea and implementing the same if helpful for Business Unit. For implemented ideas, projects and best practices, employees earn points which can be re-deemmed after reaching a minimum level. Client has its Website portal and native android Mobile application."
+            "Client deals with customized product development to manage Idea generation within an organization.",
+            "The objective of the portal is to effectively engage all Global employees to participate in the continuous improvement process by sharing an innovative idea and implementing the same if helpful for Business Unit.",
+            "For implemented ideas, projects and best practices, employees earn points which can be re-deemed after reaching a minimum level.",
+            "Client has its Website portal and native android Mobile application."
           ],
           expandable: true
         },
@@ -146,7 +150,7 @@ export const caseStudies = [
           title: "Solution Details",
           icon: "/casestudy/logos/Solution_Details.svg",
           subPoints: [
-            "Detailed solution approach for automation testing",
+          
             "Understanding of the flows in the application.",
             "Detailed Functional Test Cases for Automation.",
             "Automation testing of Website and Mobile."
@@ -326,6 +330,17 @@ export const caseStudies = [
             }
           ],
           expandable: true
+        },
+        {
+          number: 8,
+          title: "Conclusion",
+          icon: "/casestudy/logos/Conclusion.svg",
+          subPoints: [
+            "Adopting a user-centric approach and leveraging modern UI/UX design principles has resulted in a highly engaging and intuitive automotive car resale platform.",
+            "The blend of a visually appealing interface, efficient search functionality, and user-friendly design has led to enhanced satisfaction, improved user engagement, and higher conversion rates.",
+            "Continuous monitoring and feedback will guide future iterations and improvements to the platform’s design."
+          ],
+          expandable: true
         }
       ]
     }
@@ -359,6 +374,10 @@ export const caseStudies = [
           title: "Objectives",
           icon: "/casestudy/logos/Objectives.svg",
           subPoints: [
+            {
+              subTitle: "",
+              text: "The goal was to create a comprehensive CRM system that enables businesses to manage customer relationships effectively. Key objectives included:",
+            },
             {
               subTitle: "Centralized Customer Data :",
               text: "To store and manage customer interactions in one platform."
@@ -474,8 +493,7 @@ export const caseStudies = [
           title: "Results",
           icon: "/casestudy/logos/Results.svg",
           subPoints: [
-            "Successfully delivered the CRM system on schedule, enhancing customer data management by 50%.",
-            "Increased sales tracking efficiency, leading to a 25% improvement in sales conversion rates.",
+            "Successfully delivered the CRM system on schedule, enhancing customer data management by 50%.Increased sales tracking efficiency, leading to a 25% improvement in sales conversion rates.",
             "Received positive user feedback regarding the interface and overall functionality, resulting in a smooth transition from legacy systems."
           ],
           expandable: true
@@ -563,72 +581,72 @@ export const caseStudies = [
           },
           expandable: true
         },
-        {
-          number: 4,
-          title: "Testing",
-          icon: "/casestudy/logos/Testing.svg",
-          subPoints: [
-            "Conducted unit testing on individual components to ensure code quality.",
-            "Performed integration testing to ensure seamless interactions between backend and frontend.",
-            "Engaged users in UAT to gather feedback and validate features."
-          ],
-          expandable: true
-        },
-        {
-          number: 5,
-          title: "Deployment",
-          icon: "/casestudy/logos/Deployment.svg",
-          subPoints: [
-            "Deployed the application on cloud infrastructure using AWS services.",
-            "Configured CI/CD pipelines for automated testing and deployment.",
-            "Established monitoring and logging for production support."
-          ],
-          expandable: true
-        },
-        {
-          number: 6,
-          title: "Challenges Encountered",
-          icon: "/casestudy/logos/Challenges_Encountered.svg",
-          subPoints: [
-            {
-              subTitle: "Complex Business Logic :",
-              text: "Insurance workflows are intricate; breaking them down into clear, testable scenarios required deep domain knowledge and collaboration."
-            },
-            {
-              subTitle: "Maintenance & Scalability :",
-              text: "As test cases grew, ensuring maintainability was crucial; implemented best practices like Page Object Model for better code organization."
-            },
-            {
-              subTitle: "Tool Integration :",
-              text: "Ensuring smooth integration with CI/CD pipelines required careful configuration and troubleshooting."
-            }
-          ],
-          expandable: true
-        },
-        {
-          number: 7,
-          title: "Results",
-          icon: "/casestudy/logos/Results.svg",
-          subPoints: [
-            "Successfully implemented a comprehensive automation framework covering end-to-end testing scenarios.",
-            "Reduced manual testing effort by 70%, leading to faster release cycles.",
-            "Improved test coverage to 95%, ensuring higher code quality.",
-            "Enabled continuous integration and deployment, reducing time-to-market for new features."
-          ],
-          expandable: true
-        },
-        {
-          number: 8,
-          title: "Conclusion",
-          icon: "/casestudy/logos/Conclusion.svg",
-          subPoints: [
-            "The implementation of Cucumber BDD framework proved invaluable for the insurance automation project.",
-            "Clear, maintainable test scenarios facilitated better communication and collaboration across teams.",
-            "The solution set a foundation for continuous improvement and innovation in the testing process.",
-            "Future enhancements may include advanced AI-driven anomaly detection and predictive testing."
-          ],
-          expandable: true
-        }
+        // {
+        //   number: 4,
+        //   title: "Testing",
+        //   icon: "/casestudy/logos/Testing.svg",
+        //   subPoints: [
+        //     "Conducted unit testing on individual components to ensure code quality.",
+        //     "Performed integration testing to ensure seamless interactions between backend and frontend.",
+        //     "Engaged users in UAT to gather feedback and validate features."
+        //   ],
+        //   expandable: true
+        // },
+        // {
+        //   number: 5,
+        //   title: "Deployment",
+        //   icon: "/casestudy/logos/Deployment.svg",
+        //   subPoints: [
+        //     "Deployed the application on cloud infrastructure using AWS services.",
+        //     "Configured CI/CD pipelines for automated testing and deployment.",
+        //     "Established monitoring and logging for production support."
+        //   ],
+        //   expandable: true
+        // },
+        // {
+        //   number: 6,
+        //   title: "Challenges Encountered",
+        //   icon: "/casestudy/logos/Challenges_Encountered.svg",
+        //   subPoints: [
+        //     {
+        //       subTitle: "Complex Business Logic :",
+        //       text: "Insurance workflows are intricate; breaking them down into clear, testable scenarios required deep domain knowledge and collaboration."
+        //     },
+        //     {
+        //       subTitle: "Maintenance & Scalability :",
+        //       text: "As test cases grew, ensuring maintainability was crucial; implemented best practices like Page Object Model for better code organization."
+        //     },
+        //     {
+        //       subTitle: "Tool Integration :",
+        //       text: "Ensuring smooth integration with CI/CD pipelines required careful configuration and troubleshooting."
+        //     }
+        //   ],
+        //   expandable: true
+        // },
+        // {
+        //   number: 7,
+        //   title: "Results",
+        //   icon: "/casestudy/logos/Results.svg",
+        //   subPoints: [
+        //     "Successfully implemented a comprehensive automation framework covering end-to-end testing scenarios.",
+        //     "Reduced manual testing effort by 70%, leading to faster release cycles.",
+        //     "Improved test coverage to 95%, ensuring higher code quality.",
+        //     "Enabled continuous integration and deployment, reducing time-to-market for new features."
+        //   ],
+        //   expandable: true
+        // },
+        // {
+        //   number: 8,
+        //   title: "Conclusion",
+        //   icon: "/casestudy/logos/Conclusion.svg",
+        //   subPoints: [
+        //     "The implementation of Cucumber BDD framework proved invaluable for the insurance automation project.",
+        //     "Clear, maintainable test scenarios facilitated better communication and collaboration across teams.",
+        //     "The solution set a foundation for continuous improvement and innovation in the testing process.",
+        //     "Future enhancements may include advanced AI-driven anomaly detection and predictive testing."
+        //   ],
+        //   expandable: true
+        // }
       ]
     }
   }
