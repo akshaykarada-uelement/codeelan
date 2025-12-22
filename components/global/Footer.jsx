@@ -27,7 +27,7 @@ export default function Footer() {
                   />
                 </Link>
               </div>
-              <div className="text-white">
+              <div className="fl8 !text-white">
                 <p>
                   Powered by cutting-edge neural networks and sophisticated
                   image processing techniques,
@@ -35,7 +35,7 @@ export default function Footer() {
               </div>
             </div>
             <div className="flex flex-col gap-6 md:gap-10 md:hidden">
-              <h4 className="text-white ">Platforms</h4>
+              <h4 className="fl9">Platforms</h4>
               <ul className="space-y-2 md:min-w-[150px]">
                 <li>
                   <Image
@@ -74,12 +74,12 @@ export default function Footer() {
           </div>
           <div className="flex flex-row justify-around gap-6 xl:gap-40">
             <div className="flex flex-col gap-6 md:gap-10">
-              <h4 className="text-white text-5">Important Links</h4>
+              <h4 className="fl9">Important Links</h4>
               <ul className="space-y-2 md:min-w-[150px] min-w-[122px]">
                 <li>
                   <a
                     href="/about-us"
-                    className="text-white hover:text-blue-600"
+                    className="fl8 !text-white hover:text-blue-600"
                   >
                     About Us
                   </a>
@@ -87,7 +87,7 @@ export default function Footer() {
                 <li>
                   <a
                     href="/privacy-policy"
-                    className="text-white hover:text-blue-600"
+                    className="fl8 !text-white hover:text-blue-600"
                   >
                     Privacy Policy
                   </a>
@@ -95,7 +95,7 @@ export default function Footer() {
                 <li>
                   <a
                     href="/codeofconductpage"
-                    className="text-white hover:text-blue-600"
+                    className="fl8 !text-white hover:text-blue-600"
                   >
                     Code of Conduct
                   </a>
@@ -103,7 +103,7 @@ export default function Footer() {
               </ul>
             </div>
             <div className="hidden md:flex md:flex-col gap-6 md:gap-10">
-              <h4 className="text-white">Platforms</h4>
+              <h4 className="fl9">Platforms</h4>
               <ul className="flex flex-col gap-2 md:min-w-[150px]">
                 <li>
                   <Image
@@ -140,7 +140,7 @@ export default function Footer() {
               </ul>
             </div>
             <div className="flex flex-col gap-6 md:gap-10">
-              <h4 className="text-white ">Contact Details</h4>
+              <h4 className="fl9">Contact Details</h4>
               <ul className="space-y-2 md:min-w-[150px] min-w-[120px]">
                 <li className="flex gap-2 items-center">
                   <img
@@ -148,7 +148,7 @@ export default function Footer() {
                     alt="mobile"
                     className="size-6"
                   />
-                  <a href="" className="text-white">
+                  <a href="" className="fl8 !text-white">
                     (820) 865-0598
                   </a>
                 </li>
@@ -158,7 +158,7 @@ export default function Footer() {
                     alt="email"
                     className="w-4.5 h-3.5"
                   />
-                  <a href="mailto:info@codeelan.com" className="text-white">
+                  <a href="mailto:info@codeelan.com" className="fl8 !text-white">
                     info@codeelan.com
                   </a>
                 </li>
@@ -171,11 +171,11 @@ export default function Footer() {
 
       <div className="container-padding py-4 md:py-4 bg-[#1E273E]">
         <div className="flex flex-col md:flex-row items-start md:items-center md:justify-between w-full gap-4">
-          <p className="text-white">
+          <p className="fl8 !text-white">
             2025 © All rights reserved by CodeElan Technologies.
           </p>
           <div className="flex items-center gap-6">
-            <a href="/terms" className="text-white">
+            <a href="/terms" className="fl8 !text-white">
               Social Platforms
             </a>
             <div className="bg-[#D9D9D933] w-20 h-0.5"></div>
