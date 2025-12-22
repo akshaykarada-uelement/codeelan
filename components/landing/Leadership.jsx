@@ -36,7 +36,7 @@ export default function Leadership() {
           <div className="inline-block w-full mx-auto">
             <h3 className="relative fl2 title-content-gap text-center">
               Leadership Team
-              <span className="block absolute md:right-[calc(50%-200px)] right-[calc(50%-110px)]  -translate-1/2 w-8 md:w-11 h-[5px] bg-[#49CF38] "></span>
+              <span className="block absolute md:right-[calc(50%-200px)] right-[calc(50%-140px)]  -translate-1/2 w-8 md:w-11 h-[5px] bg-[#49CF38] "></span>
             </h3>
           </div>
           <p className="fl7 text-center w-[80vw]">

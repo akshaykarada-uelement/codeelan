@@ -15,7 +15,7 @@ export default function LeadershipCard({
             src={leader.image}
             alt={leader.name}
             fill
-            className="object-cover"
+            className="object-cover p-4"
             priority
           />
         </div>
