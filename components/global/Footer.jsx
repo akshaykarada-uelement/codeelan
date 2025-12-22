@@ -98,7 +98,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link
-                    href="/privacypolicy"
+                    href="/partnership"
                     className="fl8 !text-white hover:text-blue-600"
                   >
                     Partnership
@@ -106,7 +106,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link
-                    href="/codeofconductpage"
+                    href="/missionvision"
                     className="fl8 !text-white hover:text-blue-600"
                   >
                     Mission and Vision
@@ -187,12 +187,12 @@ export default function Footer() {
             2025 © All rights reserved by CodeElan Technologies.
           </p>
           <div className="flex items-center gap-6">
-            <a href="/terms" className="fl8 !text-white">
+            <Link href="/privacypolicy" className="fl8 !text-white">
               Privacy Policy
-            </a>
-            <a href="/terms" className="fl8 !text-white">
+            </Link>
+            <Link href="/codeofconductpage" className="fl8 !text-white">
              Code of Conduct
-            </a>
+            </Link>
           </div>
         </div>
       </div>

@@ -23,6 +23,8 @@ const partners = [
 ];
 
 export default function Partnerships() {
+    const [isPrevHovered, setIsPrevHovered] = useState(false);
+    const [isNextHovered, setIsNextHovered] = useState(false);
     const [active, setActive] = useState(0);
     const touchStart = useRef(null);
 
@@ -50,35 +52,50 @@ export default function Partnerships() {
                 <span className="block absolute right-[calc(50%-140px)] -translate-x-1/2 w-6 h-[5px] bg-[#49CF38] "></span>
             </h2>
 
-           
+
             <div className="carousel-wrapper">
                 <div className="relative flex justify-center z-0">
 
-                   
+
                     <div className="side-card left ">
                         <img src={partners[prevIndex].logo} alt="" />
                     </div>
 
-                    
+
                     <div className="center-card fl7">
                         <img src={partners[active].logo} alt="" />
                         <p>{partners[active].content}</p>
                     </div>
 
-                   
+
                     <div className="side-card right">
                         <img src={partners[nextIndex].logo} alt="" />
                     </div>
                 </div>
             </div>
 
-           
+
             <div className="carousel-nav-wrapper">
-                <button onClick={prev}>
-                    <img src="/icons/prev.svg" alt="Previous" />
+                <button
+                    onClick={prev}
+                    onMouseEnter={() => setIsPrevHovered(true)}
+                    onMouseLeave={() => setIsPrevHovered(false)}
+                >
+                    <img
+                        src={isPrevHovered ? "/icons/prev1.svg" : "/icons/prev.svg"}
+                        alt="Previous"
+                    />
                 </button>
-                <button onClick={next}>
-                    <img src="/icons/next.svg" alt="Next" />
+
+                <button
+                    onClick={next}
+                    onMouseEnter={() => setIsNextHovered(true)}
+                    onMouseLeave={() => setIsNextHovered(false)}
+                >
+                    <img
+                        src={isNextHovered ? "/icons/next1.svg" : "/icons/next.svg"}
+                        alt="Next"
+                    />
                 </button>
             </div>
         </section>
