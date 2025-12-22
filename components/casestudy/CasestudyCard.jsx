@@ -22,7 +22,7 @@ export default function CasestudyCard({ caseStudy }) {
         </div>
 
         <div className="flex items-center justify-between p-4 md:p-5">
-          <h3 className="text-[#323232] group-hover:text-[#49CF38] font-bold text-base md:text-lg ">
+          <h3 className="group-hover:text-[#49CF38]  fl4">
             {caseStudy.title}
           </h3>
           <div
