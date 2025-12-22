@@ -33,6 +33,18 @@ export default function Footer() {
                   image processing techniques,
                 </p>
               </div>
+               <div className="flex gap-5">
+              <img
+                src="/landing/linkedin.png"
+                alt="linkedin"
+                className="size-6"
+              />
+              <img
+                src="/landing/facebook.png"
+                alt="facebook"
+                className="size-6"
+              />
+            </div>
             </div>
             <div className="flex flex-col gap-6 md:gap-10 md:hidden">
               <h4 className="fl9">Platforms</h4>
@@ -74,31 +86,31 @@ export default function Footer() {
           </div>
           <div className="flex flex-row xl:justify-around gap-6 xl:gap-12 w-[70vw]">
             <div className="flex flex-col gap-6 md:gap-10">
-              <h4 className="fl9">Important Links</h4>
+              <h4 className="fl9">About Us</h4>
               <ul className="space-y-2 ">
                 <li>
-                  <a
-                    href="/about-us"
+                  <Link
+                    href="/casestudy"
                     className="fl8 !text-white hover:text-blue-600"
                   >
-                    About Us
-                  </a>
+                    Case Studies
+                  </Link>
                 </li>
                 <li>
-                  <a
+                  <Link
                     href="/privacy-policy"
                     className="fl8 !text-white hover:text-blue-600"
                   >
-                    Privacy Policy
-                  </a>
+                    Partnership
+                  </Link>
                 </li>
                 <li>
-                  <a
+                  <Link
                     href="/codeofconductpage"
                     className="fl8 !text-white hover:text-blue-600"
                   >
-                    Code of Conduct
-                  </a>
+                    Mission and Vision
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -176,21 +188,11 @@ export default function Footer() {
           </p>
           <div className="flex items-center gap-6">
             <a href="/terms" className="fl8 !text-white">
-              Social Platforms
+              Privacy Policy
             </a>
-            <div className="bg-[#D9D9D933] w-20 h-0.5"></div>
-            <div className="flex gap-2">
-              <img
-                src="/landing/linkedin.png"
-                alt="linkedin"
-                className="size-6"
-              />
-              <img
-                src="/landing/facebook.png"
-                alt="facebook"
-                className="size-6"
-              />
-            </div>
+            <a href="/terms" className="fl8 !text-white">
+             Code of Conduct
+            </a>
           </div>
         </div>
       </div>
