@@ -21,7 +21,7 @@ export default function CodeOfConduct() {
      
         <div className="container-padding">
           <div className="flex items-center gap-3 mb-4">
-            <span className="w-1 h-8 bg-green-500 transform rotate-[15deg]" />
+            <span className="w-1 h-8 bg-[#49CF38] transform rotate-[15deg]" />
             <h2 className="fl3">The Pledge</h2>
           </div>
           <p className="fl7">
