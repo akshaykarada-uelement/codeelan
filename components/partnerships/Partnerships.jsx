@@ -50,29 +50,29 @@ export default function Partnerships() {
                 <span className="block absolute right-[calc(50%-140px)] -translate-x-1/2 w-6 h-[5px] bg-[#49CF38] "></span>
             </h2>
 
-            {/* CARDS AREA */}
+           
             <div className="carousel-wrapper">
                 <div className="relative flex justify-center z-0">
 
-                    {/* Left */}
+                   
                     <div className="side-card left ">
                         <img src={partners[prevIndex].logo} alt="" />
                     </div>
 
-                    {/* Center */}
+                    
                     <div className="center-card fl7">
                         <img src={partners[active].logo} alt="" />
                         <p>{partners[active].content}</p>
                     </div>
 
-                    {/* Right */}
+                   
                     <div className="side-card right">
                         <img src={partners[nextIndex].logo} alt="" />
                     </div>
                 </div>
             </div>
 
-            {/* NAV BUTTONS — COMPLETELY OUTSIDE */}
+           
             <div className="carousel-nav-wrapper">
                 <button onClick={prev}>
                     <img src="/icons/prev.svg" alt="Previous" />
