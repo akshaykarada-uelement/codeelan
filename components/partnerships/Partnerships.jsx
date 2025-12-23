@@ -50,7 +50,7 @@ export default function Partnerships() {
            <div className="  relative mb-20 text-center">
                 <h2 className="fl2 inline-block relative">
                    Partnerships
-                    <span className="block absolute right-0  w-10 h-[5px] bg-[#49CF38]"></span>
+                    <span className="block absolute right-0  w-10 h-2 bg-[#49CF38]"></span>
                 </h2>
             </div>
 

@@ -5,7 +5,7 @@ export default function Missionandvision() {
       <div className="  relative mb-20 text-center">
         <h2 className="fl2 inline-block relative">
           Mission and Vision                   
-           <span className="block absolute right-0  w-10 h-[5px] bg-[#49CF38]"></span>
+           <span className="block absolute right-0  w-10 h-2 bg-[#49CF38]"></span>
         </h2>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">

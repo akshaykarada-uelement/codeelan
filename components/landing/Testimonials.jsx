@@ -52,11 +52,11 @@ export default function Testimonials() {
               alt=""
               className="absolute left-75 -top-8 w-60 h-40"
             />
-            <div className="inline-block w-full mx-auto">
-              <h3 className="relative fl2 title-content-gap">
+            <div className="  relative  ">
+              <h2 className="fl2 inline-block relative">
                 Testimonials
-                <span className="block absolute md:right-[calc(50%-75px)] right-[calc(50%-140px)]  -translate-1/2 w-10 md:w-11 h-2 bg-[#49CF38] "></span>
-              </h3>
+                <span className="block absolute right-0  w-10 h-2 bg-[#49CF38]"></span>
+              </h2>
             </div>
             <div className="flex gap-40 mt-20">
               <button
@@ -107,12 +107,12 @@ export default function Testimonials() {
         </div>
       </div>
 
-      
+
       <div className="md:hidden ">
         <div className="inline-block w-full mx-auto">
           <h3 className="relative fl2 title-content-gap text-center">
             Testimonials
-            <span className="block absolute md:right-[calc(50%-150px)] right-[calc(50%-110px)]  -translate-1/2 w-8 md:w-11 h-[5px] bg-[#49CF38] "></span>
+            <span className="block absolute md:right-[calc(50%-150px)] right-[calc(50%-110px)]  -translate-1/2 w-8 md:w-11 h-2 bg-[#49CF38] "></span>
           </h3>
         </div>
 
