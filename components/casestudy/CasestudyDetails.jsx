@@ -25,7 +25,7 @@ export default function CaseStudyDetails({ caseStudy }) {
   return (
     <div className="min-h-screen">
       <div className="flex md:flex-row flex-col items-center md:justify-center w-full gap-8 xl:gap-10 mb-8 md:mb-10 bg-[#F0F0F0]">
-        <div className="flex md:w-1/2 w-full flex-col justify-center container-padding py-4 md:py-0">
+        <div className="flex md:w-1/2 w-full flex-col justify-center container-padding py-4 md:py-0 mr-25">
           <div className="flex gap-3 mb-5 md:mb-10">
             <span className="w-1 h-10 bg-[#49CF38] transform rotate-[15deg]" />
             <h1 className="fl3">{caseStudy.title}</h1>
@@ -88,13 +88,30 @@ export default function CaseStudyDetails({ caseStudy }) {
                   }
                 >
                   <div className="flex md:flex-row flex-col md:items-center gap-4 sm:gap-6 xl:gap-10 flex-1 text-left">
+                    <div className="flex justify-between">
                     <img
                       src={point.icon}
                       alt={point.title}
                       className="size-8 md:size-15"
                     />
+                    <h3 className="fl4 md:hidden block">{point.title}</h3>
+                    <span
+                      className="md:hidden flex justify-end items-center flex-shrink-0 ml-2"
+                      aria-hidden="true"
+                    >
+                      <img
+                        src={
+                          expandedPoint === index
+                            ? "/casestudy/minus.svg"
+                            : "/casestudy/plus.svg"
+                        }
+                        alt={expandedPoint === index ? "Collapse" : "Expand"}
+                        className="md:size-7 size-5 transition-all duration-300"
+                      />
+                    </span>
+                    </div>
                     <div className="flex flex-col gap-3 sm:gap-4 flex-1">
-                      <h3 className="fl4">{point.title}</h3>
+                      <h3 className="fl4 hidden md:block">{point.title}</h3>
                       {previewText &&
                       firstSubPoint &&
                       typeof firstSubPoint === "object" ? (
@@ -136,19 +153,29 @@ export default function CaseStudyDetails({ caseStudy }) {
                         </div>
                       ) : previewText ? (
                         <div className="fl7">
-                          <ul className="list-disc ml-4">
-                            <li style={clampStyle}>{previewText}</li>
+                          <ul className="list-disc list-outside pl-4 space-y-1">
+                            <li>
+                              <div style={clampStyle} className="fl7">
+                                {previewText}
+                              </div>
+                            </li>
                           </ul>
                         </div>
                       ) : null}
                     </div>
                     <span
-                      className={`hidden md:block flex justify-end text-[20px] font-bold text-gray-600 hover:text-green-500 transition-transform duration-300 flex-shrink-0 ml-2 ${
-                        expandedPoint === index ? "rotate-45" : ""
-                      }`}
+                      className="hidden md:flex justify-end items-center flex-shrink-0 ml-2"
                       aria-hidden="true"
                     >
-                      +
+                      <img
+                        src={
+                          expandedPoint === index
+                            ? "/casestudy/minus.svg"
+                            : "/casestudy/plus.svg"
+                        }
+                        alt={expandedPoint === index ? "Collapse" : "Expand"}
+                        className="md:size-7 size-5 transition-all duration-300"
+                      />
                     </span>
                   </div>
                 </button>
@@ -221,10 +248,10 @@ export default function CaseStudyDetails({ caseStudy }) {
                                 {row.map((cell, cellIdx) => (
                                   <td
                                     key={cellIdx}
-                                    className={`px-3 sm:px-4 py-2 sm:py-3 fl7 ${
+                                    className={`px-3 sm:px-4 py-2 sm:py-3  ${
                                       cellIdx < row.length - 1
-                                        ? "border-r-[2px] border-[#DEDEDE]"
-                                        : ""
+                                        ? "border-r-[2px] border-[#DEDEDE] fl5"
+                                        : "fl7"
                                     }`}
                                   >
                                     {cell}

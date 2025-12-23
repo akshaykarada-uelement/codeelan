@@ -49,7 +49,7 @@ export default function Leadership() {
           </p>
         </div>
 
-        <div className="hidden md:block">
+        <div className="hidden md:block relative">
           <Swiper
             modules={[Pagination]}
             slidesPerView="auto"
@@ -81,12 +81,12 @@ export default function Leadership() {
               const isActive = leader.id === activeLeaderId;
 
               return (
-                <SwiperSlide key={leader.id} className="!w-auto">
+                <SwiperSlide key={leader.id} className="!w-auto py-6"> 
                   <div
                     onMouseEnter={() => handleHoverDesktop(leader.id, index)}
                     onMouseLeave={() => setActiveLeaderId(null)}
-                    className={`transition-all duration-300 ease-out ${
-                      isActive ? "w-[640px]" : "w-[320px]"
+                    className={`transition-all duration-500 ease-in-out h-[386px] ${
+                      isActive ? "w-[682px]" : "w-[332px]"
                     }`}
                   >
                     <LeadershipCard
@@ -102,11 +102,11 @@ export default function Leadership() {
 
           <div
             ref={paginationDesktopRef}
-            className="swiper-pagination flex justify-center mt-8 gap-2 absolute w-[90vw]"
+            className="swiper-pagination flex justify-center -mb-5! gap-2 w-full"
           />
         </div>
 
-        <div className="md:hidden w-full mt-4">
+        <div className="md:hidden w-full mt-4 relative">
           <Swiper
             modules={[Pagination]}
             spaceBetween={16}
@@ -140,10 +140,9 @@ export default function Leadership() {
               </SwiperSlide>
             ))}
           </Swiper>
-
           <div
             ref={paginationMobileRef}
-            className="swiper-pagination flex justify-center mt-6 gap-2"
+            className="swiper-pagination flex justify-center -mb-10! gap-2 w-full"
           />
         </div>
     
