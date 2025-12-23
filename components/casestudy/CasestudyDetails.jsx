@@ -136,19 +136,29 @@ export default function CaseStudyDetails({ caseStudy }) {
                         </div>
                       ) : previewText ? (
                         <div className="fl7">
-                          <ul className="list-disc ml-4">
-                            <li style={clampStyle}>{previewText}</li>
+                          <ul className="list-disc list-outside pl-4 space-y-1">
+                            <li>
+                              <div style={clampStyle} className="fl7">
+                                {previewText}
+                              </div>
+                            </li>
                           </ul>
                         </div>
                       ) : null}
                     </div>
                     <span
-                      className={`hidden md:block flex justify-end text-[20px] font-bold text-gray-600 hover:text-green-500 transition-transform duration-300 flex-shrink-0 ml-2 ${
-                        expandedPoint === index ? "rotate-45" : ""
-                      }`}
+                      className="hidden md:flex justify-end items-center flex-shrink-0 ml-2"
                       aria-hidden="true"
                     >
-                      +
+                      <img
+                        src={
+                          expandedPoint === index
+                            ? "/casestudy/minus.svg"
+                            : "/casestudy/plus.svg"
+                        }
+                        alt={expandedPoint === index ? "Collapse" : "Expand"}
+                        className="md:size-7 size-5 transition-all duration-300"
+                      />
                     </span>
                   </div>
                 </button>
@@ -221,10 +231,10 @@ export default function CaseStudyDetails({ caseStudy }) {
                                 {row.map((cell, cellIdx) => (
                                   <td
                                     key={cellIdx}
-                                    className={`px-3 sm:px-4 py-2 sm:py-3 fl7 ${
+                                    className={`px-3 sm:px-4 py-2 sm:py-3  ${
                                       cellIdx < row.length - 1
-                                        ? "border-r-[2px] border-[#DEDEDE]"
-                                        : ""
+                                        ? "border-r-[2px] border-[#DEDEDE] fl5"
+                                        : "fl7"
                                     }`}
                                   >
                                     {cell}
