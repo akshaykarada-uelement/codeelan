@@ -20,13 +20,13 @@ export default function TestimonialCard({ testimonial, isMobile = false }) {
               </div>
             </div>
             <div className="flex-1">
-              <h3 className="text-lg font-semibold text-gray-900">
+              <h3 className="fl4">
                 {testimonial.name}
               </h3>
-              <p className="text-sm text-gray-600">{testimonial.title}</p>
+              <p className="fl7">{testimonial.title}</p>
             </div>
           </div>
-          <p className="text-gray-700 text-sm leading-relaxed">
+          <p className="fl8">
             "{testimonial.description}"
           </p>
         </div>

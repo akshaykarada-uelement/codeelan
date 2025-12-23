@@ -106,6 +106,8 @@ export default function Testimonials() {
           </div>
         </div>
       </div>
+
+      
       <div className="md:hidden">
         <div className="inline-block w-full mx-auto">
           <h3 className="relative fl2 title-content-gap text-center">
