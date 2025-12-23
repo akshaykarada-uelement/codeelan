@@ -9,7 +9,7 @@ export default function LeadershipCard({
 }) {
   if (isMobile) {
     return (
-      <div className="bg-[#F0F0F0] shadow-md overflow-hidden w-full h-full flex flex-col">
+      <div className="bg-[#F0F0F0] shadow-md overflow-hidden w-full h-133 flex flex-col">
         <div className="relative w-full h-56">
           <Image
             src={leader.image}
@@ -32,15 +32,15 @@ export default function LeadershipCard({
 
   if (isActiveDesktop) {
     return (
-      <div className="bg-white shadow-md overflow-hidden flex h-[350px]">
-        <div className="w-[260px] flex-shrink-0 flex items-center justify-center bg-[#F0F0F0]">
+      <div className="bg-white shadow-md flex h-[350px]">
+        <div className="w-[260px] flex items-center justify-center bg-[#F0F0F0]">
           <div className="flex-1 px-8 py-6 flex flex-col justify-center">
             <div className="relative w-[200px] h-[200px]">
               <Image
                 src={leader.image}
                 alt={leader.name}
                 fill
-                className="object-cover rounded-md"
+                className="object-cover"
                 priority
               />
             </div>
@@ -65,7 +65,7 @@ export default function LeadershipCard({
             src={leader.image}
             alt={leader.name}
             fill
-            className="object-cover rounded-md"
+            className="object-cover"
             priority
           />
         </div>
