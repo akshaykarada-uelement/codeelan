@@ -81,12 +81,12 @@ export default function Leadership() {
               const isActive = leader.id === activeLeaderId;
 
               return (
-                <SwiperSlide key={leader.id} className="!w-auto">
+                <SwiperSlide key={leader.id} className="!w-auto py-6"> 
                   <div
                     onMouseEnter={() => handleHoverDesktop(leader.id, index)}
                     onMouseLeave={() => setActiveLeaderId(null)}
-                    className={`transition-all duration-300 ease-out ${
-                      isActive ? "w-[640px]" : "w-[320px]"
+                    className={`transition-all duration-500 ease-in-out h-[386px] ${
+                      isActive ? "w-[682px]" : "w-[332px]"
                     }`}
                   >
                     <LeadershipCard
@@ -140,10 +140,9 @@ export default function Leadership() {
               </SwiperSlide>
             ))}
           </Swiper>
-
           <div
             ref={paginationMobileRef}
-            className="swiper-pagination flex justify-center !mt-5 gap-2 w-full"
+            className="swiper-pagination flex justify-center !mt-8 gap-2 w-full"
           />
         </div>
     
