@@ -66,7 +66,7 @@ export default function Hero() {
 
     return (
 
-        <main className="relative min-h-screen w-full overflow-hidden bg-black  flex flex-col justify-center">
+        <main className="relative z-50 min-h-screen w-full overflow-hidden bg-black flex flex-col justify-center">
 
 
             <div className="absolute inset-0 z-0">
