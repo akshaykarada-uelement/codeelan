@@ -49,7 +49,7 @@ export default function Leadership() {
           </p>
         </div>
 
-        <div className="hidden md:block">
+        <div className="hidden md:block relative">
           <Swiper
             modules={[Pagination]}
             slidesPerView="auto"
@@ -102,7 +102,7 @@ export default function Leadership() {
 
           <div
             ref={paginationDesktopRef}
-            className="swiper-pagination flex justify-center mt-8 gap-2 absolute w-[90vw]"
+            className="swiper-pagination flex justify-center mt-8 gap-2 w-full"
           />
         </div>
 
