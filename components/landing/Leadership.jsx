@@ -32,7 +32,7 @@ export default function Leadership() {
   return (
     <section className="section-block-padding container-padding">
       
-        <div className="flex flex-col justify-center items-center section-block-padding">
+        <div className="flex flex-col justify-center items-center pb-7 md:pb-12 3xl:pb-18">
           <div className="inline-block w-full mx-auto">
             <h3 className="relative fl2 title-content-gap text-center">
               Leadership Team
