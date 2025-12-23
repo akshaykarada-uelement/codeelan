@@ -35,7 +35,7 @@ export default function TestimonialCard({ testimonial, isMobile = false }) {
   }
 
   return (
-    <div className="bg-white shadow-lg overflow-hidden w-165 h-70">
+    <div className="bg-white shadow-lg overflow-hidden w-150 h-70">
     
       <div className="p-8 space-y-8">
         <div className="flex gap-8">

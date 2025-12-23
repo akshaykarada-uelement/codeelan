@@ -102,7 +102,7 @@ export default function Leadership() {
 
           <div
             ref={paginationDesktopRef}
-            className="swiper-pagination flex justify-center !mt-8 gap-2 w-full"
+            className="swiper-pagination flex justify-center -mb-5! gap-2 w-full"
           />
         </div>
 
@@ -142,7 +142,7 @@ export default function Leadership() {
           </Swiper>
           <div
             ref={paginationMobileRef}
-            className="swiper-pagination flex justify-center !mt-8 gap-2 w-full"
+            className="swiper-pagination flex justify-center -mb-10! gap-2 w-full"
           />
         </div>
     
