@@ -35,22 +35,17 @@ export default function TestimonialCard({ testimonial, isMobile = false }) {
   }
 
   return (
-    <div className="bg-white shadow-lg overflow-hidden border-l-4 w-125 h-70">
-      <span className="absolute left-0 top-0 h-full w-2 bg-[#49CF38]" />
-
-      <span className="absolute left-0 top-0 h-2 w-[8vw] bg-[#49CF38]" />
-
-      <span className="absolute left-0 bottom-0 h-2 w-[8vw] bg-[#49CF38]" />
-
-      <div className="p-8 space-y-4">
-        <div className="flex gap-4">
+    <div className="bg-white shadow-lg overflow-hidden w-165 h-70">
+    
+      <div className="p-8 space-y-8">
+        <div className="flex gap-8">
           <div className="flex-shrink-0">
             <div className="relative w-20 h-20">
               <Image
                 src={testimonial.image}
                 alt={testimonial.name}
                 fill
-                className="object-cover rounded-lg"
+                className="object-cover"
                 priority
               />
             </div>
