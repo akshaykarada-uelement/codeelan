@@ -108,7 +108,7 @@ export default function Testimonials() {
       </div>
 
       
-      <div className="md:hidden">
+      <div className="md:hidden ">
         <div className="inline-block w-full mx-auto">
           <h3 className="relative fl2 title-content-gap text-center">
             Testimonials
@@ -148,7 +148,7 @@ export default function Testimonials() {
 
         <div
           ref={paginationMobileRef}
-          className="swiper-pagination flex justify-center mt-6 gap-2"
+          className="swiper-pagination relative flex justify-center -mt-4! gap-2 w-full"
         ></div>
       </div>
     </section>

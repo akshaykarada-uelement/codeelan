@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function TestimonialCard({ testimonial, isMobile = false }) {
   if (isMobile) {
     return (
-      <div className="bg-white shadow-md overflow-hidden w-70 h-85">
+      <div className="bg-white shadow-md overflow-hidden w-70 h-60">
         <div className="p-6 space-y-4">
           <div className="flex gap-4">
             <div className="flex-shrink-0">
