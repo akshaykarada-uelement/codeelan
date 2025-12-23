@@ -102,7 +102,7 @@ export default function Leadership() {
 
           <div
             ref={paginationDesktopRef}
-            className="swiper-pagination flex justify-center mt-8 gap-2"
+            className="swiper-pagination flex justify-center mt-8 gap-2 absolute w-[90vw]"
           />
         </div>
 
@@ -118,6 +118,7 @@ export default function Leadership() {
               bulletClass: "swiper-pagination-bullet leadership-bullet",
               bulletActiveClass:
                 "swiper-pagination-bullet-active leadership-bullet-active",
+            
             }}
             onInit={(swiper) => {
               if (paginationMobileRef.current && isMounted) {
