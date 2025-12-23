@@ -27,9 +27,15 @@ export default function OurMission() {
                                     our platform enables businesses to automate visual tasks with unmatched accuracy, efficiency, and scalability.
                                 </p>
 
-                                <button className="mt-auto w-fit green-btn">
+                                <a
+                                    href="https://omniscientia.codeelan.com/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="mt-auto w-fit green-btn"
+                                >
                                     Know More
-                                </button>
+                                </a>
+
                             </div>
 
 
@@ -48,9 +54,15 @@ export default function OurMission() {
                                     Revolutionize Testing Across Web, API, Mobile & Performance.
                                 </p>
 
-                                <button className="md:mt-40 w-fit green-btn">
+                                <a
+                                    href="https://perfectus.codeelan.com/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="mt-auto w-fit green-btn"
+                                >
                                     Know More
-                                </button>
+                                </a>
+
                             </div>
 
                         </div>
