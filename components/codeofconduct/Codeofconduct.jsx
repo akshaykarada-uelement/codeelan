@@ -1,14 +1,14 @@
 export default function CodeOfConduct() {
   return (
     <main className="min-h-screen px-4 md:px-12 py-12 bg-white">
-      
+
       <div className="max-w-5xl mx-auto text-center mb-12">
-        <h1 className="fl2 ">
+        <h1 className="fl2 inline-block relative">
           Code of Conduct
-                  <span className="block absolute right-[calc(50%-180px)] -translate-x-1/2 w-6 h-[5px] bg-[#49CF38] "></span>
+          <span className="block absolute right-0  w-10 h-[5px] bg-[#49CF38]"></span>
 
         </h1>
-       
+
         <p className="fl7 max-w-3xl mx-auto mt-8">
           All participants of CodeElan Technologies are expected to abide by our
           Code of Conduct, both online and during in-person events that are
@@ -16,9 +16,9 @@ export default function CodeOfConduct() {
         </p>
       </div>
 
-    
+
       <div className=" mx-auto space-y-10">
-     
+
         <div className="container-padding">
           <div className="flex items-center gap-3 mb-4">
             <span className="w-1 h-8 bg-[#49CF38] transform rotate-[15deg]" />
@@ -34,7 +34,7 @@ export default function CodeOfConduct() {
           </p>
         </div>
 
-       
+
         <div className="bg-[#F5F5F5] container-padding p-6 md:p-8 ">
           <div className="flex items-center gap-3 mb-4">
             <span className="w-1 h-8 bg-green-500 transform rotate-[15deg]" />
@@ -76,7 +76,7 @@ export default function CodeOfConduct() {
           </ul>
         </div>
 
-       
+
         <div className="container-padding section-block-bottom">
           <div className="flex items-center gap-3 mb-4">
             <span className="w-1 h-8 bg-green-500 transform rotate-[15deg]" />

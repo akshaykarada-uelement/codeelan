@@ -58,10 +58,10 @@ export default function OurMission() {
 
 
                     <div className="w-full lg:w-1/2 flex flex-col gap-6 text-left">
-                        <div className="relative">
+                        <div className="  relative  ">
                             <h2 className="fl2 inline-block relative">
                                 Our Mission
-                                <span className="block absolute right-0 -bottom-3 w-10 h-[5px] bg-[#49CF38]"></span>
+                                <span className="block absolute right-0  w-10 h-[5px] bg-[#49CF38]"></span>
                             </h2>
                         </div>
 

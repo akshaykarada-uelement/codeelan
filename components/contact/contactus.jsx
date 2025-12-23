@@ -18,13 +18,14 @@ export default function Contactus() {
         <main className="min-h-screen container-padding section-block-padding">
 
             {/* CONTACT FORM */}
-            <div className="max-w-3xl mx-auto">
-                <h1 className="fl2 text-center mb-8">
-                    Contact Us
-                    <span className="block absolute right-[calc(50%-120px)] -translate-x-1/2 w-6 h-[5px] bg-[#49CF38] "></span>
-                </h1>
-
-                <div className="bg-white shadow-xl p-6 md:py-18 md:px-40">
+            <div className="max-w-[40%] mx-auto">
+           <div className="  relative mb-20 text-center">
+                <h2 className="fl2 inline-block relative">
+                   Contact Us
+                    <span className="block absolute right-0  w-10 h-[5px] bg-[#49CF38]"></span>
+                </h2>
+            </div>
+                <div className="bg-white shadow-xl p-6 ">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
                             <label className="block fl7 mb-1">Your Name *</label>

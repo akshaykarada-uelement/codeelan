@@ -5,7 +5,7 @@ export default function Privacypolicypage() {
             <div className="  relative mb-20 text-center">
                 <h2 className="fl2 inline-block relative">
                     Privacy Policy
-                    <span className="block absolute right-0 -bottom-3 w-10 h-[5px] bg-[#49CF38]"></span>
+                    <span className="block absolute right-0  w-10 h-[5px] bg-[#49CF38]"></span>
                 </h2>
             </div>
 
@@ -32,7 +32,7 @@ export default function Privacypolicypage() {
                 </div>
 
 
-                <div className="grid grid-cols-1 md:grid-cols-12 gap-6 py-8">
+                <div className="grid grid-cols-1 md:grid-cols-12 gap-6 py-10">
                     <div className="md:col-span-4 flex  gap-3">
                         <span className="w-1 h-9 bg-green-500 transform rotate-[15deg]" />
                         <h2 className="fl3">Interpretation and <br />
@@ -473,101 +473,178 @@ export default function Privacypolicypage() {
                 </div>
             </div>
             <div className="container-padding">
-
-                <div className="grid grid-cols-1 md:grid-cols-12 gap-6 pt-10">
-                    <div className="md:col-span-4">
-                        <h4 className="fl4">Children's Privacy</h4>
-                    </div>
-                    <div className="md:col-span-8 fl7">
-                        <p>
-                            Our Service does not address anyone under the age of 13. We do not
-                            knowingly collect personally identifiable information from anyone under
-                            the age of 13. If You are a parent or guardian and You are aware that
-                            Your child has provided Us with Personal Data, please contact Us. If We
-                            become aware that We have collected Personal Data from anyone under the
-                            age of 13 without verification of parental consent, We take steps to
-                            remove that information from Our servers. If We need to rely on consent
-                            as a legal basis for processing Your information and Your country
-                            requires consent from a parent, We may require Your parent's consent
-                            before We collect and use that information.
-                        </p>
+                <div className="grid grid-cols-1 md:grid-cols-12 gap-6 pt-4">
+                <div className="md:col-span-4">
+                    <div className="md:col-span-4 flex  gap-3">
+                        <span className="w-1 h-9 bg-green-500 transform rotate-[15deg]" />
+                        <h2 className="fl3">Disclosure of Your <br />
+                            Personal Data</h2>
                     </div>
                 </div>
-
-
-                <div className="grid grid-cols-1 md:grid-cols-12 gap-6 pt-10">
-                    <div className="md:col-span-4">
-                        <h4 className="fl4">
-                            Links to Other Websites
-                        </h4>
-                    </div>
-                    <div className="md:col-span-8 fl7 ">
-                        <p>
-                            Our Service may contain links to other websites that are not operated by
-                            Us. If You click on a third party link, You will be directed to that
-                            third party's site. We strongly advise You to review the Privacy Policy
-                            of every site You visit. We have no control over and assume no
-                            responsibility for the content, privacy policies or practices of any
-                            third party sites or services.
-                        </p>
-                    </div>
-                </div>
-
-
-                <div className="grid grid-cols-1 md:grid-cols-12 gap-6 pt-10">
-                    <div className="md:col-span-4">
-                        <h4 className="text-xl fl4">
-                            Changes to this Privacy <br /> Policy
-                        </h4>
-                    </div>
-                    <div className="md:col-span-8 fl7">
-                        <p>
-                            We may update Our Privacy Policy from time to time. We will notify You
-                            of any changes by posting the new Privacy Policy on this page. We will
-                            let You know via email and/or a prominent notice on Our Service, prior
-                            to the change becoming effective and update the "Last updated" date at
-                            the top of this Privacy Policy. You are advised to review this Privacy
-                            Policy periodically for any changes. Changes to this Privacy Policy are
-                            effective when they are posted on this page.
-                        </p>
-                    </div>
-                </div>
-
-
-                <div className="grid grid-cols-1 md:grid-cols-12 gap-6 py-10">
-                    <div className="md:col-span-4">
-                        <h4 className="fl4">Contact Us</h4>
-                    </div>
-                    <div className="md:col-span-8 fl7">
-                        <p className="mb-4">
-                            If you have any questions about this Privacy Policy, You can contact us:
-                        </p>
-                        <ul className="list-disc pl-5 ">
-                            <li>
-                                By email:{" "}
-                                <a
-                                    href="mailto:info@codeelan.com"
-                                    className="text-blue-600 hover:underline"
-                                >
-                                    info@codeelan.com
-                                </a>
-                            </li>
-                            <li>
-                                By visiting this page on our website:{" "}
-                                <a
-                                    href="https://codeelan.com/contactus/"
-                                    className="text-blue-600 hover:underline"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >
-                                    https://codeelan.com/contact-us/
-                                </a>
-                            </li>
-                            <li>By phone number: (820) 865-0598</li>
-                        </ul>
-                    </div>
+                <div className="md:col-span-8">
+                    
                 </div>
             </div>
-        </main>
+
+            
+            <div className="grid grid-cols-1 md:grid-cols-12 gap-6 pt-10">
+                <div className="md:col-span-4">
+                    <h4 className="fl4">Business Transactions</h4>
+                </div>
+                <div className="md:col-span-8 fl7">
+                    <p>
+                        If the Company is involved in a merger, acquisition or asset sale, Your
+                        Personal Data may be transferred. We will provide notice before Your
+                        Personal Data is transferred and becomes subject to a different Privacy
+                        Policy.
+                    </p>
+                </div>
+            </div>
+
+           
+            <div className="grid grid-cols-1 md:grid-cols-12 gap-6 pt-10">
+                <div className="md:col-span-4">
+                    <h4 className="fl4">Law enforcement</h4>
+                </div>
+                <div className="md:col-span-8 fl7">
+                    <p className="mb-4">
+                        Under certain circumstances, the Company may be required to disclose
+                        Your Personal Data if required to do so by law or in response to valid
+                        requests by public authorities (e.g. a court or a government agency).
+                    </p>
+                    <p className="mb-2 italic ">Other legal requirements</p>
+                    <p className="mb-2">
+                        The Company may disclose Your Personal Data in the good faith belief
+                        that such action is necessary to:
+                    </p>
+                    <ul className="list-disc pl-5 space-y-1">
+                        <li>Comply with a legal obligation</li>
+                        <li>Protect and defend the rights or property of the Company</li>
+                        <li>
+                            Prevent or investigate possible wrongdoing in connection with the
+                            Service
+                        </li>
+                        <li>
+                            Protect the personal safety of Users of the Service or the public
+                        </li>
+                        <li>Protect against legal liability</li>
+                    </ul>
+                </div>
+            </div>
+
+            
+            <div className="grid grid-cols-1 md:grid-cols-12 gap-6 pt-10">
+                <div className="md:col-span-4">
+                    <h4 className="fl4">
+                        Security of Your Personal <br /> Data
+                    </h4>
+                </div>
+                <div className="md:col-span-8 fl7">
+                    <p>
+                        The security of Your Personal Data is important to Us, but remember that
+                        no method of transmission over the Internet, or method of electronic
+                        storage is 100% secure. While We strive to use commercially acceptable
+                        means to protect Your Personal Data, We cannot guarantee its absolute
+                        security.
+                    </p>
+                </div>
+            </div>
+
+
+            <div className="grid grid-cols-1 md:grid-cols-12 gap-6 pt-10">
+                <div className="md:col-span-4">
+                    <h4 className="fl4">Children's Privacy</h4>
+                </div>
+                <div className="md:col-span-8 fl7">
+                    <p>
+                        Our Service does not address anyone under the age of 13. We do not
+                        knowingly collect personally identifiable information from anyone under
+                        the age of 13. If You are a parent or guardian and You are aware that
+                        Your child has provided Us with Personal Data, please contact Us. If We
+                        become aware that We have collected Personal Data from anyone under the
+                        age of 13 without verification of parental consent, We take steps to
+                        remove that information from Our servers. If We need to rely on consent
+                        as a legal basis for processing Your information and Your country
+                        requires consent from a parent, We may require Your parent's consent
+                        before We collect and use that information.
+                    </p>
+                </div>
+            </div>
+
+
+            <div className="grid grid-cols-1 md:grid-cols-12 gap-6 pt-10">
+                <div className="md:col-span-4">
+                    <h4 className="fl4">
+                        Links to Other Websites
+                    </h4>
+                </div>
+                <div className="md:col-span-8 fl7 ">
+                    <p>
+                        Our Service may contain links to other websites that are not operated by
+                        Us. If You click on a third party link, You will be directed to that
+                        third party's site. We strongly advise You to review the Privacy Policy
+                        of every site You visit. We have no control over and assume no
+                        responsibility for the content, privacy policies or practices of any
+                        third party sites or services.
+                    </p>
+                </div>
+            </div>
+
+
+            <div className="grid grid-cols-1 md:grid-cols-12 gap-6 pt-10">
+                <div className="md:col-span-4">
+                    <h4 className="text-xl fl4">
+                        Changes to this Privacy <br /> Policy
+                    </h4>
+                </div>
+                <div className="md:col-span-8 fl7">
+                    <p>
+                        We may update Our Privacy Policy from time to time. We will notify You
+                        of any changes by posting the new Privacy Policy on this page. We will
+                        let You know via email and/or a prominent notice on Our Service, prior
+                        to the change becoming effective and update the "Last updated" date at
+                        the top of this Privacy Policy. You are advised to review this Privacy
+                        Policy periodically for any changes. Changes to this Privacy Policy are
+                        effective when they are posted on this page.
+                    </p>
+                </div>
+            </div>
+
+
+            <div className="grid grid-cols-1 md:grid-cols-12 gap-6 py-10">
+                <div className="md:col-span-4">
+                    <h4 className="fl4">Contact Us</h4>
+                </div>
+                <div className="md:col-span-8 fl7">
+                    <p className="mb-4">
+                        If you have any questions about this Privacy Policy, You can contact us:
+                    </p>
+                    <ul className="list-disc pl-5 ">
+                        <li>
+                            By email:{" "}
+                            <a
+                                href="mailto:info@codeelan.com"
+                                className="text-blue-600 hover:underline"
+                            >
+                                info@codeelan.com
+                            </a>
+                        </li>
+                        <li>
+                            By visiting this page on our website:{" "}
+                            <a
+                                href="https://codeelan.com/contactus/"
+                                className="text-blue-600 hover:underline"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                https://codeelan.com/contact-us/
+                            </a>
+                        </li>
+                        <li>By phone number: (820) 865-0598</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        </main >
     );
 }

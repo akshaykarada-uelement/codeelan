@@ -54,11 +54,11 @@ export default function Testimonials() {
       <div className="">
         <div className="hidden md:grid md:grid-cols-12 gap-8 items-center">
           <div className="md:col-span-3">
-            <div className="inline-block w-full mx-auto">
-              <h3 className="relative fl2 title-content-gap text-center">
-                Testimonials
-                <span className="block absolute md:right-[calc(50%-150px)] right-[calc(50%-140px)]  -translate-1/2 w-8 md:w-11 h-[5px] bg-[#49CF38] "></span>
-              </h3>
+            <div className="  relative  text-center">
+                <h2 className="fl2 inline-block relative">
+                    Testimonials
+                    <span className="block absolute right-0  w-10 h-[5px] bg-[#49CF38]"></span>
+                </h2>
             </div>
             <div className="flex gap-4">
               <button

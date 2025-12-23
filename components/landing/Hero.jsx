@@ -16,7 +16,7 @@ const SLIDES = [
         title: "Automate Complex Visual Tasks",
         desc: "Powered by cutting-edge neural networks and sophisticated image processing techniques, our platform enables businesses to automate visual tasks ",
         bg: "/landing/hero/hero-bg2.png",
-        image: "/landing/hero/slider-image1.jpg",
+        image: "/landing/hero/slider-image2.png",
     },
     {
         id: 3,
@@ -53,11 +53,11 @@ export default function Hero() {
             return { zIndex: 30, x: 0, scale: 1.3, opacity: 1 };
         } else if (position === 1) {
 
-            return { zIndex: 25, x: 300, scale: 1, opacity: 0.8 };
+            return { zIndex: 25, x: 330, scale: 1, opacity: 0.7 };
 
         } else if (position === 2) {
 
-            return { zIndex: 20, x: 550, scale: 1, opacity: 0.7 };
+            return { zIndex: 20, x: 610, scale: 0.9, opacity: 0.6 };
         } else {
 
             return { zIndex: 0, x: 120, scale: 1, opacity: 0 };

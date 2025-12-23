@@ -47,13 +47,14 @@ export default function Partnerships() {
 
     return (
         <section className="py-24 relative">
-            <h2 className="text-center fl2 mb-16">
-                Partnerships
-                <span className="block absolute right-[calc(50%-140px)] -translate-x-1/2 w-6 h-[5px] bg-[#49CF38] "></span>
-            </h2>
+           <div className="  relative mb-20 text-center">
+                <h2 className="fl2 inline-block relative">
+                   Partnerships
+                    <span className="block absolute right-0  w-10 h-[5px] bg-[#49CF38]"></span>
+                </h2>
+            </div>
 
-
-            <div className="carousel-wrapper">
+            <div className="carousel-wrapper"> 
                 <div className="relative flex justify-center z-0">
 
 

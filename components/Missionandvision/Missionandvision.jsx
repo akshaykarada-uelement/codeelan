@@ -2,21 +2,20 @@
 export default function Missionandvision() {
   return (
     <main className="min-h-screen container-padding section-block-padding">
-      <div className="inline-block w-full mx-auto">
-      <h2 className="relative text-center fl2 mb-10">
-        Mission and Vision
-        <span className="block absolute right-[calc(50%-200px)] -translate-x-1/2 w-6 h-[5px] bg-[#49CF38] "></span>
-      </h2>
+      <div className="  relative mb-20 text-center">
+        <h2 className="fl2 inline-block relative">
+          Mission and Vision                   
+           <span className="block absolute right-0  w-10 h-[5px] bg-[#49CF38]"></span>
+        </h2>
       </div>
-
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-        
+
         {/* LEFT CONTENT */}
         <div className="flex flex-col gap-10">
-          
+
           {/* Mission */}
           <div className="bg-white shadow-md p-17">
-            <h3 className="fl3 mb-4 flex items-center gap-2">
+            <h3 className="fl3 mb-4 flex items-center gap-4">
               <span><img src="/mission/mission2.svg" alt="" /></span> Mission
             </h3>
             <p className="fl7">
@@ -36,7 +35,7 @@ export default function Missionandvision() {
 
           {/* Vision */}
           <div className="bg-white shadow-md p-17">
-            <h3 className="fl3 mb-4 flex items-center gap-2">
+            <h3 className="fl3 mb-4 flex items-center gap-4">
               <span><img src="/mission/mission3.svg" alt="" /></span> Vision
             </h3>
             <p className="fl7">
