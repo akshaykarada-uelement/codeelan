@@ -88,13 +88,30 @@ export default function CaseStudyDetails({ caseStudy }) {
                   }
                 >
                   <div className="flex md:flex-row flex-col md:items-center gap-4 sm:gap-6 xl:gap-10 flex-1 text-left">
+                    <div className="flex justify-between">
                     <img
                       src={point.icon}
                       alt={point.title}
                       className="size-8 md:size-15"
                     />
+                    <h3 className="fl4 md:hidden block">{point.title}</h3>
+                    <span
+                      className="md:hidden flex justify-end items-center flex-shrink-0 ml-2"
+                      aria-hidden="true"
+                    >
+                      <img
+                        src={
+                          expandedPoint === index
+                            ? "/casestudy/minus.svg"
+                            : "/casestudy/plus.svg"
+                        }
+                        alt={expandedPoint === index ? "Collapse" : "Expand"}
+                        className="md:size-7 size-5 transition-all duration-300"
+                      />
+                    </span>
+                    </div>
                     <div className="flex flex-col gap-3 sm:gap-4 flex-1">
-                      <h3 className="fl4">{point.title}</h3>
+                      <h3 className="fl4 hidden md:block">{point.title}</h3>
                       {previewText &&
                       firstSubPoint &&
                       typeof firstSubPoint === "object" ? (
