@@ -50,15 +50,39 @@ export default function Testimonials() {
             <img
               src="/landing/double-testimonial.png"
               alt=""
-              className="absolute left-75 -top-8 w-60 h-40"
+              className="absolute left-50 -top-8 w-60 h-40"
             />
-            <div className="  relative  ">
+            <div className="relative">
               <h2 className="fl2 inline-block relative">
                 Testimonials
                 <span className="block absolute right-0  w-10 h-2 bg-[#49CF38]"></span>
               </h2>
             </div>
-            <div className="flex gap-40 mt-20">
+          </div>
+          <div className="md:w-[70%] relative flex flex-col justify-center">
+            <div className="flex justify-center">
+              <span className="absolute -left-2 top-0 h-71 w-2 bg-[#49CF38]" />
+              <span className="absolute -left-2 -top-2 h-2 w-[8vw] bg-[#49CF38]" />
+              <span className="absolute -left-2 bottom-42.5 h-2 w-[8vw] bg-[#49CF38] z-10" />
+              <Swiper
+                ref={swiperDesktopRef}
+                modules={[Navigation]}
+                slidesPerView={1.5}
+                spaceBetween={24}
+                onSwiper={(swiper) => (swiperDesktopRef.current = swiper)}
+                className="overflow-visible h-[350]"
+              >
+                {testimonialsData.map((testimonial, index) => (
+                  <SwiperSlide key={testimonial.id}>
+                    <TestimonialCard
+                      testimonial={testimonial}
+                      isMobile={false}
+                    />
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+            </div>
+            <div className="flex gap-40 md:px-20 mb-15 z-100">
               <button
                 onClick={handlePrev}
                 className="flex items-center justify-center w-12 h-12 transition-all"
@@ -79,34 +103,16 @@ export default function Testimonials() {
                 onMouseLeave={() => setIsNextHovered(false)}
               >
                 <img
-                  src={isNextHovered ? "/icons/next1.svg" : "/icons/next.svg"}
+                  src={
+                    isNextHovered ? "/icons/next1.svg" : "/icons/next-wt.svg"
+                  }
                   alt="Next"
                 />
               </button>
             </div>
           </div>
-          <div className="md:w-[70%]  relative flex justify-center">
-            <span className="absolute -left-2 top-0 h-71 w-2 bg-[#49CF38]" />
-            <span className="absolute -left-2 -top-2 h-2 w-[8vw] bg-[#49CF38]" />
-            <span className="absolute -left-2 bottom-15.5 h-2 w-[8vw] bg-[#49CF38] z-10" />
-            <Swiper
-              ref={swiperDesktopRef}
-              modules={[Navigation]}
-              slidesPerView={1.5}
-              spaceBetween={24}
-              onSwiper={(swiper) => (swiperDesktopRef.current = swiper)}
-              className="overflow-visible h-[350]"
-            >
-              {testimonialsData.map((testimonial, index) => (
-                <SwiperSlide key={testimonial.id}>
-                  <TestimonialCard testimonial={testimonial} isMobile={false} />
-                </SwiperSlide>
-              ))}
-            </Swiper>
-          </div>
         </div>
       </div>
-
 
       <div className="md:hidden ">
         <div className="inline-block w-full mx-auto">

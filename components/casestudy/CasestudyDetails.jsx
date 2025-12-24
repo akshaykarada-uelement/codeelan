@@ -25,7 +25,7 @@ export default function CaseStudyDetails({ caseStudy }) {
   return (
     <div className="min-h-screen">
       <div className="flex md:flex-row flex-col items-center md:justify-center w-full gap-8 xl:gap-10 mb-8 md:mb-10 bg-[#F0F0F0]">
-        <div className="flex md:w-1/2 w-full flex-col justify-center container-padding py-4 md:py-0 mr-25">
+        <div className="flex md:w-1/2 w-full flex-col justify-center container-padding py-4 md:py-0 md:mr-25">
           <div className="flex gap-3 mb-5 md:mb-10">
             <span className="w-1 h-10 bg-[#49CF38] transform rotate-[15deg]" />
             <h1 className="fl3">{caseStudy.title}</h1>

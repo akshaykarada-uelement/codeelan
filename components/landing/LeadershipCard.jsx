@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import Image from "next/image";
 
 export default function LeadershipCard({
@@ -7,6 +8,17 @@ export default function LeadershipCard({
   isActiveDesktop,
   isMobile = false,
 }) {
+  const [showDescription, setShowDescription] = useState(false);
+
+  useEffect(() => {
+    let timer;
+    if (isActiveDesktop) {
+      timer = setTimeout(() => setShowDescription(true), 350);
+    } else {
+      setShowDescription(false);
+    }
+    return () => clearTimeout(timer);
+  }, [isActiveDesktop]);
   if (isMobile) {
     return (
       <div className="bg-[#F0F0F0] shadow-[0_4px_12px_#00000040] overflow-hidden w-full h-133 flex flex-col">
@@ -46,7 +58,11 @@ export default function LeadershipCard({
             <p className="pl7 text-center py-2">{leader.position}</p>
           </div>
         </div>
-        <p className="fl7 p-8">{leader.description}</p>
+        {showDescription ? (
+          <p className="fl7 p-8">{leader.description}</p>
+        ) : (
+          <div className="fl7 p-8" aria-hidden="true" />
+        )}
       </div>
     );
   }

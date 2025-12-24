@@ -121,15 +121,15 @@ export default function Footer() {
                   <Image
                     src="/landing/platform1.png"
                     alt="codeElan"
-                    width={100}
-                    height={48}
+                    width={200}
+                    height={100}
                     className="hidden md:block"
                   />
                   <Image
                     src="/landing/platform1.png"
                     alt="codeElan"
-                    width={100}
-                    height={30}
+                    width={150}
+                    height={50}
                     className="block md:hidden"
                   />
                 </li>
@@ -183,7 +183,7 @@ export default function Footer() {
 
       <div className="container-padding py-4 md:py-4 bg-[#1E273E]">
         <div className="flex flex-col md:flex-row items-start md:items-center md:justify-between w-full gap-4">
-          <p className="fl8 !text-white">
+          <p className="fl8 !text-[#49CF38]">
             2025 © All rights reserved by CodeElan Technologies.
           </p>
           <div className="flex items-center gap-6">
