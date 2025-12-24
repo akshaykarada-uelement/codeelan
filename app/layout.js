@@ -10,7 +10,7 @@ export default function RootLayout({ children }) {
       </head>
       <body>
         <Navbar />
-        <div className="xl:pt-20 pt-15">
+        <div className="xl:pt-18 pt-13">
         {children}
         </div>
         <Footer />

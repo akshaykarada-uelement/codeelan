@@ -30,7 +30,7 @@ export default function Leadership() {
   };
 
   return (
-    <section className="section-block-padding container-padding">
+    <section className="section-block-padding container-paddingv2">
       
         <div className="flex flex-col justify-center items-center pb-7 md:pb-12 3xl:pb-18">
           <div className="  relative mb-20 text-center">
@@ -86,7 +86,7 @@ export default function Leadership() {
                     onMouseEnter={() => handleHoverDesktop(leader.id, index)}
                     onMouseLeave={() => setActiveLeaderId(null)}
                     className={`transition-all duration-500 ease-in-out h-[386px] ${
-                      isActive ? "w-[682px]" : "w-[332px]"
+                      isActive ? "w-[50vw]" : "w-[23vw]"
                     }`}
                   >
                     <LeadershipCard
