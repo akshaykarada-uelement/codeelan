@@ -14,7 +14,7 @@ export default function Missionandvision() {
         <div className="flex flex-col gap-10">
 
           {/* Mission */}
-          <div className="bg-white shadow-md p-17">
+          <div className="bg-white shadow-[4px_4px_10px_3px_#00000026] p-8 md:p-17">
             <h3 className="fl3 mb-4 flex items-center gap-4">
               <span><img src="/mission/mission2.svg" alt="" /></span> Mission
             </h3>
@@ -34,7 +34,7 @@ export default function Missionandvision() {
           </div>
 
           {/* Vision */}
-          <div className="bg-white shadow-md p-17">
+          <div className="bg-white shadow-[4px_4px_10px_3px_#00000026] p-8 md:p-17">
             <h3 className="fl3 mb-4 flex items-center gap-4">
               <span><img src="/mission/mission3.svg" alt="" /></span> Vision
             </h3>
@@ -58,7 +58,7 @@ export default function Missionandvision() {
           <img
             src="/mission/mission1.png"
             alt="Mission and Vision Illustration"
-            className="w-full max-w-md"
+            className="w-full max-w-[500px]"
           />
         </div>
 

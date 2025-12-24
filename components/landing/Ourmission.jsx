@@ -5,7 +5,7 @@ export default function OurMission() {
                 <div className="max-w-[90%] w-full flex flex-col lg:flex-row gap-12 lg:gap-20 items-center">
 
 
-                    <div className="w-full lg:w-1/2 bg-white shadow-xl p-8 md:p-10 relative">
+                    <div className="w-full lg:w-1/2 bg-white shadow-[0px_5px_9px_4px_#00000026] p-8 md:p-10 relative">
 
 
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-0">
