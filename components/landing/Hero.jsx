@@ -50,7 +50,7 @@ export default function Hero() {
 
         if (position === 0) {
 
-            return { zIndex: 30, x: 0, scale: 1.3, opacity: 1 };
+            return { zIndex: 30, x: 0, scale: 1.2, opacity: 1 };
         } else if (position === 1) {
 
             return { zIndex: 25, x: 330, scale: 1, opacity: 0.7 };
@@ -110,7 +110,7 @@ export default function Hero() {
                         </motion.div>
                     </AnimatePresence>
 
-                    <button className="green-btn mt-8 md:mt-30">
+                    <button className="green-btn mt-20 md:mt-30">
                         Get Started
                     </button>
                 </div>
@@ -118,26 +118,25 @@ export default function Hero() {
 
                 <div className="order-1 flex items-center justify-center lg:order-2 lg:justify-start">
 
-                    <div className="relative h-[380px] w-[280px] md:h-[450px] md:w-[350px]">
+                    <div className="relative h-[380px] w-[280px] md:h-[450px] md:w-[350px] ">
                         {SLIDES.map((slide, index) => {
+                            
+                            const position = (index - activeIndex + SLIDES.length) % SLIDES.length;
+
                             const style = getCardStyle(index);
-                            const isFront = (index - activeIndex + SLIDES.length) % SLIDES.length === 0;
+                            const isFront = position === 0;
 
                             return (
                                 <motion.div
                                     key={slide.id}
-                                    className="absolute inset-0 overflow-hidden "
+                                    className="absolute inset-0 overflow-hidden"
                                     initial={style}
                                     animate={style}
-
                                     drag={isFront ? "x" : false}
                                     dragConstraints={{ left: 0, right: 0 }}
                                     onDragEnd={(_, info) => {
-                                        if (isFront) {
-
-                                            if (Math.abs(info.offset.x) > 100) {
-                                                handleNext();
-                                            }
+                                        if (isFront && Math.abs(info.offset.x) > 100) {
+                                            handleNext();
                                         }
                                     }}
                                     transition={{
@@ -145,19 +144,24 @@ export default function Hero() {
                                         ease: [0.16, 1, 0.3, 1],
                                     }}
                                     style={{
-
                                         cursor: isFront ? "grab" : "default",
                                         touchAction: "none"
                                     }}
                                     whileTap={{ cursor: "grabbing" }}
                                 >
                                     <div className="relative h-full w-full pointer-events-none">
+                                       
                                         <img
                                             src={slide.image}
                                             alt={slide.title}
                                             className="h-102 w-70 object-cover"
                                         />
-                                        <div className="absolute inset-0 " />
+
+
+                                        <div
+                                            className={`absolute top-0 left-0 h-102 w-70 transition-colors duration-300 ${position === 0 ? "bg-transparent" : "bg-white/60"
+                                                }`}
+                                        />
                                     </div>
                                 </motion.div>
                             );

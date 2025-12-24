@@ -268,14 +268,14 @@ body {
 /* hover glow effect */
 .react-select__option--is-focused {
   background-color: #ffffff !important;
-  color: #1E273E !important;
+  color: #49CF38 !important;
   
 }
 
 /* selected option */
 .react-select__option--is-selected {
   background-color: #ffffff !important;
-  color: #49CF38 !important;
+  color: #1E273E !important;
   font-weight: 500;
 } /* =======================
    CENTER CARD

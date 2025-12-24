@@ -33,13 +33,13 @@ export default function Leadership() {
     <section className="section-block-padding container-paddingv2">
       
         <div className="flex flex-col justify-center items-center pb-7 md:pb-12 3xl:pb-18">
-          <div className="  relative mb-20 text-center">
+          <div className="  relative mb-12 text-center">
                 <h2 className="fl2 inline-block relative">
                     Leadership Team
                     <span className="block absolute right-0  w-10 h-2 bg-[#49CF38]"></span>
                 </h2>
             </div>
-          <p className="fl7 text-center w-[80vw]">
+          <p className="fl7 text-center w-[70vw]">
             Our leadership team brings together decades of experience crafting
             sophisticated custom software solutions, pioneering automation
             frameworks, and delivering superior-quality engineering for

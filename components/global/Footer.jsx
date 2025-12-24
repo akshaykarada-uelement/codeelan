@@ -121,8 +121,8 @@ export default function Footer() {
                   <Image
                     src="/landing/platform1.png"
                     alt="codeElan"
-                    width={200}
-                    height={100}
+                    width={100}
+                    height={20}
                     className="hidden md:block"
                   />
                   <Image
@@ -137,8 +137,8 @@ export default function Footer() {
                   <Image
                     src="/landing/platform2.png"
                     alt="codeElan"
-                    width={195}
-                    height={48}
+                    width={105}
+                    height={20}
                     className="hidden md:block"
                   />
                   <Image

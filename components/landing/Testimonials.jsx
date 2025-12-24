@@ -50,7 +50,7 @@ export default function Testimonials() {
             <img
               src="/landing/double-testimonial.png"
               alt=""
-              className="absolute left-50 -top-8 w-60 h-40"
+              className="absolute left-80 -top-2 w-60 h-40"
             />
             <div className="relative">
               <h2 className="fl2 inline-block relative">

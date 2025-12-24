@@ -102,7 +102,7 @@ export default function Navbar() {
                                 className={`flex items-center gap-1 font-medium transition-colors
                   ${activeLink === item.name
                                         ? "text-[#49CF38]"
-                                        : "text-[#1E2A5E] hover:text-[#49CF38]"
+                                        : "text-[#1E2A5E] hover:text-[#49CF38] "
                                     }
                 `}
                             >
@@ -127,13 +127,13 @@ export default function Navbar() {
                                     <div className="w-[260px] bg-white shadow-[0_10px_30px_rgba(0,0,0,0.15)]">
                                         {item.children.map((child, index) => {
                                             const isExternal = child.href.startsWith('http://') || child.href.startsWith('https://');
-                                            const linkClassName = `block px-5 py-4 text-sm font-medium text-[#1E2A5E] hover:text-[#49CF38]
+                                            const linkClassName = `block px-5 py-4 text-sm font-medium text-[#1E2A5E] hover:text-[#49CF38] hover:siz
                           ${index !== item.children.length - 1
-                                                        ? "border-b border-[#DEDEDE99]"
-                                                        : ""
-                                                    }
+                                                    ? "border-b border-[#DEDEDE99]"
+                                                    : ""
+                                                }
                         `;
-                                            
+
                                             return isExternal ? (
                                                 <a
                                                     key={child.name}
@@ -223,11 +223,11 @@ export default function Navbar() {
                                         const isExternal = child.href.startsWith('http://') || child.href.startsWith('https://');
                                         const linkClassName = `text-sm px-3 py-2 rounded-md transition-colors
   ${pathname === child.href
-                                                    ? "bg-white text-[#49CF38]"
-                                                    : "text-[#1E273E]"
-                                                }
+                                                ? "bg-white text-[#49CF38]"
+                                                : "text-[#1E273E]"
+                                            }
 `;
-                                        
+
                                         return isExternal ? (
                                             <a
                                                 key={child.name}

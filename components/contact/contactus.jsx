@@ -47,73 +47,73 @@ export default function Contactus() {
         },
     ];
     return (
-        <main className="min-h-screen  section-block-padding">
+        <main className="min-h-screen container-paddingv2 section-block-padding">
 
-            {/* CONTACT FORM */}
-           <div className="w-full max-w-2xl mx-auto px-4 md:px-0">
-    <div className="relative mb-12 md:mb-20 text-center">
-        <h2 className="fl2 inline-block relative text-3xl md:text-4xl">
-            Contact Us
-            <span className="block absolute right-0 w-10 h-2 bg-[#49CF38]"></span>
-        </h2>
-    </div>
-    <div className="bg-white shadow-[0px_0px_10px_1px_#00000026] p-4 md:p-6 rounded-lg">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
-            <div>
-                <label className="block fl7 mb-1">Your Name *</label>
-                <input
-                    type="text"
-                    placeholder="Ex. Amy West"
-                    className="w-full bg-[#f5f5f5] p-3 outline-none fl8 rounded"
-                />
+
+            <div className="w-full max-w-2xl mx-auto px-4 md:px-0">
+                <div className="relative mb-12 md:mb-20 text-center">
+                    <h2 className="fl2 inline-block relative text-3xl md:text-4xl">
+                        Contact Us
+                        <span className="block absolute right-0 w-10 h-2 bg-[#49CF38]"></span>
+                    </h2>
+                </div>
+                <div className="bg-white shadow-[0px_0px_10px_1px_#00000026] p-4 md:p-6 rounded-lg">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+                        <div>
+                            <label className="block fl7 mb-1">Your Name *</label>
+                            <input
+                                type="text"
+                                placeholder="Ex. Amy West"
+                                className="w-full bg-[#f5f5f5] p-3 outline-none fl8 rounded"
+                            />
+                        </div>
+
+                        <div>
+                            <label className="block fl7 mb-1">Email Address *</label>
+                            <input
+                                type="email"
+                                placeholder="example@gmail.com"
+                                className="w-full bg-[#f5f5f5] p-3 outline-none fl8 rounded"
+                            />
+                        </div>
+                    </div>
+
+                    <div className="mt-6">
+                        <label className="block fl7 mb-1">
+                            Services/Technologies interested in *
+                        </label>
+
+                        <Select
+                            options={serviceOptions}
+                            placeholder="Select Service"
+                            classNamePrefix="react-select"
+                        />
+                    </div>
+
+
+                    <div className="mt-6">
+                        <label className="block fl7 mb-1">Subject *</label>
+                        <input
+                            type="text"
+                            placeholder="Subject"
+                            className="w-full bg-[#f5f5f5] p-3 outline-none fl8 rounded"
+                        />
+                    </div>
+
+                    <div className="mt-6">
+                        <label className="block fl7 mb-1">Comments *</label>
+                        <textarea
+                            placeholder="Message"
+                            rows={4}
+                            className="w-full bg-[#f5f5f5] p-3 outline-none fl8 resize-none rounded"
+                        />
+                    </div>
+
+                    <button className="mt-6 !w-full green-btn py-3 fl7 ">
+                        Send
+                    </button>
+                </div>
             </div>
-
-            <div>
-                <label className="block fl7 mb-1">Email Address *</label>
-                <input
-                    type="email"
-                    placeholder="example@gmail.com"
-                    className="w-full bg-[#f5f5f5] p-3 outline-none fl8 rounded"
-                />
-            </div>
-        </div>
-
-        <div className="mt-6">
-            <label className="block fl7 mb-1">
-                Services/Technologies interested in *
-            </label>
-
-            <Select
-                options={serviceOptions}
-                placeholder="Select Service"
-                classNamePrefix="react-select"
-            />
-        </div>
-
-
-        <div className="mt-6">
-            <label className="block fl7 mb-1">Subject *</label>
-            <input
-                type="text"
-                placeholder="Subject"
-                className="w-full bg-[#f5f5f5] p-3 outline-none fl8 rounded"
-            />
-        </div>
-
-        <div className="mt-6">
-            <label className="block fl7 mb-1">Comments *</label>
-            <textarea
-                placeholder="Message"
-                rows={4}
-                className="w-full bg-[#f5f5f5] p-3 outline-none fl8 resize-none rounded"
-            />
-        </div>
-
-        <button className="mt-6 w-full bg-green-500 text-[#1E273E] py-3 fl7 font-semibold rounded hover:bg-green-600 transition-colors">
-            Send
-        </button>
-    </div>
-</div>
 
             {/* FIND US HERE */}
             <div className="w-full section-block-padding mx-auto px-6 py-10 lg:p-10 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8 lg:gap-10">
