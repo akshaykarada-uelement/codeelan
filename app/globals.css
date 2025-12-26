@@ -184,8 +184,6 @@ body {
   }
 }
 
-/* casestudy moble view swiper */
-
 .casestudy-bullet {
   width: 8px;
   height: 8px;
@@ -205,8 +203,6 @@ body {
 .casestudy-swiper {
   padding-bottom: 40px;
 }
-
-/* ===== React Select – CodeElan Style ===== */
 
 .react-select__control {
   background-color: #f5f5f5 !important;
@@ -236,7 +232,6 @@ body {
   color: #1a2b6d80;
 }
 
-/* dropdown menu */
 .react-select__menu {
   margin-top: 6px;
   border-radius: 2px;
@@ -244,7 +239,6 @@ body {
   overflow: hidden;
 }
 
-/* option base */
 .react-select__option {
   padding: 14px 16px;
   font-size: 16px;
@@ -254,7 +248,6 @@ body {
   position: relative;
 }
 
-/* separator line */
 .react-select__option:not(:last-child)::after {
   content: "";
   position: absolute;
@@ -265,21 +258,18 @@ body {
   background: #eaeaea;
 }
 
-/* hover glow effect */
 .react-select__option--is-focused {
   background-color: #ffffff !important;
   color: #49CF38 !important;
   
 }
 
-/* selected option */
 .react-select__option--is-selected {
   background-color: #ffffff !important;
   color: #1E273E !important;
   font-weight: 500;
-} /* =======================
-   CENTER CARD
-======================= */
+} 
+
 .center-card {
   width: 360px;
   min-height: 500px;
@@ -288,6 +278,9 @@ body {
   z-index: 2;
   padding: 40px 24px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
 }
 
 .center-card img {
@@ -302,9 +295,6 @@ body {
   line-height: 1.7;
 }
 
-/* =======================
-   SIDE CARDS
-======================= */
 .side-card {
   width: 240px;
   height: 300px;
@@ -322,7 +312,6 @@ body {
   height: 140px;
 }
 
-/* Desktop spacing */
 .side-card.left {
   left: calc(50% - 460px);
 }
@@ -331,9 +320,6 @@ body {
   right: calc(50% - 460px);
 }
 
-/* =======================
-   WRAPPER + GREY PANEL
-======================= */
 .carousel-wrapper {
   position: relative;
   height: 620px;
@@ -355,9 +341,6 @@ body {
   z-index: 0;
 }
 
-/* =======================
-   NAVIGATION
-======================= */
 .carousel-nav-wrapper {
   margin-top: 40px;
   display: flex;
@@ -376,13 +359,10 @@ body {
   height: 34px;
 }
 
-/* =======================
-   TABLET (≤ 1024px)
-======================= */
 @media (max-width: 1024px) {
   .center-card {
     width: 320px;
-    min-height: 420px;
+    min-height: 530px; 
   }
 
   .side-card {
@@ -401,13 +381,10 @@ body {
 
   .carousel-wrapper::before {
     width: 60%;
-    height: 520px;
+    height: 600px; 
   }
 }
 
-/* =======================
-   MOBILE (≤ 768px)
-======================= */
 @media (max-width: 768px) {
   .side-card {
     display: none;
@@ -438,7 +415,6 @@ body {
   }
 }
 
-/* leadership section styling  */
 
 .leadership-bullet {
   width: 8px;

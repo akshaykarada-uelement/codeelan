@@ -46,28 +46,28 @@ export default function Partnerships() {
     };
 
     return (
-        <section className="py-24 relative">
-           <div className="  relative mb-20 text-center">
+        <section className="section-block-padding relative">
+            <div className="relative mb-20 text-center">
                 <h2 className="fl2 inline-block relative">
-                   Partnerships
-                    <span className="block absolute right-0  w-10 h-2 bg-[#49CF38]"></span>
+                    Partnerships
+                   <span className="block absolute right-0  -bottom-[2px] w-10 h-2 bg-[#49CF38]"></span>
                 </h2>
             </div>
 
-            <div className="carousel-wrapper"> 
+            <div 
+                className="carousel-wrapper"
+                onTouchStart={onTouchStart}
+                onTouchEnd={onTouchEnd}
+            >
                 <div className="relative flex justify-center z-0">
-
-
                     <div className="side-card left ">
                         <img src={partners[prevIndex].logo} alt="" />
                     </div>
-
 
                     <div className="center-card fl7">
                         <img src={partners[active].logo} alt="" />
                         <p>{partners[active].content}</p>
                     </div>
-
 
                     <div className="side-card right">
                         <img src={partners[nextIndex].logo} alt="" />
@@ -75,9 +75,11 @@ export default function Partnerships() {
                 </div>
             </div>
 
-
+            
             <div className="carousel-nav-wrapper">
                 <button
+                    
+                    className="lg:absolute lg:top-1/2 lg:left-20 lg:-translate-y-1/2 lg:z-10 hover:scale-110 transition-transform"
                     onClick={prev}
                     onMouseEnter={() => setIsPrevHovered(true)}
                     onMouseLeave={() => setIsPrevHovered(false)}
@@ -89,6 +91,8 @@ export default function Partnerships() {
                 </button>
 
                 <button
+                    
+                    className="lg:absolute lg:top-1/2 lg:right-20 lg:-translate-y-1/2 lg:z-10 hover:scale-110 transition-transform"
                     onClick={next}
                     onMouseEnter={() => setIsNextHovered(true)}
                     onMouseLeave={() => setIsNextHovered(false)}
