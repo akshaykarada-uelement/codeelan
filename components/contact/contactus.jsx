@@ -6,16 +6,15 @@ import { motion } from "framer-motion";
 import dynamic from "next/dynamic";
 import Select from "react-select";
 
-const LeafletMap = dynamic(() => import("@/components/map/LeafletMap"), {
+const LeafletMap = dynamic(() => import('../map/LeafletMap'), {
     ssr: false,
+    loading: () => <p>Loading map...</p>,
 });
-
 
 const serviceOptions = [
     { value: "omniscientia", label: "Omniscientia" },
     { value: "perfectus", label: "Perfectus" },
 ];
-
 
 export default function Contactus() {
     const [activeIndex, setActiveIndex] = useState(0);
@@ -46,15 +45,15 @@ export default function Contactus() {
             ),
         },
     ];
+
     return (
         <main className="min-h-screen container-paddingv2 section-block-padding">
-
 
             <div className="w-full max-w-2xl mx-auto px-4 md:px-0">
                 <div className="relative mb-12 md:mb-20 text-center">
                     <h2 className="fl2 inline-block relative text-3xl md:text-4xl">
                         Contact Us
-                        <span className="block absolute right-0 w-10 h-2 bg-[#49CF38]"></span>
+                        <span className="block absolute right-0  -bottom-[2px] w-10 h-2 bg-[#49CF38]"></span>
                     </h2>
                 </div>
                 <div className="bg-white shadow-[0px_0px_10px_1px_#00000026] p-4 md:p-6 rounded-lg">
@@ -84,12 +83,12 @@ export default function Contactus() {
                         </label>
 
                         <Select
+                            instanceId="service-select"
                             options={serviceOptions}
                             placeholder="Select Service"
                             classNamePrefix="react-select"
                         />
                     </div>
-
 
                     <div className="mt-6">
                         <label className="block fl7 mb-1">Subject *</label>
@@ -115,69 +114,62 @@ export default function Contactus() {
                 </div>
             </div>
 
-            {/* FIND US HERE */}
+
             <div className="w-full section-block-padding mx-auto px-6 py-10 lg:p-10 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8 lg:gap-10">
 
-                {/* --- LEFT SIDE: Heading --- */}
-                <div className="  relative  text-center">
+
+                <div className="relative text-center">
                     <h2 className="fl2 inline-block relative">
                         Find us here
-                        <span className="block absolute right-0  w-10 h-2 bg-[#49CF38]"></span>
+                        <span className="block absolute right-0  -bottom-[2px] w-10 h-2 bg-[#49CF38]"></span>
                     </h2>
                 </div>
 
-                {/* --- RIGHT SIDE: Interactive Contact List --- */}
-                {/* Mobile: Stack vertical (flex-col). Desktop: Row (lg:flex-row) */}
+
                 <div
-                    className="flex flex-col lg:flex-row w-full lg:w-auto bg-white rounded-lg lg:bg-transparent"
+                    className="flex flex-col lg:flex-row w-full lg:w-auto bg-white lg:bg-transparent"
                     onMouseLeave={() => setActiveIndex(0)}
                 >
                     {contactItems.map((item, index) => (
                         <div
                             key={item.id}
                             onMouseEnter={() => setActiveIndex(index)}
-                            onClick={() => setActiveIndex(index)} // Allow click on mobile
+                            onClick={() => setActiveIndex(index)}
                             className="relative px-6 py-5 lg:px-8 lg:py-6 cursor-pointer group w-full lg:w-auto"
                         >
-                            {/* Animated Gray Background */}
+
                             {activeIndex === index && (
                                 <motion.div
                                     layoutId="activeBackground"
-                                    className="absolute inset-0 bg-gray-100 rounded-lg lg:rounded-sm"
+                                    className="absolute inset-0 bg-[#F7F7F7]  "
                                     transition={{ type: "spring", stiffness: 300, damping: 30 }}
                                 />
                             )}
 
-                            {/* Content */}
                             <div className="relative z-10 flex items-start gap-4">
-                                <div className="mt-1 text-gray-700">
+                                <div className="mt-1 ">
                                     {item.icon}
                                 </div>
                                 <div>
-                                    <h3 className="font-semibold text-gray-900 text-lg">
+                                    <h3 className="fl4">
                                         {item.label}
                                     </h3>
-                                    <div className="text-gray-500 text-sm mt-1">
+                                    <div className="fl7 mt-1">
                                         {item.value}
                                     </div>
                                 </div>
                             </div>
 
-                            {/* DIVIDERS LOGIC */}
                             {index !== contactItems.length - 1 && (
-                                <>
-                                    {/* Mobile Divider (Horizontal at bottom) */}
-                                    <div className="absolute bottom-0 left-6 right-6 h-[1px] bg-gray-200 lg:hidden" />
-
-                                    {/* Desktop Divider (Vertical at right) */}
-                                    <div className="hidden lg:block absolute right-0 top-1/2 -translate-y-1/2 h-12 w-[1px] bg-gray-200" />
-                                </>
+                                <div>
+                                    <div className="absolute bottom-0 left-6 right-6 h-[1px] bg-[#D9D9D9] lg:hidden" />
+                                    <div className="hidden lg:block absolute right-0 top-1/2 -translate-y-1/2 h-12 w-[1px] bg-[#D9D9D9]" />
+                                </div>
                             )}
                         </div>
                     ))}
                 </div>
             </div>
-
 
             <div className="">
                 <LeafletMap />
