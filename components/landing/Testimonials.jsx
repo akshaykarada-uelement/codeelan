@@ -41,7 +41,7 @@ export default function Testimonials() {
   };
 
   return (
-    <section className="section-block-top pl-8 md:pl-14 2xl:pl-15 3xl:pl-18 bg-white relative overflow-hidden">
+    <section className="section-block-top  md:pl-14 2xl:pl-15 3xl:pl-18 bg-white relative overflow-hidden">
       <div className="absolute top-0 right-0 w-1/2 bg-[#1E273E] hidden md:block h-150"></div>
 
       <div className="hidden md:block">
@@ -59,11 +59,11 @@ export default function Testimonials() {
               </h2>
             </div>
           </div>
-          <div className="md:w-[70%] relative flex flex-col justify-center">
+          <div className="md:w-[70%] relative flex flex-col justify-center pb-24">
             <div className="flex justify-center">
-              <span className="absolute -left-2 top-0 h-71 w-2 bg-[#49CF38]" />
+              <span className="absolute -left-2 top-0 h-75 w-2 bg-[#49CF38]" />
               <span className="absolute -left-2 -top-2 h-2 w-[8vw] bg-[#49CF38]" />
-              <span className="absolute -left-2 bottom-42.5 h-2 w-[8vw] bg-[#49CF38] z-10" />
+              <span className="absolute -left-2 bottom-35 h-2 w-[8vw] bg-[#49CF38] z-10" />
               <Swiper
                 ref={swiperDesktopRef}
                 modules={[Navigation]}
@@ -82,51 +82,60 @@ export default function Testimonials() {
                 ))}
               </Swiper>
             </div>
-            <div className="flex gap-40 md:px-20 mb-15 z-100">
-              <button
-                onClick={handlePrev}
-                className="flex items-center justify-center w-12 h-12 transition-all"
-                aria-label="Previous testimonial"
-                onMouseEnter={() => setIsPrevHovered(true)}
-                onMouseLeave={() => setIsPrevHovered(false)}
-              >
-                <img
-                  src={isPrevHovered ? "/icons/prev1.svg" : "/icons/prev.svg"}
-                  alt="Previous"
-                />
-              </button>
-              <button
-                onClick={handleNext}
-                className="flex items-center justify-center w-12 h-12  transition-all"
-                aria-label="Next testimonial"
-                onMouseEnter={() => setIsNextHovered(true)}
-                onMouseLeave={() => setIsNextHovered(false)}
-              >
-                <img
-                  src={
-                    isNextHovered ? "/icons/next1.svg" : "/icons/next-wt.svg"
-                  }
-                  alt="Next"
-                />
-              </button>
-            </div>
           </div>
+        </div>
+
+        <div className="absolute left-1/2 -translate-x-1/2 bottom-6 md:bottom-8 lg:bottom-12 z-50 flex gap-16 md:gap-20 lg:gap-32 xl:gap-40">
+          <button
+            onClick={handlePrev}
+            className="flex items-center justify-center w-12 h-12 transition-all"
+            aria-label="Previous testimonial"
+            onMouseEnter={() => setIsPrevHovered(true)}
+            onMouseLeave={() => setIsPrevHovered(false)}
+          >
+            <img
+              src={isPrevHovered ? "/icons/prev1.svg" : "/icons/prev.svg"}
+              alt="Previous"
+            />
+          </button>
+          <button
+            onClick={handleNext}
+            className="flex items-center justify-center w-12 h-12  transition-all"
+            aria-label="Next testimonial"
+            onMouseEnter={() => setIsNextHovered(true)}
+            onMouseLeave={() => setIsNextHovered(false)}
+          >
+            <img
+              src={
+                isNextHovered ? "/icons/next1.svg" : "/icons/next-wt.svg"
+              }
+              alt="Next"
+            />
+          </button>
         </div>
       </div>
 
-      <div className="md:hidden ">
-        <div className="inline-block w-full mx-auto">
-          <h3 className="relative fl2 title-content-gap text-center">
+      <div className="md:hidden w-[80%] mx-auto pb-10">
+        <div className=" mb-8 relative flex justify-center items-center">
+          <h3 className="relative fl2 title-content-gap mx-auto inline-block">
             Testimonials
-            <span className="block absolute md:right-[calc(50%-150px)] right-[calc(50%-110px)]  -translate-1/2 w-8 md:w-11 h-2 bg-[#49CF38] "></span>
+            <span className="block absolute right-0  -bottom-[2px] w-10 h-2 bg-[#49CF38]"></span>
           </h3>
         </div>
 
         <Swiper
           ref={swiperMobileRef}
           modules={[Pagination]}
-          spaceBetween={16}
+          spaceBetween={20}
           slidesPerView={1}
+          
+          breakpoints={{
+            
+            640: {
+              slidesPerView: 1.2, 
+              spaceBetween: 24,
+            },
+          }}
           pagination={{
             el: paginationMobileRef.current,
             clickable: true,
@@ -143,18 +152,20 @@ export default function Testimonials() {
               swiper.pagination.update();
             }
           }}
-          className="w-70 mx-auto"
+          className="w-full px-4 sm:px-8"
         >
           {testimonialsData.map((testimonial) => (
-            <SwiperSlide key={testimonial.id}>
-              <TestimonialCard testimonial={testimonial} isMobile={true} />
+            <SwiperSlide key={testimonial.id} className="h-auto">
+              <div className="h-full py-2">
+                <TestimonialCard testimonial={testimonial} isMobile={true} />
+              </div>
             </SwiperSlide>
           ))}
         </Swiper>
 
         <div
           ref={paginationMobileRef}
-          className="swiper-pagination relative flex justify-center -mt-4! gap-2 w-full"
+          className="swiper-pagination relative flex justify-center mt-6 gap-2 w-full"
         ></div>
       </div>
     </section>

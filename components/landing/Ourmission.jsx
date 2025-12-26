@@ -11,7 +11,7 @@ export default function OurMission() {
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-0">
 
 
-                            <div className="relative flex flex-col gap-6 md:pr-8 md:border-r-2 md:border-dashed md:border-gray-200">
+                            <div className="relative flex flex-col gap-6 h-full md:pr-8 md:border-r-2 md:border-dashed md:border-[#D9D9D980]">
                                 <div className="flex justify-between items-start">
 
                                     <img
@@ -31,7 +31,7 @@ export default function OurMission() {
                                     href="https://omniscientia.codeelan.com/"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="mt-14 md:mt-24 w-fit green-btn"
+                                    className="mt-14 md:mt-auto w-fit green-btn"
                                 >
                                     Know More
                                 </a>
@@ -39,7 +39,7 @@ export default function OurMission() {
                             </div>
 
 
-                            <div className="relative flex flex-col gap-6 md:pl-8">
+                            <div className="relative flex flex-col gap-6 h-full md:pl-8">
                                 <div className="flex justify-between items-start">
 
                                     <img
@@ -58,7 +58,7 @@ export default function OurMission() {
                                     href="https://perfectus.codeelan.com/"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className=" w-fit green-btn mt-14 md:mt-50" 
+                                    className=" w-fit green-btn mt-14 md:mt-auto" 
                                 >
                                     Know More
                                 </a>
