@@ -445,3 +445,17 @@ body {
   width: 24px;
   border-radius: 4px;
 }
+
+/* --- Slider Animation Logic --- */
+.slide-card {
+  transition: flex 0.7s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.slide-vertical-text {
+  bottom: 2rem;
+  left: 1.5rem;
+  transform-origin: bottom left;
+  transform: rotate(-90deg) translate(0, 100%);
+  width: 16rem; 
+  position: absolute;
+}
