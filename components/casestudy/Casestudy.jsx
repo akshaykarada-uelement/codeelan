@@ -1,7 +1,21 @@
 'use client';
 
-import React, { useState } from 'react';
+import React from 'react';
 import Image from 'next/image';
+import { getAllCaseStudies } from '../../data/caseStudies';
+import CaseStudyDetails from './CasestudyDetails';
+import { useState, useEffect, useRef } from 'react';
+
+
+// Map slides to case study IDs
+const slideToCaseStudyMap = {
+  0: 'ecommerce-mobile-app',
+  1: 'product-testing-web',
+  2: 'automation-website-mobile',
+  3: 'insurance-automation',
+  4: 'crm-development-aspnet',
+  5: 'automotive-car-resale'
+};
 
 const slides = [
   { id: 0, title: 'Ecommerce Mobile App', image: '/casestudy/mobileapp.png' },
@@ -16,6 +30,50 @@ export default function CasestudyGrid() {
   const [isPrevHovered, setIsPrevHovered] = useState(false);
   const [isNextHovered, setIsNextHovered] = useState(false);
   const [activeIndex, setActiveIndex] = useState(0);
+  const intervalRef = useRef(null);
+  const startX = useRef(0);
+  const isDragging = useRef(false);
+
+  useEffect(() => {
+    startAutoPlay();
+    return stopAutoPlay;
+  }, []);
+
+  const startAutoPlay = () => {
+    stopAutoPlay();
+    intervalRef.current = setInterval(() => {
+      next();
+    }, 6000);
+  };
+
+  const stopAutoPlay = () => {
+    if (intervalRef.current) {
+      clearInterval(intervalRef.current);
+      intervalRef.current = null;
+    }
+  };
+
+  const onStart = (x) => {
+    startX.current = x;
+    isDragging.current = true;
+    stopAutoPlay();
+  };
+
+  const onMoveEnd = (x) => {
+    if (!isDragging.current) return;
+    const diff = x - startX.current;
+    if (diff > 60) prev();
+    if (diff < -60) next();
+    isDragging.current = false;
+    startAutoPlay();
+  };
+
+
+
+  // Get the active case study
+  const caseStudies = getAllCaseStudies();
+  const activeCaseStudyId = slideToCaseStudyMap[activeIndex];
+  const activeCaseStudy = caseStudies.find(study => study.id === activeCaseStudyId);
 
   const prev = () =>
     setActiveIndex((p) => (p === 0 ? slides.length - 1 : p - 1));
@@ -43,7 +101,12 @@ export default function CasestudyGrid() {
         </div>
 
         <div className="w-[80%] relative">
-          <div className="flex items-center justify-center gap-6 h-[600px] overflow-hidden lg:h-[560px] xl:h-[600px]">
+          <div
+            className="flex items-center justify-center gap-6 h-[600px] overflow-hidden"
+            onMouseDown={(e) => onStart(e.clientX)}
+            onMouseUp={(e) => onMoveEnd(e.clientX)}
+            onMouseLeave={() => (isDragging.current = false)}
+          >
             {visibleSlides.map((slide, i) => {
               const isActive = i === 1;
 
@@ -143,7 +206,11 @@ export default function CasestudyGrid() {
           </h3>
         </div>
 
-        <div className="flex gap-4 px-4 h-[420px] overflow-hidden">
+        <div
+          className="flex gap-4 px-4 h-[420px] overflow-hidden"
+          onTouchStart={(e) => onStart(e.touches[0].clientX)}
+          onTouchEnd={(e) => onMoveEnd(e.changedTouches[0].clientX)}
+        >
           {[slides[(activeIndex - 1 + slides.length) % slides.length], slides[activeIndex]].map(
             (slide, i) => {
               const isActive = i === 1;
@@ -212,6 +279,13 @@ export default function CasestudyGrid() {
           </button>
         </div>
       </div>
+
+      {/* Case Study Details Section */}
+      {activeCaseStudy && (
+        <div className="mt-12 md:mt-16">
+          <CaseStudyDetails caseStudy={activeCaseStudy} hideBackButton={true} />
+        </div>
+      )}
 
     </main>
   );

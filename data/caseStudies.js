@@ -6,7 +6,7 @@ export const caseStudies = [
     description:
       "The ecommerce mobile app offers a seamless platform for both sellers and consumers, enabling businesses to create online stores and reach a broader customer base.",
     image: "/casestudy/cs-image1.png",
-    detailimage: "/casestudy/casestudydetails-temp.png",
+    detailimage: "/casestudy/mobileappbg.png",
     category: "Mobile Development",
     gridSize: "standard",
     details: {
@@ -60,7 +60,7 @@ export const caseStudies = [
     description:
       "Comprehensive web-based testing platform for QA teams with real-time bug tracking, automated test case management, and detailed performance monitoring.",
     image: "/casestudy/cs-image2.jpg",
-    detailimage: "/casestudy/casestudydetails-temp.png",
+    detailimage: "/casestudy/testingbg.png",
     category: "QA & Testing",
     gridSize: "standard",
     details: {
@@ -128,7 +128,7 @@ export const caseStudies = [
     description:
       "End-to-end automation testing suite covering web and mobile platforms with comprehensive integration, supporting multiple frameworks and devices.",
     image: "/casestudy/cs-image3.png",
-    detailimage: "/casestudy/casestudydetails-temp.png",
+    detailimage: "/casestudy/automationbg.png",
     category: "Test Automation",
     gridSize: "tall-bottom",
     details: {
@@ -183,7 +183,7 @@ export const caseStudies = [
     description:
       "Modern, intuitive UI/UX design for an automotive marketplace with advanced filtering, AR car preview, and secure transaction handling.",
     image: "/casestudy/cs-image4.png",
-    detailimage: "/casestudy/casestudydetails-temp.png",
+    detailimage: "/casestudy/uiuxbg.png",
     category: "UI/UX Design",
     gridSize: "tall-right",
     details: {
@@ -352,7 +352,7 @@ export const caseStudies = [
     description:
       "Enterprise-level CRM system built with ASP.NET MVC featuring customer relationship management, sales pipeline tracking, and advanced analytics dashboards.",
     image: "/casestudy/cs-image5.png",
-    detailimage: "/casestudy/casestudydetails-temp.png",
+    detailimage: "/casestudy/developmentbg.png",
     category: "Backend Development",
     gridSize: "equal",
     details: {
@@ -519,7 +519,7 @@ export const caseStudies = [
     description:
       "Automated insurance processing system with policy management, claims handling automation, and customer portal with AI-driven recommendations.",
     image: "/casestudy/cs-image6.png",
-    detailimage: "/casestudy/casestudydetails-temp.png",
+    detailimage: "/casestudy/insurencebg.png",
     category: "Automation",
     gridSize: "equal",
     details: {

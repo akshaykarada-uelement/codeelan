@@ -4,7 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-export default function CaseStudyDetails({ caseStudy }) {
+export default function CaseStudyDetails({ caseStudy, hideBackButton = false }) {
   const [expandedPoint, setExpandedPoint] = useState(null);
 
   const handleTogglePoint = (index) => {
@@ -24,25 +24,42 @@ export default function CaseStudyDetails({ caseStudy }) {
 
   return (
     <div className="min-h-screen">
-      <div className="flex md:flex-row flex-col items-center md:justify-center w-full gap-8 xl:gap-10 mb-8 md:mb-10 bg-[#F0F0F0]">
-        <div className="flex md:w-1/2 w-full flex-col justify-center container-padding py-4 md:py-0 md:mr-25">
-          <div className="flex gap-3 mb-5 md:mb-10">
-            <span className="w-1 h-10 bg-[#49CF38] transform rotate-[15deg]" />
-            <h1 className="fl3">{caseStudy.title}</h1>
-          </div>
-          <p className="fl7">{caseStudy.description}</p>
-        </div>
+      <div className="relative w-full min-h-[420px] md:min-h-[520px] flex items-center overflow-hidden ">
+        {/* Background Image */}
+        <img
+          src={caseStudy.detailimage}
+          alt={caseStudy.title}
+          className="absolute inset-0 w-full h-full object-cover"
+        />
 
-        <div className="flex md:w-1/2 w-full h-auto items-center justify-center overflow-hidden">
-          <img
-            src={caseStudy.detailimage}
-            alt={caseStudy.title}
-            className="object-cover"
-          />
+        {/* Gradient Overlay */}
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              "linear-gradient(270deg, rgba(247, 247, 247, 0) -19.72%, rgba(0, 0, 0, 0.94) 76.98%)",
+          }}
+        />
+
+        {/* Content */}
+        <div className="relative z-10 w-full">
+          <div className="container-padding max-w-3xl">
+            <div className="flex gap-3 mb-5 md:mb-8 items-start">
+              <span className="w-1 h-10 bg-[#49CF38] transform rotate-[15deg]" />
+              <h1 className="fl3 !text-white">
+                {caseStudy.title}
+              </h1>
+            </div>
+
+            <p className="fl7 !text-white/90 max-w-xl">
+              {caseStudy.description}
+            </p>
+          </div>
         </div>
       </div>
 
-      <div className="space-y-8 md:space-y-10 px-5 md:px-18 2xl:px-18 3xl:px-22">
+
+      <div className="space-y-8 md:space-y-10 px-5 md:px-18 2xl:px-18 3xl:px-22 section-block-padding">
         {points.map((point, index) => {
           const firstSubPoint =
             point.subPoints && point.subPoints.length > 0
@@ -65,11 +82,11 @@ export default function CaseStudyDetails({ caseStudy }) {
             expandedPoint === index
               ? {}
               : {
-                  display: "-webkit-box",
-                  WebkitLineClamp: 2,
-                  WebkitBoxOrient: "vertical",
-                  overflow: "hidden",
-                };
+                display: "-webkit-box",
+                WebkitLineClamp: 2,
+                WebkitBoxOrient: "vertical",
+                overflow: "hidden",
+              };
 
           return (
             <div
@@ -89,32 +106,32 @@ export default function CaseStudyDetails({ caseStudy }) {
                 >
                   <div className="flex md:flex-row flex-col md:items-center gap-4 sm:gap-6 xl:gap-10 flex-1 text-left">
                     <div className="flex justify-between">
-                    <img
-                      src={point.icon}
-                      alt={point.title}
-                      className="size-8 md:size-15"
-                    />
-                    <h3 className="fl4 md:hidden block">{point.title}</h3>
-                    <span
-                      className="md:hidden flex justify-end items-center flex-shrink-0 ml-2"
-                      aria-hidden="true"
-                    >
                       <img
-                        src={
-                          expandedPoint === index
-                            ? "/casestudy/minus.svg"
-                            : "/casestudy/plus.svg"
-                        }
-                        alt={expandedPoint === index ? "Collapse" : "Expand"}
-                        className="md:size-7 size-5 transition-all duration-300"
+                        src={point.icon}
+                        alt={point.title}
+                        className="size-8 md:size-15"
                       />
-                    </span>
+                      <h3 className="fl4 md:hidden block">{point.title}</h3>
+                      <span
+                        className="md:hidden flex justify-end items-center flex-shrink-0 ml-2"
+                        aria-hidden="true"
+                      >
+                        <img
+                          src={
+                            expandedPoint === index
+                              ? "/casestudy/minus.svg"
+                              : "/casestudy/plus.svg"
+                          }
+                          alt={expandedPoint === index ? "Collapse" : "Expand"}
+                          className="md:size-7 size-5 transition-all duration-300"
+                        />
+                      </span>
                     </div>
                     <div className="flex flex-col gap-3 sm:gap-4 flex-1">
                       <h3 className="fl4 hidden md:block">{point.title}</h3>
                       {previewText &&
-                      firstSubPoint &&
-                      typeof firstSubPoint === "object" ? (
+                        firstSubPoint &&
+                        typeof firstSubPoint === "object" ? (
                         <div className="fl7">
                           <ul className="list-disc text-black ml-4">
                             <li className="">
@@ -248,11 +265,10 @@ export default function CaseStudyDetails({ caseStudy }) {
                                 {row.map((cell, cellIdx) => (
                                   <td
                                     key={cellIdx}
-                                    className={`px-3 sm:px-4 py-2 sm:py-3  ${
-                                      cellIdx < row.length - 1
+                                    className={`px-3 sm:px-4 py-2 sm:py-3  ${cellIdx < row.length - 1
                                         ? "border-r-[2px] border-[#DEDEDE] fl5"
                                         : "fl7"
-                                    }`}
+                                      }`}
                                   >
                                     {cell}
                                   </td>
@@ -269,12 +285,14 @@ export default function CaseStudyDetails({ caseStudy }) {
             </div>
           );
         })}
-        <Link href="/casestudy" className=" ">
-          <div className="flex flex-row justify-start items-center green-btn">
-            <img src="/casestudy/back_btn.png" alt="Previous" />
-            <span>Go back</span>
-          </div>
-        </Link>
+        {!hideBackButton && (
+          <Link href="/casestudy" className=" ">
+            <div className="flex flex-row justify-start items-center green-btn">
+              <img src="/casestudy/back_btn.png" alt="Previous" />
+              <span>Go back</span>
+            </div>
+          </Link>
+        )}
       </div>
 
       <div className=""></div>
