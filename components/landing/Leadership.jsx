@@ -1,151 +1,126 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
+import { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination } from "swiper/modules";
 import LeadershipCard from "./LeadershipCard";
 import { leadershipTeam } from "@/data/leadershipData";
-
 import "swiper/css";
-import "swiper/css/pagination";
+
+const GAP = 24;
 
 export default function Leadership() {
-  const [activeLeaderId, setActiveLeaderId] = useState(null);
-
-  const swiperDesktopRef = useRef(null);
-  const swiperMobileRef = useRef(null);
-  const paginationDesktopRef = useRef(null);
-  const paginationMobileRef = useRef(null);
-
-  const [isMounted, setIsMounted] = useState(false);
-
-  useEffect(() => setIsMounted(true), []);
-
-  const handleHoverDesktop = (leaderId, index) => {
-    setActiveLeaderId(leaderId);
-
-    if (swiperDesktopRef.current) {
-      swiperDesktopRef.current.slideTo(index, 300);
-    }
-  };
+  const [activeIndex, setActiveIndex] = useState(null);
 
   return (
     <section className="section-block-padding container-paddingv2">
-      
-        <div className="flex flex-col justify-center items-center pb-7 md:pb-12 3xl:pb-18">
-          <div className="  relative mb-12 text-center">
-                <h2 className="fl2 inline-block relative">
-                    Leadership Team
-                    <span className="block absolute right-0  w-10 h-2 bg-[#49CF38]"></span>
-                </h2>
-            </div>
-          <p className="fl7 text-center w-[70vw]">
-            Our leadership team brings together decades of experience crafting
-            sophisticated custom software solutions, pioneering automation
-            frameworks, and delivering superior-quality engineering for
-            enterprises worldwide. They are the architects behind CodeElan’s
-            commitment to excellence, ensuring every solution is designed for
-            real-world scalability and innovation.
-          </p>
-        </div>
+      <div className="flex flex-col items-center pb-12">
+        <h2 className="fl2 relative mb-6">
+          Leadership Team
+          <span className="block absolute right-0 w-10 h-2 bg-[#49CF38]" />
+        </h2>
+        <p className="fl7 text-center max-w-4xl">
+          Our leadership team brings together decades of experience crafting
+          sophisticated custom software solutions.
+        </p>
+      </div>
 
-        <div className="hidden md:block relative">
-          <Swiper
-            modules={[Pagination]}
-            slidesPerView="auto"
-            spaceBetween={24}
-            grabCursor
-            onSwiper={(swiper) => (swiperDesktopRef.current = swiper)}
-            pagination={{
-              el: paginationDesktopRef.current,
-              clickable: true,
-              bulletClass: "swiper-pagination-bullet leadership-bullet",
-              bulletActiveClass:
-                "swiper-pagination-bullet-active leadership-bullet-active",
-            }}
-            onInit={(swiper) => {
-              if (paginationDesktopRef.current && isMounted) {
-                swiper.params.pagination.el = paginationDesktopRef.current;
-                swiper.pagination.init();
-                swiper.pagination.render();
-                swiper.pagination.update();
-              }
-            }}
-            onDoubleClick={(swiper, e) => {
-              if (e.shiftKey) swiper.slidePrev();
-              else swiper.slideNext();
-            }}
-            className="overflow-visible"
-          >
-            {leadershipTeam.map((leader, index) => {
-              const isActive = leader.id === activeLeaderId;
+     
+      <div className="hidden xl:block w-full overflow-visible ">
+        <Swiper
+          slidesPerView="auto"
+          spaceBetween={GAP}
+          className="w-full !pb-8 !px-4 overflow-visible"
+        >
+          {leadershipTeam.map((leader, index) => {
+            const isActive = activeIndex === index;
+            const isLast = index === leadershipTeam.length - 1;
 
-              return (
-                <SwiperSlide key={leader.id} className="!w-auto py-6"> 
+            return (
+              <SwiperSlide
+                key={leader.id}
+                
+                className={`
+                  transition-[width] duration-500 ease-in-out 
+                  ${!isLast ? "!w-auto" : "!w-[220px] 2xl:!w-[340px]"}
+                `}
+                style={{ zIndex: isActive ? 50 : 1 }}
+              >
+                <div
+                  onMouseEnter={() => setActiveIndex(index)}
+                  onMouseLeave={() => setActiveIndex(null)}
+                  className="relative h-[400px] flex items-stretch group"
+                >
                   <div
-                    onMouseEnter={() => handleHoverDesktop(leader.id, index)}
-                    onMouseLeave={() => setActiveLeaderId(null)}
-                    className={`transition-all duration-500 ease-in-out h-[386px] ${
-                      isActive ? "w-[50vw]" : "w-[23vw]"
-                    }`}
+                    className={`
+                      w-[280px] 2xl:w-[340px] shrink-0 z-20 relative 
+                      transition-shadow duration-500 bg-white
+                      ${isActive ? "shadow-[0px_4px_12px_#00000015]" : ""}
+                    `}
                   >
-                    <LeadershipCard
-                      leader={leader}
-                      isActiveDesktop={isActive}
-                      isMobile={false}
-                    />
+                    <LeadershipCard leader={leader} isActive={isActive} />
                   </div>
-                </SwiperSlide>
-              );
-            })}
-          </Swiper>
 
-          <div
-            ref={paginationDesktopRef}
-            className="swiper-pagination flex justify-center -mb-5! gap-2 w-full"
-          />
-        </div>
+                  <div
+                    className={`
+                      bg-white 
+                      flex items-center overflow-hidden
+                      transition-all duration-500 ease-in-out
+                      
+                      /* POSITIONING LOGIC */
+                      ${isLast
+                        ? `absolute top-0 right-full h-full z-10 origin-right` 
+                        : `relative z-10` 
+                      }
 
-        <div className="md:hidden w-full mt-4 relative">
-          <Swiper
-            modules={[Pagination]}
-            spaceBetween={16}
-            slidesPerView={1}
-            onSwiper={(swiper) => (swiperMobileRef.current = swiper)}
-            pagination={{
-              el: paginationMobileRef.current,
-              clickable: true,
-              bulletClass: "swiper-pagination-bullet leadership-bullet",
-              bulletActiveClass:
-                "swiper-pagination-bullet-active leadership-bullet-active",
-            
-            }}
-            onInit={(swiper) => {
-              if (paginationMobileRef.current && isMounted) {
-                swiper.params.pagination.el = paginationMobileRef.current;
-                swiper.pagination.init();
-                swiper.pagination.render();
-                swiper.pagination.update();
-              }
-            }}
-            className="w-[280px] mx-auto"
-          >
-            {leadershipTeam.map((leader) => (
-              <SwiperSlide key={leader.id}>
+                      /* WIDTH & OPACITY */
+                      ${isActive
+                        ? "w-[320px] 2xl:w-[460px] opacity-100"
+                        : "w-0 opacity-0"
+                      }
+
+                      /* SHADOW DIRECTION */
+                      ${isActive
+                        ? isLast
+                          ? "shadow-[-4px_4px_12px_#00000010]" 
+                          : "shadow-[4px_4px_12px_#00000010]"  
+                        : "shadow-none"
+                      }
+                    `}
+                  >
+                    <div className="w-[320px] 2xl:w-[460px] p-6 shrink-0">
+                      <p className="fl7 text-left">{leader.description}</p>
+                    </div>
+                  </div>
+                </div>
+              </SwiperSlide>
+            );
+          })}
+        </Swiper>
+      </div>
+
+      <div className="xl:hidden mt-6">
+        <Swiper
+          slidesPerView="auto"
+          centeredSlides={true}
+          spaceBetween={24}
+          className="w-full !pb-10 px-4"
+        >
+          {leadershipTeam.map((leader) => (
+            <SwiperSlide
+              key={leader.id}
+              className="!w-[300px] sm:!w-[340px] !h-auto"
+            >
+              <div className="h-full">
                 <LeadershipCard
                   leader={leader}
-                  isActiveDesktop={false}
                   isMobile
+                  className="h-full"
                 />
-              </SwiperSlide>
-            ))}
-          </Swiper>
-          <div
-            ref={paginationMobileRef}
-            className="swiper-pagination flex justify-center -mb-10! gap-2 w-full"
-          />
-        </div>
-    
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
     </section>
   );
 }

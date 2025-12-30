@@ -31,14 +31,7 @@ export const leadershipTeam = [
     description:
       'Rajesh brings deep technical expertise and leadership excellence to our engineering division. With a track record of building high-performance teams and delivering complex solutions, he ensures our engineering practices remain at the forefront of innovation and quality.',
   },
-  {
-    id: 'priya-sharma',
-    name: 'Priya Sharma',
-    position: 'Head of Product',
-    image: '/landing/leadership1.png',
-    description:
-      'Priya leads our product strategy with innovation and customer-centric approach. Her experience spans product management, market research, and strategic planning. She is passionate about creating products that solve real-world problems and delight customers.',
-  },
+  
 ];
 
 export const getLeadershipTeam = () => leadershipTeam;

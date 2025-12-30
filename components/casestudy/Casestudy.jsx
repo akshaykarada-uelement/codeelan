@@ -126,7 +126,7 @@ export default function CasestudyGrid() {
                   )}
 
                   {!isActive && (
-                    <span className="absolute bottom-6 left-12 rotate-[-90deg] origin-left !text-white fl4">
+                    <span className="absolute bottom-6 left-14 rotate-[-90deg] origin-left !text-white fl4">
                       {slide.title}
                     </span>
                   )}
@@ -228,7 +228,7 @@ export default function CasestudyGrid() {
 
                   {!isActive && (
                     <span className="absolute bottom-8 left-4 rotate-[-90deg] origin-left !text-white fl4 tracking-wide">
-                      {slide.title.split(' ')[0]}
+                      {slide.title}
                     </span>
                   )}
 

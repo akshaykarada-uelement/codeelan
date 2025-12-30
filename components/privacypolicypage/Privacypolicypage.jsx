@@ -128,7 +128,7 @@ export default function Privacypolicypage() {
                 </div>
             </div>
             <div className="bg-[#F0F0F0] m-7">
-                <div className=" container-padding ">
+                <div className=" container-paddingv2 ">
                     <div className="grid grid-cols-1 md:grid-cols-12 gap-6 py-8 ">
                         <div className="md:col-span-4 flex  gap-3">
                             <span className="w-1 h-9 bg-green-500 transform rotate-[15deg]" />
