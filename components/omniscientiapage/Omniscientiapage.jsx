@@ -1,41 +1,114 @@
-import React from 'react';
+"use client";
+
+import React, { useState } from 'react';
+
+
+const UserInformationModal = ({ onClose }) => {
+  return (
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4">
+
+      <div className="relative w-full max-w-md bg-[#0a0a0a] border border-[#222] rounded-lg shadow-2xl p-8">
+
+
+        <button
+          onClick={onClose}
+          className="absolute top-6 right-6 text-gray-400 hover:text-white transition-colors"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+
+        <h2 className="fl3 !text-white mb-8">User Information</h2>
+
+        <div className="space-y-6">
+
+          <div className="space-y-2">
+            <label className="fl7 !text-white">Email Address *</label>
+            <input
+              type="email"
+              placeholder="example@gmail.com"
+              className="w-full bg-[#161616] border border-[#222] text-[#ffffff] rounded px-4 py-3 focus:outline-none focus:border-[#49CF38] transition-colors placeholder-[#909090]"
+            />
+          </div>
+
+
+          <div className="space-y-2">
+            <label className="fl7 !text-white">Mobile Number *</label>
+            <div className="flex gap-3">
+
+              <div className="relative w-28">
+                <select className="w-full appearance-none bg-[#161616] border border-[#222] text-[#909090]  px-4 py-3 focus:outline-none focus:border-[#49CF38]">
+                  <option>+ 91 (IN)</option>
+                  <option>+ 1 (US)</option>
+                  <option>+ 44 (UK)</option>
+                </select>
+
+                <div className="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-[#909090]">
+                  <svg width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M1 1L5 5L9 1" />
+                  </svg>
+                </div>
+              </div>
+
+
+              <input
+                type="tel"
+                placeholder="Mobile"
+                className="flex-1 fl8 bg-[#1C1C1C]  text-[#ffffff]  px-4 py-3 placeholder-[#909090] border border-[#222] focus:outline-none focus:border-[#49CF38]"
+              />
+            </div>
+          </div>
+
+
+          <button className="!w-full green-btn">
+            Generate Email OTP
+          </button>
+
+        </div>
+      </div>
+    </div>
+  );
+};
 
 export default function OmniscientiaPage() {
+  const [showModal, setShowModal] = useState(false);
   const capabilities = [
     {
       id: "01",
       title: "Optical Character Recognition (OCR)",
       desc: "Extract and interpret text from images, scanned documents, and videos, streamlining data entry, document processing, and digitization.",
       className: "md:row-span-2",
-      numberClass: "top-4 left-6 text-[#1a1a1a]", 
+      numberClass: "top-4 left-6 text-[#1a1a1a]",
     },
     {
       id: "02",
       title: "Facial Recognition",
       desc: "Leverage advanced face detection, verification, and recognition for secure authentication and personalized experiences in retail, banking, and access control.",
-      className: "md:col-span-2", 
-      numberClass: "top-4 right-6 text-[#1a1a1a]", 
+      className: "md:col-span-2",
+      numberClass: "top-4 right-6 text-[#1a1a1a]",
     },
     {
       id: "03",
-      title: <>Defect Detection & <br /> Quality Inspection</>, 
+      title: <>Defect Detection & <br /> Quality Inspection</>,
       desc: "Enhance manufacturing efficiency by identifying product defects and anomalies, ensuring superior quality control and reducing waste.",
       className: "",
-      numberClass: "top-1/2 -translate-y-1/2 right-6 text-[#1a1a1a]", 
+      numberClass: "top-1/2 -translate-y-1/2 right-6 text-[#1a1a1a]",
     },
     {
       id: "04",
       title: <>Image & Video <br /> Recognition</>,
       desc: "Identify objects, faces, and patterns in images and videos with high precision, enabling automation in surveillance, security, and customer analytics.",
       className: "",
-      numberClass: "top-1/2 -translate-y-1/2 right-6 text-[#1a1a1a]", 
+      numberClass: "top-1/2 -translate-y-1/2 right-6 text-[#1a1a1a]",
     },
     {
       id: "05",
       title: <>Automated Video/Image <br /> data annotation</>,
       desc: "Streamline AI model training by automatically labeling objects, scenes, and activities in images and videos, reducing manual effort and improving annotation accuracy.",
-      className: "md:col-span-2", 
-      numberClass: "top-1/2 -translate-y-1/2 right-10 text-[#1a1a1a]", 
+      className: "md:col-span-2",
+      numberClass: "top-1/2 -translate-y-1/2 right-10 text-[#1a1a1a]",
     },
     {
       id: "06",
@@ -49,22 +122,22 @@ export default function OmniscientiaPage() {
     {
       title: "Retail",
       desc: "Enhance inventory management and customer experience.",
-      borderClass: "border-b border-[#222] md:border-r", 
+      borderClass: "border-b border-[#222] md:border-r",
     },
     {
       title: "Smart City",
       desc: "Optimize crowd management and urban safety.",
-      borderClass: "border-b border-[#222]", 
+      borderClass: "border-b border-[#222]",
     },
     {
       title: "Manufacturing",
       desc: "Automate quality control and cut production costs.",
-      borderClass: "border-b md:border-b-0 border-[#222] md:border-r", 
+      borderClass: "border-b md:border-b-0 border-[#222] md:border-r",
     },
     {
       title: "Healthcare",
       desc: "Boost diagnostic accuracy and patient care.",
-      borderClass: "border-[#222]", 
+      borderClass: "border-[#222]",
     },
   ];
   const impactStats = [
@@ -85,73 +158,77 @@ export default function OmniscientiaPage() {
     <main className="bg-black min-h-screen">
 
 
-      <div className="relative min-h-screen w-full overflow-hidden flex items-center container-padding section-block-padding">
-      
-      <div className="absolute inset-0 z-0">
-        <img
-          src="/omniscientia/herobg1.png" 
-          alt="Background"
-          className="h-full w-full object-cover opacity-50"
-        />
-      
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0a0a0a] via-[#0a0a0ae6] to-transparent"></div>
-      </div>
+      {showModal && <UserInformationModal onClose={() => setShowModal(false)} />}
 
-      <div className="relative z-10 w-full  mx-auto px-6 lg:px-12">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-          
-          <div className="flex flex-col justify-center space-y-8">
-            
-           
-            <div className="mb-2">
-              <img 
-                src="/omniscientia/omniscientialogo.png" 
-                alt="OmniScientia AI Logo" 
-                className="w-64 md:w-120 h-auto object-contain"
+      <div className="relative min-h-screen w-full overflow-hidden flex items-center container-padding section-block-padding">
+
+
+        <div className="absolute inset-0 z-0">
+          <img
+            src="/omniscientia/herobg1.png"
+            alt="Background"
+            className="h-full w-full object-cover opacity-50"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#0a0a0a] via-[#0a0a0ae6] to-transparent"></div>
+        </div>
+
+
+        <div className="relative z-10 w-full mx-auto px-6 lg:px-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+
+            <div className="flex flex-col justify-center space-y-8">
+
+              <div className="mb-2">
+                <img
+                  src="/omniscientia/omniscientialogo.png"
+                  alt="OmniScientia AI Logo"
+                  className="w-64 md:w-120 h-auto object-contain"
+                />
+              </div>
+
+              <div className="space-y-6 fl7 !text-white max-w-3xl">
+                <p>
+                  OmniScientia AI is a Deep Learning-Based Computer Vision AI
+                  Platform which revolutionizes the way cameras perceive and
+                  interpret the world.
+                </p>
+                <p>
+                  Powered by cutting-edge neural networks and sophisticated
+                  image processing techniques to transform video and image
+                  data into actionable insights with cutting-edge computer
+                  vision solutions.
+                </p>
+              </div>
+
+              <div className="flex flex-wrap items-center gap-5 pt-4">
+                <button
+                  onClick={() => window.location.href = "https://omniscientia-dev.codeelan.com/"}
+                  className="green-btn !w-[150px]"
+                >
+                  Login
+                </button>
+
+                <button
+                  onClick={() => setShowModal(true)}
+                  className="border border-[#FFFFFF4D] px-5 py-2 md:px-4 md:py-4 w-[150px] fl7 !text-white "
+                >
+                  Demo Videos
+                </button>
+              </div>
+            </div>
+
+            <div className="relative md:h-[650px] w-full flex justify-center">
+              <div className="absolute inset-0"></div>
+              <img
+                src="/omniscientia/hero1.png"
+                alt="VR Technology Experience"
+                className="relative z-10 w-full lg:max-w-[480px]"
               />
             </div>
 
-           
-            <div className="space-y-6 fl7 !text-white max-w-3xl">
-              <p>
-                OmniScientia AI is a Deep Learning-Based Computer Vision AI
-                Platform which revolutionizes the way cameras perceive and
-                interpret the world.
-              </p>
-              <p>
-                Powered by cutting-edge neural networks and sophisticated
-                image processing techniques to transform video and image
-                data into actionable insights with cutting-edge computer
-                vision solutions.
-              </p>
-            </div>
-
-           
-            <div className="flex flex-wrap items-center gap-5 pt-4">
-              <button className="green-btn !w-[150px] ">
-                Login
-              </button>
-              <button className="border border-[#FFFFFF4D] px-5 py-2 md:px-4 md:py-4 w-[150px] fl7 !text-white">
-                Demo Videos
-              </button>
-            </div>
           </div>
-
-          
-          <div className="relative md:h-[650px] w-full flex justify-center ">
-           
-            <div className="absolute inset-0 "></div>
-            
-            <img
-              src="/omniscientia/hero1.png" 
-              alt="VR Technology Experience"
-              className="relative z-10 w-full  lg:max-w-[480px]"
-            />
-          </div>
-
         </div>
       </div>
-    </div>
 
 
       <section className="container-padding section-block-padding">
