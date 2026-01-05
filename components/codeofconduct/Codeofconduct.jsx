@@ -1,11 +1,15 @@
+import UnderlineLastChars from '@/components/UnderlineLastChars';
+
 export default function CodeOfConduct() {
   return (
     <main className="min-h-screen section-block-padding bg-white">
       <div className="container-padding space-y-10">
         <div className="text-center">
           <h1 className="fl2 inline-block relative title-content-gap">
-            Code of Conduct
-            <span className="block absolute right-0  w-10 h-2 bg-[#49CF38]"></span>
+            Code of  {" "}
+            <span className="whitespace-nowrap">
+              Condu<UnderlineLastChars>ct</UnderlineLastChars>
+            </span>
           </h1>
 
           <p className="fl7 md:max-w-[60vw] mx-auto">

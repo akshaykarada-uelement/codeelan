@@ -8,6 +8,7 @@ import { testimonialsData } from "@/data/testimonialsData";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import UnderlineLastChars from "../UnderlineLastChars";
 
 export default function Testimonials() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -54,8 +55,9 @@ export default function Testimonials() {
             />
             <div className="relative">
               <h2 className="fl2 inline-block relative">
-                Testimonials
-                <span className="block absolute right-0  w-10 h-2 bg-[#49CF38]"></span>
+                <span className="whitespace-nowrap">
+                  Testimonia<UnderlineLastChars>ls</UnderlineLastChars>
+                </span>
               </h2>
             </div>
           </div>
@@ -106,9 +108,7 @@ export default function Testimonials() {
             onMouseLeave={() => setIsNextHovered(false)}
           >
             <img
-              src={
-                isNextHovered ? "/icons/next1.svg" : "/icons/next-wt.svg"
-              }
+              src={isNextHovered ? "/icons/next1.svg" : "/icons/next-wt.svg"}
               alt="Next"
             />
           </button>
@@ -118,8 +118,9 @@ export default function Testimonials() {
       <div className="md:hidden w-[80%] mx-auto pb-10">
         <div className=" mb-8 relative flex justify-center items-center">
           <h3 className="relative fl2 title-content-gap mx-auto inline-block">
-            Testimonials
-            <span className="block absolute right-0  -bottom-[2px] w-10 h-2 bg-[#49CF38]"></span>
+            <span className="whitespace-nowrap">
+              Testimonia<UnderlineLastChars>ls</UnderlineLastChars>
+            </span>
           </h3>
         </div>
 
@@ -128,11 +129,9 @@ export default function Testimonials() {
           modules={[Pagination]}
           spaceBetween={20}
           slidesPerView={1}
-          
           breakpoints={{
-            
             640: {
-              slidesPerView: 1.2, 
+              slidesPerView: 1.2,
               spaceBetween: 24,
             },
           }}
