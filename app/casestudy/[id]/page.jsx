@@ -2,6 +2,7 @@ import { use } from 'react';
 import CaseStudyDetails from '../../../components/casestudy/CasestudyDetails';
 import { getAllCaseStudies } from '../../../data/caseStudies';
 import { notFound } from 'next/navigation';
+import UnderlineLastChars from '@/components/UnderlineLastChars';
 
 function getCaseStudyById(id) {
   const caseStudies = getAllCaseStudies();
@@ -61,10 +62,12 @@ export default function CaseStudyPage({ params }) {
   return(
     <main className="section-block-padding">
        <div className="inline-block w-full mx-auto">
-        <h3 className="relative fl2 section-block-bottom text-center">
-            Case Studies
-            <span className="block absolute md:right-[calc(50%-150px)] right-[calc(50%-110px)]  -translate-1/2 w-8 md:w-11 h-2 bg-[#49CF38] "></span>
-        </h3>
+        <h3 className="relative inline-block fl2 mb-6 text-center">
+              Case{" "}
+              <span className="whitespace-nowrap">
+                Stud<UnderlineLastChars>es</UnderlineLastChars>
+              </span>
+            </h3>
       </div>
       <CaseStudyDetails caseStudy={caseStudy} />
     </main>

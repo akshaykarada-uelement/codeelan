@@ -1,29 +1,29 @@
-'use client';
+"use client";
 
-import React from 'react';
-import Image from 'next/image';
-import { getAllCaseStudies } from '../../data/caseStudies';
-import CaseStudyDetails from './CasestudyDetails';
-import { useState, useEffect, useRef } from 'react';
-
+import React from "react";
+import Image from "next/image";
+import { getAllCaseStudies } from "../../data/caseStudies";
+import CaseStudyDetails from "./CasestudyDetails";
+import { useState, useEffect, useRef } from "react";
+import UnderlineLastChars from "@/components/UnderlineLastChars";
 
 // Map slides to case study IDs
 const slideToCaseStudyMap = {
-  0: 'ecommerce-mobile-app',
-  1: 'product-testing-web',
-  2: 'automation-website-mobile',
-  3: 'insurance-automation',
-  4: 'crm-development-aspnet',
-  5: 'automotive-car-resale'
+  0: "ecommerce-mobile-app",
+  1: "product-testing-web",
+  2: "automation-website-mobile",
+  3: "insurance-automation",
+  4: "crm-development-aspnet",
+  5: "automotive-car-resale",
 };
 
 const slides = [
-  { id: 0, title: 'Ecommerce Mobile App', image: '/casestudy/mobileapp.png' },
-  { id: 1, title: 'Product Testing (Web)', image: '/casestudy/testing.png' },
-  { id: 2, title: 'Automation', image: '/casestudy/automation.png' },
-  { id: 3, title: 'Insurance Automation', image: '/casestudy/insurance.jpg' },
-  { id: 4, title: 'CRM Development', image: '/casestudy/development.png' },
-  { id: 5, title: 'UI/UX Automotive Platform', image: '/casestudy/uiux.png' }
+  { id: 0, title: "Ecommerce Mobile App", image: "/casestudy/mobileapp.png" },
+  { id: 1, title: "Product Testing (Web)", image: "/casestudy/testing.png" },
+  { id: 2, title: "Automation", image: "/casestudy/automation.png" },
+  { id: 3, title: "Insurance Automation", image: "/casestudy/insurance.jpg" },
+  { id: 4, title: "CRM Development", image: "/casestudy/development.png" },
+  { id: 5, title: "UI/UX Automotive Platform", image: "/casestudy/uiux.png" },
 ];
 
 export default function CasestudyGrid() {
@@ -68,18 +68,17 @@ export default function CasestudyGrid() {
     startAutoPlay();
   };
 
-
-
   // Get the active case study
   const caseStudies = getAllCaseStudies();
   const activeCaseStudyId = slideToCaseStudyMap[activeIndex];
-  const activeCaseStudy = caseStudies.find(study => study.id === activeCaseStudyId);
+  const activeCaseStudy = caseStudies.find(
+    (study) => study.id === activeCaseStudyId
+  );
 
   const prev = () =>
     setActiveIndex((p) => (p === 0 ? slides.length - 1 : p - 1));
 
-  const next = () =>
-    setActiveIndex((p) => (p + 1) % slides.length);
+  const next = () => setActiveIndex((p) => (p + 1) % slides.length);
 
   const visibleSlides = [
     slides[(activeIndex - 1 + slides.length) % slides.length],
@@ -89,13 +88,14 @@ export default function CasestudyGrid() {
 
   return (
     <main className="w-full container-paddingv2">
-
       <div className="hidden md:flex mx-auto">
-        <div className="w-[20%] flex items-center">
+        <div className="w-[20vw] flex items-center">
           <div>
-            <h3 className="relative fl2 text-left">
-              Case Studies
-              <span className="block absolute right-0 -bottom-[2px] w-10 h-2 bg-[#49CF38]" />
+            <h3 className="relative inline-block fl2 mb-6 text-center">
+              Case{" "}
+              <span className="whitespace-nowrap">
+                Stud<UnderlineLastChars>es</UnderlineLastChars>
+              </span>
             </h3>
           </div>
         </div>
@@ -115,9 +115,11 @@ export default function CasestudyGrid() {
                   key={slide.id}
                   className={`
                     relative h-full bg-cover bg-center transition-all duration-500
-                    ${isActive
-                      ? 'w-[350px] xl:w-[420px]'
-                      : 'w-[120px] xl:w-[240px]'}
+                    ${
+                      isActive
+                        ? "w-[350px] xl:w-[420px]"
+                        : "w-[120px] xl:w-[240px]"
+                    }
                   `}
                   style={{ backgroundImage: `url(${slide.image})` }}
                 >
@@ -133,9 +135,7 @@ export default function CasestudyGrid() {
 
                   {isActive && (
                     <div className="absolute bottom-6 left-6 right-6 flex justify-between items-center">
-                      <h3 className="!text-[#49CF38] fl4">
-                        {slide.title}
-                      </h3>
+                      <h3 className="!text-[#49CF38] fl4">{slide.title}</h3>
 
                       <button className="size-10 flex justify-end">
                         <Image
@@ -159,7 +159,7 @@ export default function CasestudyGrid() {
               onMouseLeave={() => setIsPrevHovered(false)}
             >
               <img
-                src={isPrevHovered ? '/icons/prev1.svg' : '/icons/prev.svg'}
+                src={isPrevHovered ? "/icons/prev1.svg" : "/icons/prev.svg"}
                 alt="Previous"
               />
             </button>
@@ -173,9 +173,7 @@ export default function CasestudyGrid() {
                   <span
                     key={i}
                     className={
-                      i === activeIndex
-                        ? '!text-[#49CF38] fl3'
-                        : 'fl4'
+                      i === activeIndex ? "!text-[#49CF38] fl3" : "fl4"
                     }
                   >
                     {i + 1}
@@ -190,7 +188,7 @@ export default function CasestudyGrid() {
               onMouseLeave={() => setIsNextHovered(false)}
             >
               <img
-                src={isNextHovered ? '/icons/next1.svg' : '/icons/next.svg'}
+                src={isNextHovered ? "/icons/next1.svg" : "/icons/next.svg"}
                 alt="Next"
               />
             </button>
@@ -201,8 +199,10 @@ export default function CasestudyGrid() {
       <div className="md:hidden">
         <div className="w-full flex justify-center">
           <h3 className="relative inline-block fl2 mb-6 text-center">
-            Case Studies
-            <span className="absolute right-0 -bottom-2 w-8 h-[6px] bg-[#49CF38]" />
+            Case{" "}
+            <span className="whitespace-nowrap">
+              Stud<UnderlineLastChars>es</UnderlineLastChars>
+            </span>
           </h3>
         </div>
 
@@ -211,42 +211,43 @@ export default function CasestudyGrid() {
           onTouchStart={(e) => onStart(e.touches[0].clientX)}
           onTouchEnd={(e) => onMoveEnd(e.changedTouches[0].clientX)}
         >
-          {[slides[(activeIndex - 1 + slides.length) % slides.length], slides[activeIndex]].map(
-            (slide, i) => {
-              const isActive = i === 1;
+          {[
+            slides[(activeIndex - 1 + slides.length) % slides.length],
+            slides[activeIndex],
+          ].map((slide, i) => {
+            const isActive = i === 1;
 
-              return (
-                <div
-                  key={slide.id}
-                  className={`
+            return (
+              <div
+                key={slide.id}
+                className={`
                     relative h-full bg-cover bg-center transition-all duration-500
-                    ${isActive ? 'w-[60%]' : 'w-[35%]'}
+                    ${isActive ? "w-[60%]" : "w-[35%]"}
                   `}
-                  style={{ backgroundImage: `url(${slide.image})` }}
-                >
-                  {!isActive && <div className="absolute inset-0 bg-black/40" />}
+                style={{ backgroundImage: `url(${slide.image})` }}
+              >
+                {!isActive && <div className="absolute inset-0 bg-black/40" />}
 
-                  {!isActive && (
-                    <span className="absolute bottom-8 left-4 rotate-[-90deg] origin-left !text-white fl4 tracking-wide">
+                {!isActive && (
+                  <span className="absolute bottom-8 left-4 rotate-[-90deg] origin-left !text-white fl4 tracking-wide">
+                    {slide.title}
+                  </span>
+                )}
+
+                {isActive && (
+                  <div className="absolute bottom-6 left-6 right-6 flex items-end justify-between">
+                    <h3 className="!text-[#49CF38] fl4 leading-tight max-w-[70%]">
                       {slide.title}
-                    </span>
-                  )}
+                    </h3>
 
-                  {isActive && (
-                    <div className="absolute bottom-6 left-6 right-6 flex items-end justify-between">
-                      <h3 className="!text-[#49CF38] fl4 leading-tight max-w-[70%]">
-                        {slide.title}
-                      </h3>
-
-                      <button className="size-7 bg-[#49CF38] flex items-center justify-center">
-                        <img src="/icons/downarrow.svg" alt="" />
-                      </button>
-                    </div>
-                  )}
-                </div>
-              );
-            }
-          )}
+                    <button className="size-7 bg-[#49CF38] flex items-center justify-center">
+                      <img src="/icons/downarrow.svg" alt="" />
+                    </button>
+                  </div>
+                )}
+              </div>
+            );
+          })}
         </div>
 
         <div className="flex items-center justify-between px-6 mt-6">
@@ -262,11 +263,7 @@ export default function CasestudyGrid() {
               return (
                 <span
                   key={i}
-                  className={
-                    i === activeIndex
-                      ? '!text-[#49CF38] fl3'
-                      : 'fl4'
-                  }
+                  className={i === activeIndex ? "!text-[#49CF38] fl3" : "fl4"}
                 >
                   {i + 1}
                 </span>
@@ -286,7 +283,6 @@ export default function CasestudyGrid() {
           <CaseStudyDetails caseStudy={activeCaseStudy} hideBackButton={true} />
         </div>
       )}
-
     </main>
   );
 }
