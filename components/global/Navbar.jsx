@@ -18,8 +18,8 @@ export default function Navbar() {
             name: "Platforms",
             href: "/platforms",
             children: [
-                { name: "Omniscientia", href: "https://omniscientia.codeelan.com/" },
-                { name: "Perfectus", href: "https://perfectus.codeelan.com/" },
+                { name: "Omniscientia", href: "/omniscientia" },
+                { name: "Perfectus", href: "/perfectus" },
             ],
         },
         {
