@@ -152,8 +152,16 @@ export default function CasestudyGrid() {
                   <span
                     key={i}
                     className={
-                      i === activeIndex ? "!text-[#49CF38] fl3" : "fl4"
+                      (i === activeIndex ? "!text-[#49CF38] fl3" : "fl4") +
+                      " cursor-pointer"
                     }
+                    onClick={() => setActiveIndex(i)}
+                    role="button"
+                    tabIndex={0}
+                    onKeyDown={(e) => {
+                      if (e.key === "Enter" || e.key === " " || e.key === "Spacebar")
+                        setActiveIndex(i);
+                    }}
                   >
                     {i + 1}
                   </span>
@@ -242,7 +250,14 @@ export default function CasestudyGrid() {
               return (
                 <span
                   key={i}
-                  className={i === activeIndex ? "!text-[#49CF38] fl3" : "fl4"}
+                  className={(i === activeIndex ? "!text-[#49CF38] fl3" : "fl4") + " cursor-pointer"}
+                  onClick={() => setActiveIndex(i)}
+                  role="button"
+                  tabIndex={0}
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter" || e.key === " " || e.key === "Spacebar")
+                      setActiveIndex(i);
+                  }}
                 >
                   {i + 1}
                 </span>
