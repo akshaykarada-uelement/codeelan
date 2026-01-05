@@ -4,7 +4,7 @@ import React from "react";
 import Image from "next/image";
 import { getAllCaseStudies } from "../../data/caseStudies";
 import CaseStudyDetails from "./CasestudyDetails";
-import { useState, useEffect, useRef } from "react";
+import { useState, useRef } from "react";
 import UnderlineLastChars from "@/components/UnderlineLastChars";
 
 // Map slides to case study IDs
@@ -30,33 +30,13 @@ export default function CasestudyGrid() {
   const [isPrevHovered, setIsPrevHovered] = useState(false);
   const [isNextHovered, setIsNextHovered] = useState(false);
   const [activeIndex, setActiveIndex] = useState(0);
-  const intervalRef = useRef(null);
   const startX = useRef(0);
   const isDragging = useRef(false);
 
-  useEffect(() => {
-    startAutoPlay();
-    return stopAutoPlay;
-  }, []);
-
-  const startAutoPlay = () => {
-    stopAutoPlay();
-    intervalRef.current = setInterval(() => {
-      next();
-    }, 6000);
-  };
-
-  const stopAutoPlay = () => {
-    if (intervalRef.current) {
-      clearInterval(intervalRef.current);
-      intervalRef.current = null;
-    }
-  };
 
   const onStart = (x) => {
     startX.current = x;
     isDragging.current = true;
-    stopAutoPlay();
   };
 
   const onMoveEnd = (x) => {
@@ -65,7 +45,6 @@ export default function CasestudyGrid() {
     if (diff > 60) prev();
     if (diff < -60) next();
     isDragging.current = false;
-    startAutoPlay();
   };
 
   // Get the active case study
