@@ -33,7 +33,6 @@ export default function CasestudyGrid() {
   const startX = useRef(0);
   const isDragging = useRef(false);
 
-
   const onStart = (x) => {
     startX.current = x;
     isDragging.current = true;
@@ -102,14 +101,14 @@ export default function CasestudyGrid() {
                   `}
                   style={{ backgroundImage: `url(${slide.image})` }}
                 >
+                  <div className="absolute inset-0 bg-gradient-to-b from-[#F7F7F7]/0 via-[#323232]/70 to-[#000000]/85" />
                   {!isActive && (
-                    <div className="absolute inset-0 bg-black/40" />
-                  )}
-
-                  {!isActive && (
-                    <span className="absolute bottom-6 left-14 rotate-[-90deg] origin-left !text-white fl4">
-                      {slide.title}
-                    </span>
+                    <>
+                      <div className="absolute bottom-6 bg-[#1E273E] w-25 h-35 z-5"></div>
+                      <span className="absolute bottom-6 left-14 rotate-[-90deg] origin-left !text-white fl4 z-10">
+                        {slide.title}
+                      </span>
+                    </>
                   )}
 
                   {isActive && (
@@ -159,7 +158,11 @@ export default function CasestudyGrid() {
                     role="button"
                     tabIndex={0}
                     onKeyDown={(e) => {
-                      if (e.key === "Enter" || e.key === " " || e.key === "Spacebar")
+                      if (
+                        e.key === "Enter" ||
+                        e.key === " " ||
+                        e.key === "Spacebar"
+                      )
                         setActiveIndex(i);
                     }}
                   >
@@ -213,12 +216,15 @@ export default function CasestudyGrid() {
                   `}
                 style={{ backgroundImage: `url(${slide.image})` }}
               >
-                {!isActive && <div className="absolute inset-0 bg-black/40" />}
+               <div className="absolute inset-0 bg-gradient-to-b from-[#F7F7F7]/0 via-[#323232]/70 to-[#000000]/85" />
 
                 {!isActive && (
-                  <span className="absolute bottom-8 left-4 rotate-[-90deg] origin-left !text-white fl4 tracking-wide">
+                  <>
+                  <div className="absolute bottom-6 bg-[#1E273E] w-20 h-30 z-5"></div>
+                  <span className="absolute bottom-8 left-10 rotate-[-90deg] origin-left !text-white fl4 tracking-wide z-10">
                     {slide.title}
                   </span>
+                  </>
                 )}
 
                 {isActive && (
@@ -250,12 +256,19 @@ export default function CasestudyGrid() {
               return (
                 <span
                   key={i}
-                  className={(i === activeIndex ? "!text-[#49CF38] fl3" : "fl4") + " cursor-pointer"}
+                  className={
+                    (i === activeIndex ? "!text-[#49CF38] fl3" : "fl4") +
+                    " cursor-pointer"
+                  }
                   onClick={() => setActiveIndex(i)}
                   role="button"
                   tabIndex={0}
                   onKeyDown={(e) => {
-                    if (e.key === "Enter" || e.key === " " || e.key === "Spacebar")
+                    if (
+                      e.key === "Enter" ||
+                      e.key === " " ||
+                      e.key === "Spacebar"
+                    )
                       setActiveIndex(i);
                   }}
                 >
