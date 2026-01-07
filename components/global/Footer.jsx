@@ -7,7 +7,7 @@ export default function Footer() {
     <footer className="flex flex-col">
       <section className="bg-[#1E273E] section-block-padding container-padding">
         <div className="flex w-full flex-col md:flex-row gap-10 lg:gap-10 xl:gap-14">
-          <div className="flex gap-10 w-[30vw]"> 
+          <div className="flex gap-10 w-[30vw]">
             <div className="flex flex-col gap-6 md:gap-10">
               <div className="w-40">
                 <Link href="/" className="flex items-center">
@@ -33,18 +33,18 @@ export default function Footer() {
                   image processing techniques,
                 </p>
               </div>
-               <div className="flex gap-5">
-              <img
-                src="/landing/linkedin.png"
-                alt="linkedin"
-                className="size-6"
-              />
-              <img
-                src="/landing/facebook.png"
-                alt="facebook"
-                className="size-6"
-              />
-            </div>
+              <div className="flex gap-5">
+                <img
+                  src="/landing/linkedin.png"
+                  alt="linkedin"
+                  className="size-6"
+                />
+                <img
+                  src="/landing/facebook.png"
+                  alt="facebook"
+                  className="size-6"
+                />
+              </div>
             </div>
             <div className="flex flex-col gap-6 md:gap-10 md:hidden">
               <h4 className="fl9">Platforms</h4>
@@ -116,38 +116,26 @@ export default function Footer() {
             </div>
             <div className="hidden md:flex md:flex-col gap-6 md:gap-10">
               <h4 className="fl9">Platforms</h4>
-              <ul className="flex flex-col gap-2">
+              <ul className="flex flex-col gap-4">
                 <li>
-                  <Image
-                    src="/landing/platform1.png"
-                    alt="codeElan"
-                    width={100}
-                    height={20}
-                    className="hidden md:block"
-                  />
-                  <Image
-                    src="/landing/platform1.png"
-                    alt="codeElan"
-                    width={150}
-                    height={50}
-                    className="block md:hidden"
-                  />
+                  <Link href="/omniscientia">
+                    <Image
+                      src="/landing/platform1.png"
+                      alt="omniscientia"
+                      width={150}
+                      height={50}
+                    />
+                  </Link>
                 </li>
                 <li>
-                  <Image
-                    src="/landing/platform2.png"
-                    alt="codeElan"
-                    width={105}
-                    height={20}
-                    className="hidden md:block"
-                  />
-                  <Image
-                    src="/landing/platform2.png"
-                    alt="codeElan"
-                    width={70}
-                    height={30}
-                    className="block md:hidden"
-                  />
+                  <Link href="/perfectus">
+                    <Image
+                      src="/landing/platform2.png"
+                      alt="perfectus"
+                      width={150}
+                      height={50}
+                    />
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -160,7 +148,7 @@ export default function Footer() {
                     alt="mobile"
                     className="size-6"
                   />
-                  <a href="" className="fl8 !text-white">
+                  <a className="fl8 !text-white">
                     (820) 865-0598
                   </a>
                 </li>
@@ -170,7 +158,10 @@ export default function Footer() {
                     alt="email"
                     className="w-4.5 h-3.5"
                   />
-                  <a href="mailto:info@codeelan.com" className="fl8 !text-white">
+                  <a
+                    href="mailto:info@codeelan.com"
+                    className="fl8 !text-white"
+                  >
                     info@codeelan.com
                   </a>
                 </li>
@@ -191,7 +182,7 @@ export default function Footer() {
               Privacy Policy
             </Link>
             <Link href="/codeofconductpage" className="fl8 !text-white">
-             Code of Conduct
+              Code of Conduct
             </Link>
           </div>
         </div>
