@@ -32,6 +32,7 @@ export default function CasestudyGrid() {
   const [activeIndex, setActiveIndex] = useState(0);
   const startX = useRef(0);
   const isDragging = useRef(false);
+  const detailsRef = useRef(null);
 
   const onStart = (x) => {
     startX.current = x;
@@ -57,6 +58,12 @@ export default function CasestudyGrid() {
     setActiveIndex((p) => (p === 0 ? slides.length - 1 : p - 1));
 
   const next = () => setActiveIndex((p) => (p + 1) % slides.length);
+
+  const scrollToDetails = () => {
+    if (detailsRef.current) {
+      detailsRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
 
   const visibleSlides = [
     slides[(activeIndex - 1 + slides.length) % slides.length],
@@ -115,7 +122,7 @@ export default function CasestudyGrid() {
                     <div className="absolute bottom-6 left-6 right-6 flex justify-between items-center">
                       <h3 className="!text-[#49CF38] fl4">{slide.title}</h3>
 
-                      <button className="size-10 flex justify-end">
+                      <button type="button" onClick={scrollToDetails} className="size-10 flex justify-end cursor-pointer">
                         <Image
                           src="/icons/downarrow.svg"
                           alt=""
@@ -123,6 +130,7 @@ export default function CasestudyGrid() {
                           height={40}
                         />
                       </button>
+                      
                     </div>
                   )}
                 </div>
@@ -216,14 +224,14 @@ export default function CasestudyGrid() {
                   `}
                 style={{ backgroundImage: `url(${slide.image})` }}
               >
-               <div className="absolute inset-0 bg-gradient-to-b from-[#F7F7F7]/0 via-[#323232]/70 to-[#000000]/85" />
+                <div className="absolute inset-0 bg-gradient-to-b from-[#F7F7F7]/0 via-[#323232]/70 to-[#000000]/85" />
 
                 {!isActive && (
                   <>
-                  <div className="absolute bottom-6 bg-[#1E273E] w-20 h-30 z-5"></div>
-                  <span className="absolute bottom-8 left-10 rotate-[-90deg] origin-left !text-white fl4 tracking-wide z-10">
-                    {slide.title}
-                  </span>
+                    <div className="absolute bottom-6 bg-[#1E273E] w-20 h-30 z-5"></div>
+                    <span className="absolute bottom-8 left-10 rotate-[-90deg] origin-left !text-white fl4 tracking-wide z-10">
+                      {slide.title}
+                    </span>
                   </>
                 )}
 
@@ -233,7 +241,7 @@ export default function CasestudyGrid() {
                       {slide.title}
                     </h3>
 
-                    <button className="size-7 bg-[#49CF38] flex items-center justify-center">
+                    <button type="button" onClick={scrollToDetails} className="size-7 bg-[#49CF38] flex items-center justify-center cursor-pointer">
                       <img src="/icons/downarrow.svg" alt="" />
                     </button>
                   </div>
@@ -284,9 +292,8 @@ export default function CasestudyGrid() {
         </div>
       </div>
 
-      {/* Case Study Details Section */}
       {activeCaseStudy && (
-        <div className="mt-12 md:mt-16">
+        <div ref={detailsRef} className="mt-12 md:mt-16">
           <CaseStudyDetails caseStudy={activeCaseStudy} hideBackButton={true} />
         </div>
       )}
