@@ -18,12 +18,12 @@ const slideToCaseStudyMap = {
 };
 
 const slides = [
-  { id: 0, title: "Ecommerce Mobile App", image: "/casestudy/mobileapp.png" },
-  { id: 1, title: "Product Testing (Web)", image: "/casestudy/testing.png" },
+  { id: 0, title: "Ecommerce", image: "/casestudy/mobileapp.png" },
+  { id: 1, title: "Product Testing", image: "/casestudy/testing.png" },
   { id: 2, title: "Automation", image: "/casestudy/automation.png" },
   { id: 3, title: "Insurance Automation", image: "/casestudy/insurance.jpg" },
   { id: 4, title: "CRM Development", image: "/casestudy/development.png" },
-  { id: 5, title: "UI/UX Automotive Platform", image: "/casestudy/uiux.png" },
+  { id: 5, title: "UI/UX Automotive", image: "/casestudy/uiux.png" },
 ];
 
 export default function CasestudyGrid() {
@@ -111,8 +111,8 @@ export default function CasestudyGrid() {
                   <div className="absolute inset-0 bg-gradient-to-b from-[#F7F7F7]/0 via-[#323232]/70 to-[#000000]/85" />
                   {!isActive && (
                     <>
-                      <div className="absolute bottom-6 bg-[#1E273E] w-25 h-35 z-5"></div>
-                      <span className="absolute bottom-6 left-14 rotate-[-90deg] origin-left !text-white fl4 z-10">
+                      <div className="absolute bottom-8 bg-[#1E273E] w-20 h-25 z-5"></div>
+                      <span className="absolute bottom-8 left-10 rotate-[-90deg] origin-left !text-white fl4 z-10 whitespace-nowrap">
                         {slide.title}
                       </span>
                     </>
