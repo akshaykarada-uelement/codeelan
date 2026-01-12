@@ -12,61 +12,72 @@ export default function LeadershipCarousel() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
   const [paused, setPaused] = useState(false);
+  const [metrics, setMetrics] = useState(null);
   const timerRef = useRef(null);
 
-  // carouselSlots.js
-  const DESKTOP_SLOTS = {
-    "-1": { x: 0, zIndex: 1 },
-    0: { x: 285, zIndex: 5 },
-    1: { x: 670, zIndex: 3 },
-    2: { x: 955, zIndex: 2 },
-    // 3: { x: 960, z: -320, zIndex: 1 },
-  };
-
-  const MOBILE_SLOTS = {
-    0: { x: 0, z: 0, zIndex: 5 },
-    1: { x: 200, z: -120, zIndex: 2 },
-    2: { x: 400, z: -240, zIndex: 1 },
-  };
-
-  /* -------------------- Responsive -------------------- */
+  /* ---------------- Responsive ---------------- */
   useEffect(() => {
-    const resize = () => setIsMobile(window.innerWidth < 768);
-    resize();
-    window.addEventListener("resize", resize);
-    return () => window.removeEventListener("resize", resize);
+    const update = () => {
+      const vw = window.innerWidth;
+      const mobile = vw < 768;
+
+      const cardWidth = mobile ? vw * 0.6 : vw * 0.5;
+      const cardHeight = cardWidth * 1.45;
+      const gap = cardWidth * 0.5;
+
+      setIsMobile(mobile);
+      setMetrics({ cardWidth, cardHeight, gap });
+    };
+
+    update();
+    window.addEventListener("resize", update);
+    return () => window.removeEventListener("resize", update);
   }, []);
 
-  /* -------------------- Autoplay -------------------- */
+  /* ---------------- Autoplay ---------------- */
   useEffect(() => {
     if (paused) return;
-
-    timerRef.current = setInterval(() => {
-      setActiveIndex((i) => (i + 1) % leadershipTeam.length);
-    }, AUTOPLAY_MS);
-
+    timerRef.current = setInterval(
+      () => setActiveIndex((i) => (i + 1) % leadershipTeam.length),
+      AUTOPLAY_MS
+    );
     return () => clearInterval(timerRef.current);
   }, [paused]);
 
-  /* -------------------- Slot Logic -------------------- */
-  const slots = isMobile ? MOBILE_SLOTS : DESKTOP_SLOTS;
-  const slotKeys = Object.keys(slots).map(Number);
+  if (!metrics) return null;
 
-  const visibleCards = slotKeys.map((offset) => {
+  /* ---------------- Slots ---------------- */
+  const DESKTOP_SLOTS = {
+    "-1": { x: 0, zIndex: 1 },
+    "0": { x: metrics.gap * 3.5, zIndex: 5 },
+    "1": { x: metrics.gap * 7, zIndex: 3 },
+    "2": { x: metrics.gap * 10.5, zIndex: 2 },
+  };
+
+  const MOBILE_SLOTS = {
+    "0": { x: 0, zIndex: 5 },
+    "1": { x: metrics.gap * 1.5, zIndex: 2 },
+    "2": { x: metrics.gap * 3, zIndex: 1 },
+  };
+
+  const slots = isMobile ? MOBILE_SLOTS : DESKTOP_SLOTS;
+
+  const visibleCards = Object.keys(slots).map((offset) => {
     const index =
-      (activeIndex + offset + leadershipTeam.length) % leadershipTeam.length;
+      (activeIndex + Number(offset) + leadershipTeam.length) %
+      leadershipTeam.length;
 
     return {
       leader: leadershipTeam[index],
-      offset,
+      offset: Number(offset),
       slot: slots[offset],
-      isActive: offset === 0,
+      isActive: Number(offset) === 0,
     };
   });
 
   const activeLeader = leadershipTeam[activeIndex];
 
-  /* -------------------- Render -------------------- */
+  /* ---------------- Render ---------------- */
   return (
     <section className="section-block-padding container-padding">
       <div className="text-center mb-12">
@@ -75,62 +86,47 @@ export default function LeadershipCarousel() {
         </h2>
       </div>
 
-      <div className="relative w-full overflow-visible">
-        {/* CARDS */}
-        <div
-          className="relative w-full h-[75vh]"
-          style={{ perspective: "1800px" }}
-        >
-          {visibleCards.map(({ leader, slot, isActive }) => (
-            <motion.div
-              key={leader.id}
-              className="absolute bottom-0"
-              animate={{
-                x: slot.x,
-                scale: slot.scale,
-                rotateY: slot.rotateY || 0,
-                z: slot.z,
-                opacity: slot.opacity,
-              }}
-              transition={{
-                type: "spring",
-                stiffness: 120,
-                damping: 20,
-              }}
+      <div className="relative w-full h-[80vh]" style={{ perspective: "2000px" }}>
+        {/* Cards */}
+        {visibleCards.map(({ leader, slot, isActive }) => (
+          <motion.div
+            key={leader.id}
+            className="absolute bottom-0"
+            animate={{ x: slot.x,}}
+            transition={{ type: "spring", stiffness: 120, damping: 22 }}
+            style={{ zIndex: slot.zIndex }}
+            onMouseEnter={() => isActive && setPaused(true)}
+            onMouseLeave={() => isActive && setPaused(false)}
+          >
+            <div
               style={{
-                left: 0,
-                zIndex: slot.zIndex,
-                transformStyle: "preserve-3d",
+                width: metrics.cardWidth,
+                height: metrics.cardHeight,
               }}
-              onMouseEnter={() => isActive && setPaused(true)}
-              onMouseLeave={() => isActive && setPaused(false)}
-            >
-              <div className="relative overflow-hidden"
-                style={{ width: isActive ? 350 : 250, height: isActive ? 500 : 250 }}>
-                <Image
-                  src={leader.image}
-                  alt={leader.name}
-                  fill
-                  className="object-cover"
-                  priority={isActive}
-                />
-              </div>
-            </motion.div>
-          ))}
-        </div>
+              className="relative overflow-hidden"
+              >
+              <Image
+                src={leader.image}
+                alt={leader.name}
+                fill
+                className="object-cover"
+                priority={isActive}
+              />
+            </div>
+          </motion.div>
+        ))}
 
-        {/* INFO PANEL */}
+        {/* Info Panel */}
         <motion.div
           key={activeLeader.id}
+          className="absolute top-0 right-0 w-[45vw] z-50"
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.2 }}
-          className="absolute top-0 right-0 w-[41vw] z-50"
           onMouseEnter={() => setPaused(true)}
           onMouseLeave={() => setPaused(false)}
         >
-          <div className="p-6 ">
-            <h3 className="fl4 mb-2">{activeLeader.name}</h3>
+          <div className="p-6">
+            <h3 className="fl4">{activeLeader.name}</h3>
             <p className="fl7 mb-4">{activeLeader.position}</p>
             <p className="fl8">{activeLeader.description}</p>
           </div>
