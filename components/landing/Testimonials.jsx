@@ -8,7 +8,7 @@ import { testimonialsData } from "@/data/testimonialsData";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import UnderlineLastChars from "../UnderlineLastChars";
+import SlashPrefix from "../SlashPrefix";
 
 export default function Testimonials() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -55,9 +55,7 @@ export default function Testimonials() {
             />
             <div className="relative">
               <h2 className="fl2 inline-block relative">
-                <span className="whitespace-nowrap">
-                  Testimonia<UnderlineLastChars>ls</UnderlineLastChars>
-                </span>
+                <SlashPrefix /> Testimonials
               </h2>
             </div>
           </div>
@@ -118,9 +116,7 @@ export default function Testimonials() {
       <div className="md:hidden w-[80%] mx-auto pb-10">
         <div className=" mb-8 relative flex justify-center items-center">
           <h3 className="relative fl2 title-content-gap mx-auto inline-block">
-            <span className="whitespace-nowrap">
-              Testimonia<UnderlineLastChars>ls</UnderlineLastChars>
-            </span>
+            <SlashPrefix /> Testimonials
           </h3>
         </div>
 

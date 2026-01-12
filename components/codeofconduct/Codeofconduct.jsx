@@ -1,4 +1,4 @@
-import UnderlineLastChars from '@/components/UnderlineLastChars';
+import SlashPrefix from "@/components/SlashPrefix";
 
 export default function CodeOfConduct() {
   return (
@@ -6,10 +6,7 @@ export default function CodeOfConduct() {
       <div className="container-padding space-y-10">
         <div className="text-center">
           <h1 className="fl2 inline-block relative title-content-gap">
-            Code of  {" "}
-            <span className="whitespace-nowrap">
-              Condu<UnderlineLastChars>ct</UnderlineLastChars>
-            </span>
+            <SlashPrefix />Code of Conduct
           </h1>
 
           <p className="fl7 md:max-w-[60vw] mx-auto">

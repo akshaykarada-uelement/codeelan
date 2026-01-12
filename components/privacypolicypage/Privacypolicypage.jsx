@@ -1,14 +1,11 @@
-import UnderlineLastChars from "@/components/UnderlineLastChars";
+import SlashPrefix from "@/components/SlashPrefix";
 
 export default function Privacypolicypage() {
   return (
     <main className="section-block-padding ">
       <div className="  relative mb-20 text-center">
         <h2 className="fl2 inline-block relative">
-          Privacy{" "}
-          <span className="whitespace-nowrap">
-            Poli<UnderlineLastChars>cy</UnderlineLastChars>
-          </span>
+          <SlashPrefix /> Privacy Policy
         </h2>
       </div>
 

@@ -5,7 +5,7 @@ import { Phone, Mail, MapPin } from "lucide-react";
 import { motion } from "framer-motion";
 import dynamic from "next/dynamic";
 import Select from "react-select";
-import UnderlineLastChars from "../UnderlineLastChars";
+import SlashPrefix from "../SlashPrefix";
 
 const LeafletMap = dynamic(() => import("../map/LeafletMap"), {
   ssr: false,
@@ -52,10 +52,7 @@ export default function Contactus() {
       <div className="w-full max-w-2xl mx-auto px-4 md:px-0">
         <div className="relative mb-12 md:mb-20 text-center">
           <h2 className="fl2 inline-block relative text-3xl md:text-4xl">
-            Contact {" "}
-            <span className="whitespace-nowrap">
-              <UnderlineLastChars>Us</UnderlineLastChars>
-            </span>
+           <SlashPrefix /> Contact Us
           </h2>
         </div>
         <div className="bg-white shadow-[0px_0px_10px_1px_#00000026] p-4 md:p-6 rounded-lg">
@@ -117,11 +114,7 @@ export default function Contactus() {
       <div className="w-full section-block-padding mx-auto px-6 py-10 lg:p-10 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8 lg:gap-10">
         <div className="relative text-center">
           <h2 className="fl2 inline-block relative">
-            Find us 
-            {" "}
-            <span className="whitespace-nowrap">
-              he<UnderlineLastChars>re</UnderlineLastChars>
-            </span>
+           <SlashPrefix /> Find us here
           </h2>
         </div>
 

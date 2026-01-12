@@ -5,7 +5,7 @@ import Image from "next/image";
 import { getAllCaseStudies } from "../../data/caseStudies";
 import CaseStudyDetails from "./CasestudyDetails";
 import { useState, useRef } from "react";
-import UnderlineLastChars from "@/components/UnderlineLastChars";
+import SlashPrefix from "@/components/SlashPrefix";
 
 // Map slides to case study IDs
 const slideToCaseStudyMap = {
@@ -77,10 +77,8 @@ export default function CasestudyGrid() {
         <div className="w-[20vw] flex items-center">
           <div>
             <h3 className="relative inline-block fl2 mb-6 text-center">
-              Case{" "}
-              <span className="whitespace-nowrap">
-                Stud<UnderlineLastChars>es</UnderlineLastChars>
-              </span>
+              <SlashPrefix />
+              Case Studes
             </h3>
           </div>
         </div>
@@ -122,7 +120,11 @@ export default function CasestudyGrid() {
                     <div className="absolute bottom-6 left-6 right-6 flex justify-between items-center">
                       <h3 className="!text-[#49CF38] fl4">{slide.title}</h3>
 
-                      <button type="button" onClick={scrollToDetails} className="size-10 flex justify-end cursor-pointer">
+                      <button
+                        type="button"
+                        onClick={scrollToDetails}
+                        className="size-10 flex justify-end cursor-pointer"
+                      >
                         <Image
                           src="/icons/downarrow.svg"
                           alt=""
@@ -130,7 +132,6 @@ export default function CasestudyGrid() {
                           height={40}
                         />
                       </button>
-                      
                     </div>
                   )}
                 </div>
@@ -197,10 +198,8 @@ export default function CasestudyGrid() {
       <div className="md:hidden">
         <div className="w-full flex justify-center">
           <h3 className="relative inline-block fl2 mb-6 text-center">
-            Case{" "}
-            <span className="whitespace-nowrap">
-              Stud<UnderlineLastChars>es</UnderlineLastChars>
-            </span>
+            <SlashPrefix />
+            Case Studes
           </h3>
         </div>
 
@@ -241,7 +240,11 @@ export default function CasestudyGrid() {
                       {slide.title}
                     </h3>
 
-                    <button type="button" onClick={scrollToDetails} className="size-7 bg-[#49CF38] flex items-center justify-center cursor-pointer">
+                    <button
+                      type="button"
+                      onClick={scrollToDetails}
+                      className="size-7 bg-[#49CF38] flex items-center justify-center cursor-pointer"
+                    >
                       <img src="/icons/downarrow.svg" alt="" />
                     </button>
                   </div>

@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import UnderlineLastChars from "../UnderlineLastChars";
+import SlashPrefix from "../SlashPrefix";
 
 const UserInformationModal = ({ onClose }) => {
   return (
@@ -256,10 +256,7 @@ export default function OmniscientiaPage() {
         <div className="mx-auto">
           <div className="text-center mb-16">
             <h2 className="fl2 !text-white inline-block relative">
-              Capabilities of Computer Vision{" "}
-              <span className="whitespace-nowrap">
-                Solutio<UnderlineLastChars>ns</UnderlineLastChars>
-              </span>
+              <SlashPrefix /> Capabilities of Computer Vision Solutions
             </h2>
             <p className="mt-6 fl7 !text-white max-w-[850px] mx-auto">
               Powered by cutting-edge neural networks and sophisticated image
@@ -293,10 +290,7 @@ export default function OmniscientiaPage() {
         <div className=" mx-auto flex flex-col lg:flex-row items-center">
           <div className="lg:w-1/2 mb-12 lg:mb-0 lg:pr-16">
             <h2 className="fl2 !text-white inline-block relative mb-8">
-              Use cases of OmniScientia across{" "}
-              <span className="whitespace-nowrap">
-                industri<UnderlineLastChars>es</UnderlineLastChars>
-              </span>
+              <SlashPrefix /> Use cases of OmniScientia across industries
             </h2>
             <p className="!text-white fl7">
               Our computer vision solutions are transforming businesses across a
@@ -326,10 +320,7 @@ export default function OmniscientiaPage() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="fl2 !text-white inline-block relative">
-              Explore Our Platform's Key{" "}
-              <span className="whitespace-nowrap">
-                Featur<UnderlineLastChars>es</UnderlineLastChars>
-              </span>
+              <SlashPrefix /> Explore Our Platform's Key Features
             </h2>
             <p className="mt-6 fl7 !text-white max-w-[940px] mx-auto ">
               Our platform is packed with powerful features designed to make
@@ -420,10 +411,7 @@ export default function OmniscientiaPage() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16 space-y-6">
             <h2 className="fl2 !text-white relative inline-block">
-              Real-World{" "}
-              <span className="whitespace-nowrap">
-                Impa<UnderlineLastChars>ct</UnderlineLastChars>
-              </span>
+              <SlashPrefix /> Real-World Impact
             </h2>
 
             <p className="!text-white fl7 max-w-3xl mx-auto ">
@@ -450,10 +438,7 @@ export default function OmniscientiaPage() {
       <div className="bg-[#131313] section-block-padding container-padding py-20">
         <div className="max-w-6xl mx-auto text-center">
           <h2 className="fl2 !text-white inline-block relative">
-            Get Started Today: Request a Demo or Contact{" "}
-            <span className="whitespace-nowrap">
-              <UnderlineLastChars>Us</UnderlineLastChars>
-            </span>
+            <SlashPrefix /> Get Started Today: Request a Demo or Contact Us
           </h2>
 
           <p className="fl7 !text-white  mx-auto mt-10 max-w-2xl">

@@ -1,13 +1,10 @@
-import UnderlineLastChars from "../UnderlineLastChars";
+import SlashPrefix from "../SlashPrefix";
 export default function Missionandvision() {
   return (
     <main className="min-h-screen container-padding section-block-padding">
       <div className="  relative mb-20 text-center">
         <h2 className="fl2 inline-block relative">
-          Mission and {" "}
-          <span className="whitespace-nowrap">
-            Visi<UnderlineLastChars>on</UnderlineLastChars>
-          </span>
+          <SlashPrefix /> Mission and Vision
         </h2>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">

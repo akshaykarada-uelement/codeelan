@@ -1,4 +1,4 @@
-import UnderlineLastChars from "../UnderlineLastChars";
+import SlashPrefix from "../SlashPrefix";
 
 export default function AboutUs() {
   return (
@@ -6,10 +6,7 @@ export default function AboutUs() {
       <div className="w-full ">
         <div className="relative mx-auto flex justify-center items-center">
           <h2 className="fl2 inline-block relative">
-            About {" "}
-            <span className="whitespace-nowrap">
-              <UnderlineLastChars>Us</UnderlineLastChars>
-            </span>
+           <SlashPrefix /> About Us
           </h2>
         </div>
 

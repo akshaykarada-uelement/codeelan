@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import UnderlineLastChars from "@/components/UnderlineLastChars";
+import SlashPrefix from "@/components/SlashPrefix";
 
 export default function Perfectuspage() {
   const iconPaths = {
@@ -149,10 +149,7 @@ export default function Perfectuspage() {
       <div className=" section-block-padding container-paddingv2">
         <div className="relative mb-20 text-center">
           <h2 className="fl2 !text-white inline-block relative ">
-            Eliminate Manual Testing{" "}
-            <span className="whitespace-nowrap">
-              Bottlenec<UnderlineLastChars>ks</UnderlineLastChars>
-            </span>
+            <SlashPrefix /> Eliminate Manual Testing Bottlenecks
           </h2>
         </div>
 
@@ -186,10 +183,7 @@ export default function Perfectuspage() {
       <div className="section-block-padding container-padding  ">
         <div className="relative mb-20 text-center">
           <h2 className="fl2 !text-white inline-block relative text-3xl font-bold">
-            Key Features of{" "}
-            <span className="whitespace-nowrap">
-              Perfect<UnderlineLastChars>us</UnderlineLastChars>
-            </span>
+            <SlashPrefix /> Key Features of Perfectus
           </h2>
         </div>
 
@@ -248,10 +242,8 @@ export default function Perfectuspage() {
       <div className="section-block-padding container-padding pb-32">
         <div className="relative mb-20 text-center">
           <h2 className="fl2 !text-white inline-block relative max-w-4xl">
-            Experience the Future: "Perfectus" – Your Business's Automation{" "}
-            <span className="whitespace-nowrap">
-              Superhe<UnderlineLastChars>ro</UnderlineLastChars>
-            </span>
+            <SlashPrefix /> Experience the Future: "Perfectus" – Your
+            Business's Automation Superhero
           </h2>
         </div>
 
@@ -271,10 +263,7 @@ export default function Perfectuspage() {
       <div className="section-block-padding container-padding pb-32">
         <div className="relative mb-20 text-center">
           <h2 className="fl2 !text-white inline-block relative ">
-            Customer Success Stories & Case{" "}
-            <span className="whitespace-nowrap">
-              Studi<UnderlineLastChars>es</UnderlineLastChars>
-            </span>
+            <SlashPrefix /> Customer Success Stories & Case Studies
           </h2>
         </div>
 
@@ -300,10 +289,7 @@ export default function Perfectuspage() {
         <div className="flex flex-col md:flex-row items-start justify-between gap-12 max-w-7xl mx-auto">
           <div className="w-full md:w-1/3 md:pt-40 ">
             <h2 className="fl2 !text-white inline-block relative">
-              Take a Free Trial{" "}
-              <span className="whitespace-nowrap">
-                Tod<UnderlineLastChars>ay</UnderlineLastChars>
-              </span>
+             <SlashPrefix /> Take a Free Trial Today
             </h2>
           </div>
 
@@ -379,10 +365,7 @@ export default function Perfectuspage() {
       <div className="bg-[#131313] section-block-padding container-padding">
         <div className="max-w-6xl mx-auto text-center ">
           <h2 className="fl2 !text-white  inline-block relative">
-            Get Started Today: Request a Demo or Contact{" "}
-            <span className="whitespace-nowrap">
-              <UnderlineLastChars>Us</UnderlineLastChars>
-            </span>
+           <SlashPrefix /> Get Started Today: Request a Demo or Contact Us
           </h2>
 
           <p className="fl7 !text-white mx-auto mt-10">

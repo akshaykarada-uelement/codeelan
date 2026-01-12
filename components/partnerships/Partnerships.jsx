@@ -1,6 +1,6 @@
 "use client";
 import { useState, useRef } from "react";
-import UnderlineLastChars from "@/components/UnderlineLastChars";
+import SlashPrefix from "@/components/SlashPrefix";
 
 const partners = [
   {
@@ -49,9 +49,7 @@ export default function Partnerships() {
     <section className="section-block-padding relative">
       <div className="relative mb-20 text-center">
         <h2 className="fl2 inline-block relative">
-          <span className="whitespace-nowrap">
-            Partnershi<UnderlineLastChars>ps</UnderlineLastChars>
-          </span>
+          <SlashPrefix /> Partnerships
         </h2>
       </div>
 

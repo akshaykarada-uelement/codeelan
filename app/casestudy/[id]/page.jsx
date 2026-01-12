@@ -1,28 +1,26 @@
-import { use } from 'react';
-import CaseStudyDetails from '../../../components/casestudy/CasestudyDetails';
-import { getAllCaseStudies } from '../../../data/caseStudies';
-import { notFound } from 'next/navigation';
-import UnderlineLastChars from '@/components/UnderlineLastChars';
+import { use } from "react";
+import CaseStudyDetails from "../../../components/casestudy/CasestudyDetails";
+import { getAllCaseStudies } from "../../../data/caseStudies";
+import { notFound } from "next/navigation";
+import SlashPrefix from "@/components/SlashPrefix";
 
 function getCaseStudyById(id) {
   const caseStudies = getAllCaseStudies();
   return caseStudies.find((study) => study.id === id);
 }
 
-
 export async function generateMetadata({ params }) {
   const awaitedParams = await params;
- 
+
   const id = awaitedParams.id;
   const decodedId = decodeURIComponent(id);
- 
+
   const caseStudy = getCaseStudyById(decodedId);
- 
 
   if (!caseStudy) {
     return {
-      title: 'Case Study Not Found',
-      description: 'The case study you are looking for does not exist.',
+      title: "Case Study Not Found",
+      description: "The case study you are looking for does not exist.",
       robots: {
         index: false,
         follow: false,
@@ -48,28 +46,24 @@ export async function generateMetadata({ params }) {
 
 export default function CaseStudyPage({ params }) {
   const awaitedParams = use(params);
- 
+
   const id = awaitedParams.id;
   const decodedId = decodeURIComponent(id);
- 
+
   const caseStudy = getCaseStudyById(decodedId);
- 
 
   if (!caseStudy) {
     notFound();
   }
 
-  return(
+  return (
     <main className="section-block-padding">
-       <div className="inline-block w-full mx-auto">
+      <div className="inline-block w-full mx-auto">
         <h3 className="relative inline-block fl2 mb-6 text-center">
-              Case{" "}
-              <span className="whitespace-nowrap">
-                Stud<UnderlineLastChars>es</UnderlineLastChars>
-              </span>
-            </h3>
+          <SlashPrefix />Case Studes
+        </h3>
       </div>
       <CaseStudyDetails caseStudy={caseStudy} />
     </main>
-  ) 
+  );
 }

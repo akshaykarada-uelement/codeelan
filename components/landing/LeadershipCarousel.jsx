@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { leadershipTeam } from "../../data/leadershipData";
-import UnderlineLastChars from "../UnderlineLastChars";
+import SlashPrefix from "../SlashPrefix";
 
 const AUTOPLAY_MS = 3000;
 
@@ -15,7 +15,7 @@ export default function LeadershipCarousel() {
   const [metrics, setMetrics] = useState(null);
   const timerRef = useRef(null);
 
-  /* ---------------- Responsive ---------------- */
+ 
   useEffect(() => {
     const update = () => {
       const vw = window.innerWidth;
@@ -34,7 +34,7 @@ export default function LeadershipCarousel() {
     return () => window.removeEventListener("resize", update);
   }, []);
 
-  /* ---------------- Autoplay ---------------- */
+  
   useEffect(() => {
     if (paused) return;
     timerRef.current = setInterval(
@@ -57,7 +57,7 @@ export default function LeadershipCarousel() {
     },
   };
 
-  /* ---------------- Slots ---------------- */
+  
   const DESKTOP_SLOTS = {
     "-1": { x: 0, zIndex: 1 },
     0: { x: metrics.gap * 3.15, zIndex: 5 },
@@ -93,7 +93,7 @@ export default function LeadershipCarousel() {
     <section className="section-block-padding container-padding">
       <div className="text-center mb-12 ">
         <h2 className="fl2 title-content-gap">
-          Leadership <UnderlineLastChars>Team</UnderlineLastChars>
+          <SlashPrefix />Leadership Team
         </h2>
         <p className="fl7 text-center w-[80vw] mx-auto">
           Our leadership team brings together decades of experience crafting

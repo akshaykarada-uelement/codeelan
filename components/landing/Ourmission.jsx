@@ -1,4 +1,4 @@
-import UnderlineLastChars from "../UnderlineLastChars";
+import SlashPrefix from "../SlashPrefix";
 export default function OurMission() {
   return (
     <>
@@ -62,10 +62,7 @@ export default function OurMission() {
           <div className="w-full lg:w-1/2 flex flex-col gap-6 text-left">
             <div className="  relative  ">
               <h2 className="fl2 inline-block relative">
-                Our {" "}
-                <span className="whitespace-nowrap">
-                 Missi<UnderlineLastChars>on</UnderlineLastChars>
-                </span>
+               <SlashPrefix /> Our Mission
               </h2>
             </div>
 
