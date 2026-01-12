@@ -68,7 +68,6 @@ export default function Hero() {
 
         <main className="relative z-50 min-h-screen w-full overflow-hidden bg-black flex flex-col justify-center">
 
-
             <div className="absolute inset-0 z-0">
                 <AnimatePresence mode="popLayout">
                     <motion.div
@@ -89,10 +88,8 @@ export default function Hero() {
                 </AnimatePresence>
             </div>
 
-            <div className="relative z-10 container mx-auto grid h-full grid-cols-1 items-center gap-12 px-6 py-12 lg:grid-cols-2 lg:px-12 lg:py-0">
-
-
-                <div className="order-2 lg:order-1 lg:pr-20">
+            <div className="relative z-10 container flex md:flex-row flex-col h-full items-center gap-12 container-padding">
+                <div className="order-2 lg:order-1">
                     <AnimatePresence mode="wait">
                         <motion.div
                             key={activeIndex}
@@ -114,8 +111,6 @@ export default function Hero() {
                         Get Started
                     </button>
                 </div>
-
-
                 <div className="order-1 flex items-center justify-center lg:order-2 lg:justify-start">
 
                     <div className="relative h-[380px] w-[280px] md:h-[450px] md:w-[350px] ">
@@ -168,7 +163,6 @@ export default function Hero() {
                         })}
                     </div>
                 </div>
-
             </div>
         </main>
     );
