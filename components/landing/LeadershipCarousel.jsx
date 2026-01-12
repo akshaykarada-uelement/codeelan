@@ -21,9 +21,9 @@ export default function LeadershipCarousel() {
       const vw = window.innerWidth;
       const mobile = vw < 768;
 
-      const cardWidth = mobile ? vw * 0.6 : vw * 0.5;
-      const cardHeight = cardWidth * 1.45;
-      const gap = cardWidth * 0.5;
+      const cardWidth = mobile ? vw * 1 : vw * 0.18;
+      const cardHeight = mobile ? cardWidth * 1.45 :cardWidth * 1.45;
+      const gap = cardWidth * 0.35;
 
       setIsMobile(mobile);
       setMetrics({ cardWidth, cardHeight, gap });
@@ -46,18 +46,29 @@ export default function LeadershipCarousel() {
 
   if (!metrics) return null;
 
+  const SCALE = {
+    active: {
+      width: 1.6,
+      height: 1.6,
+    },
+    inactive: {
+      width: 1,
+      height: 0.8,
+    },
+  };
+
   /* ---------------- Slots ---------------- */
   const DESKTOP_SLOTS = {
     "-1": { x: 0, zIndex: 1 },
-    "0": { x: metrics.gap * 3.5, zIndex: 5 },
-    "1": { x: metrics.gap * 7, zIndex: 3 },
-    "2": { x: metrics.gap * 10.5, zIndex: 2 },
+    0: { x: metrics.gap * 3.15, zIndex: 5 },
+    1: { x: metrics.gap * 8.02, zIndex: 3 },
+    2: { x: metrics.gap * 11.2, zIndex: 2 },
   };
 
   const MOBILE_SLOTS = {
-    "0": { x: 0, zIndex: 5 },
-    "1": { x: metrics.gap * 1.5, zIndex: 2 },
-    "2": { x: metrics.gap * 3, zIndex: 1 },
+    0: { x: 0, zIndex: 5 },
+    1: { x: metrics.gap * 5.2, zIndex: 2 },
+    2: { x: metrics.gap * 8.6, zIndex: 1 },
   };
 
   const slots = isMobile ? MOBILE_SLOTS : DESKTOP_SLOTS;
@@ -80,31 +91,46 @@ export default function LeadershipCarousel() {
   /* ---------------- Render ---------------- */
   return (
     <section className="section-block-padding container-padding">
-      <div className="text-center mb-12">
-        <h2 className="fl2">
+      <div className="text-center mb-12 ">
+        <h2 className="fl2 title-content-gap">
           Leadership <UnderlineLastChars>Team</UnderlineLastChars>
         </h2>
+        <p className="fl7 text-center w-[80vw] mx-auto">
+          Our leadership team brings together decades of experience crafting
+          sophisticated custom software solutions, pioneering automation
+          frameworks, and delivering superior-quality engineering for
+          enterprises worldwide. They are the architects behind CodeElan’s
+          commitment to excellence, ensuring every solution is designed for
+          real-world scalability and innovation.
+        </p>
       </div>
 
-      <div className="relative w-full h-[80vh]" style={{ perspective: "2000px" }}>
+      <div
+        className="relative w-full h-[50vh] md:h-[80vh] overflow-hidden"
+        style={{ perspective: "2000px" }}
+      >
         {/* Cards */}
         {visibleCards.map(({ leader, slot, isActive }) => (
           <motion.div
             key={leader.id}
             className="absolute bottom-0"
-            animate={{ x: slot.x,}}
-            transition={{ type: "spring", stiffness: 120, damping: 22 }}
+            animate={{ x: slot.x }}
+            transition={{ type: "spring", stiffness: 100, damping: 22 }}
             style={{ zIndex: slot.zIndex }}
             onMouseEnter={() => isActive && setPaused(true)}
             onMouseLeave={() => isActive && setPaused(false)}
           >
             <div
               style={{
-                width: metrics.cardWidth,
-                height: metrics.cardHeight,
+                width:
+                  metrics.cardWidth *
+                  (isActive ? SCALE.active.width : SCALE.inactive.width),
+                height:
+                  metrics.cardHeight *
+                  (isActive ? SCALE.active.height : SCALE.inactive.height),
               }}
               className="relative overflow-hidden"
-              >
+            >
               <Image
                 src={leader.image}
                 alt={leader.name}
@@ -119,13 +145,16 @@ export default function LeadershipCarousel() {
         {/* Info Panel */}
         <motion.div
           key={activeLeader.id}
-          className="absolute top-0 right-0 w-[45vw] z-50"
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           onMouseEnter={() => setPaused(true)}
           onMouseLeave={() => setPaused(false)}
+          className={`absolute top-0 right-0`}
+          style={{
+            width: metrics.cardWidth * SCALE.inactive.width * 2,
+          }}
         >
-          <div className="p-6">
+          <div className="md:-ml-6 2xl:-ml-8 sm:ml-2">
             <h3 className="fl4">{activeLeader.name}</h3>
             <p className="fl7 mb-4">{activeLeader.position}</p>
             <p className="fl8">{activeLeader.description}</p>
