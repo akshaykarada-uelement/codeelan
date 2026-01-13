@@ -106,7 +106,7 @@ export default function LeadershipCarousel() {
 
 <div className="relative pr-5 md:pr-0">
       <div
-        className="relative w-full h-[35vh] md:h-[92vh] xl:h-[65vh] 3xl:h-[50vh] overflow-hidden"
+        className="relative w-full h-[35vh] md:h-[92vh] xl:h-[75vh] 3xl:h-[60vh] overflow-hidden"
         style={{ perspective: "2000px" }}
       >
         {/* Cards */}
