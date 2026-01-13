@@ -3,41 +3,33 @@ export const leadershipTeam = [
     id: 'deepak-mathur',
     name: 'Deepak Mathur',
     position: 'Chief Operating Officer',
-    image: '/landing/leaders1.jpg',
+    image: '/landing/Deepak-Mathur.png',
     description:
-      'Deepak brings over 15 years of experience in operations management and business strategy. His expertise spans across supply chain optimization, team leadership, and driving operational excellence across global organizations. With a proven track record of scaling operations and implementing efficient systems, Deepak is instrumental in ensuring our company runs like a well-oiled machine.',
+      'Deepak, Founder and COO, with 24 years of experience, specializes in automation, software quality, project management, and AI/Computer Vision. He holds a Computer Science degree from Bharati Vidyapeeth, Pune, along with certifications in testing, AWS, Agile, and project management.',
   },
   {
-    id: 'shailesh-amdekar',
-    name: 'Shailesh Amdekar',
+    id: 'Chandrakant Dollin',
+    name: 'Chandrakant Dollin',
+    position: 'Chief Executive Officer',
+    image: '/landing/Chandrakant-Dollin.jpg',
+    description:
+      "CD, Partner and CEO of CodeElan Technologies, has 25+ years of experience in enterprise technology, AI, and Computer Vision, leading digital transformations. Based in Silicon Valley, he's a UC Berkeley engineering alumnus with a strong track record in growing software products.",
+  },
+  {
+    id: 'Shailesh amdekar',
+    name: 'Shailesh amdekar',
     position: 'Consultant Strategic Business Partner',
-    image: '/landing/leaders2.jpg',
+    image: '/landing/Shailesh-amdekar.png',
     description:
       'Shailesh Amdekar, CSP, with 27-year career has been a masterclass in leadership, business acumen, and customer relationships. With an eye for operational excellence and a knack for risk management, Shailesh has helped numerous organizations thrive. His approach is analytical and profoundly human—he sees numbers and the people and stories behind them.',
   },
   {
-    id: 'sandeep-mehra',
-    name: 'Sandeep Mehra',
-    position: 'Director, AcmeMinds Private Limited',
-    image: '/landing/leaders3.jpg',
+    id: 'Rajesh Kanade',
+    name: 'Rajesh Kanade',
+    position: 'Chief Technical Officer',
+    image: '/landing/Rajesh-Kanade.jpg',
     description:
-      'Sandeep is a visionary leader with extensive experience in software development and digital transformation. His strategic vision and technical acumen have guided numerous organizations through successful digital transitions. He combines deep technical knowledge with business strategy to deliver innovative solutions.',
-  },
-  {
-    id: 'rajesh-kumar',
-    name: 'Rajesh Kumar',
-    position: 'VP, Engineering',
-    image: '/landing/leaders4.jpg',
-    description:
-      'Rajesh brings deep technical expertise and leadership excellence to our engineering division. With a track record of building high-performance teams and delivering complex solutions, he ensures our engineering practices remain at the forefront of innovation and quality.',
-  },
-  {
-    id: 'deepak-mathur testing',
-    name: 'Deepak Mathur',
-    position: 'Chief Operating Officer',
-    image: '/landing/leadership1.png',
-    description:
-      'Deepak brings over 15 years of experience in operations management and business strategy. His expertise spans across supply chain optimization, team leadership, and driving operational excellence across global organizations. With a proven track record of scaling operations and implementing efficient systems, Deepak is instrumental in ensuring our company runs like a well-oiled machine.',
+      'Rajesh Kanade, 25+ years of industry experience in software development with 16+ years in leadership roles, primarily in Unified Communication, Contact centers & Cybersecurity and 1 US Patent granted.Thought Leader with a passion for building high-performing teams responsible for conceptualizing brand-new products and delivering them to market.',
   },
 ];
 
